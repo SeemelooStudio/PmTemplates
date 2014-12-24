@@ -1,42 +1,32 @@
-/* line 9, lib/mixins.less */
 .pabsolute {
   position: absolute;
 }
-/* line 12, lib/mixins.less */
 .prelative {
   position: relative;
 }
-/* line 15, lib/mixins.less */
 .with-padding {
   padding: 9px;
 }
-/* line 4, coupon.less */
 #couponWrapper {
   padding-top: 45px;
 }
-/* line 8, coupon.less */
 #coupon-banner {
   background: url(images/banner.png) center center;
   background-size: 100% auto;
   background-color: #fddc43;
   height: 180px;
 }
-/* line 15, coupon.less */
 #detail-box {
   position: absolute;
-  left: 0;
-  top: 16%;
+  margin: 48.6px 0;
   width: 100%;
-  height: 15%;
   text-align: center;
   color: #ffffff;
 }
-/* line 28, coupon.less */
 #discount {
   font-size: 16px;
   letter-spacing: 1px;
 }
-/* line 33, coupon.less */
 #number {
   font-family: "Arial Black", Helvetica, Tahoma, sans-serif;
   font-size: 44px;
@@ -46,7 +36,6 @@
   display: inline-block;
   position: relative;
 }
-/* line 43, coupon.less */
 #unit {
   font-family: "Arial Black", Helvetica, Tahoma, sans-serif;
   position: absolute;
@@ -56,13 +45,11 @@
   width: 20px;
   right: -20px;
 }
-/* line 53, coupon.less */
 #interval1 {
   font-size: 16px;
   line-height: 150%;
   letter-spacing: 1px;
 }
-/* line 59, coupon.less */
 #activity1 {
   position: absolute;
   top: 0;
@@ -71,7 +58,6 @@
   width: 20px;
   left: -20px;
 }
-/* line 68, coupon.less */
 #activity2 {
   position: absolute;
   top: 0;
@@ -80,7 +66,6 @@
   width: 20px;
   right: -20px;
 }
-/* line 77, coupon.less */
 #activity3 {
   position: absolute;
   bottom: -22%;
@@ -89,7 +74,6 @@
   width: 20px;
   left: -20px;
 }
-/* line 86, coupon.less */
 #activity5 {
   position: absolute;
   bottom: -22%;
@@ -98,7 +82,6 @@
   width: 20px;
   right: -20px;
 }
-/* line 95, coupon.less */
 #meet {
   font-family: "Arial Black", Helvetica, Tahoma, sans-serif;
   font-size: 18px;
@@ -108,17 +91,15 @@
   display: inline-block;
   position: relative;
 }
-/* line 105, coupon.less */
 #detail-box-2 {
   position: absolute;
   left: 0;
-  top: 19%;
+  top: 17%;
   width: 100%;
   height: 15%;
   text-align: center;
   color: #ffffff;
 }
-/* line 115, coupon.less */
 #reduction {
   font-family: "Arial Black", Helvetica, Tahoma, sans-serif;
   font-size: 44px;
@@ -128,7 +109,6 @@
   display: inline-block;
   position: relative;
 }
-/* line 125, coupon.less */
 #activity4 {
   font-family: "Arial Black", Helvetica, Tahoma, sans-serif;
   font-size: 44px;
@@ -138,13 +118,11 @@
   display: inline-block;
   position: relative;
 }
-/* line 135, coupon.less */
 #interval2 {
   font-size: 16px;
   line-height: 150%;
   letter-spacing: 4px;
 }
-/* line 141, coupon.less */
 #unit1 {
   font-family: "Arial Black", Helvetica, Tahoma, sans-serif;
   position: absolute;
@@ -154,41 +132,51 @@
   width: 20px;
   left: -16px;
 }
-/* line 151, coupon.less */
 #text {
   text-align: left;
   margin: 9px;
-  padding: 9px 18px;
-  height: 130px;
-  background: #ffffff;
-  border-top-color: #fddc43;
-  border-top-width: 1px;
-  border-style: solid;
-  border-radius: 0px 0px 5px 5px;
-}
-/* line 163, coupon.less */
-#text1 {
-  color: #fddc43;
+  padding: 18px 18px 9px 18px;
   font-family: "Microsoft Yahei", "微软雅黑", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
+  letter-spacing: 1px;
+  background: #ffffff;
+  border-radius: 0px 0px 2px 2px;
 }
-/* line 169, coupon.less */
+#text1 {
+  color: #fddc43;
+}
 #text2 {
   color: #0f0f0f;
-  font-family: "Microsoft Yahei", "微软雅黑", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 12px;
-  letter-spacing: 1px;
-  padding-top: 2%;
+  padding-top: 4.5px;
 }
-/* line 177, coupon.less */
 #text3 {
-  text-align: center;
-  padding-left: 10%;
-  padding-right: 10%;
-  padding-top: 6%;
-  color: #c5c5c5;
-  font-family: "Microsoft Yahei", "微软雅黑", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  letter-spacing: 1px;
+  text-align: right;
+  padding: 9px 0;
+  color: #b4b4b4;
 }
-/*# sourceMappingURL=coupon.css.map */
+#text4 {
+  font-size: 18px;
+  letter-spacing: 4px;
+  text-align: center;
+  color: #ffffff;
+  padding: 0.5em 0;
+  background: #fddc43;
+  border-radius: 2px;
+}
+#text-number {
+  text-align: center;
+  padding: 9px;
+  color: #fddc43;
+}
+#text6 {
+  color: #d2d2d2;
+}
+#portrait {
+  position: absolute;
+  margin: -54px 0 0 18px;
+  width: 48px;
+  height: 48px;
+  border-radius: 100%;
+  background: #0f0f0f;
+}
