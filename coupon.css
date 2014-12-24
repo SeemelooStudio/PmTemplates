@@ -14,4 +14,181 @@
 #couponWrapper {
   padding-top: 45px;
 }
+/* line 8, coupon.less */
+#coupon-banner {
+  background: url(images/banner.png) center center;
+  background-size: 100% auto;
+  background-color: #fddc43;
+  height: 180px;
+}
+/* line 15, coupon.less */
+#detail-box {
+  position: absolute;
+  left: 0;
+  top: 16%;
+  width: 100%;
+  height: 15%;
+  text-align: center;
+  color: #ffffff;
+}
+/* line 28, coupon.less */
+#discount {
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+/* line 33, coupon.less */
+#number {
+  font-family: "Arial Black", Helvetica, Tahoma, sans-serif;
+  font-size: 44px;
+  line-height: 90%;
+  width: auto;
+  margin: 0 auto;
+  display: inline-block;
+  position: relative;
+}
+/* line 43, coupon.less */
+#unit {
+  font-family: "Arial Black", Helvetica, Tahoma, sans-serif;
+  position: absolute;
+  top: -22%;
+  color: #ffffff;
+  font-size: 18px;
+  width: 20px;
+  right: -20px;
+}
+/* line 53, coupon.less */
+#interval1 {
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 1px;
+}
+/* line 59, coupon.less */
+#activity1 {
+  position: absolute;
+  top: 0;
+  color: #ffffff;
+  font-size: 18px;
+  width: 20px;
+  left: -20px;
+}
+/* line 68, coupon.less */
+#activity2 {
+  position: absolute;
+  top: 0;
+  color: #ffffff;
+  font-size: 18px;
+  width: 20px;
+  right: -20px;
+}
+/* line 77, coupon.less */
+#activity3 {
+  position: absolute;
+  bottom: -22%;
+  color: #ffffff;
+  font-size: 16px;
+  width: 20px;
+  left: -20px;
+}
+/* line 86, coupon.less */
+#activity5 {
+  position: absolute;
+  bottom: -22%;
+  color: #ffffff;
+  font-size: 16px;
+  width: 20px;
+  right: -20px;
+}
+/* line 95, coupon.less */
+#meet {
+  font-family: "Arial Black", Helvetica, Tahoma, sans-serif;
+  font-size: 18px;
+  line-height: 90%;
+  width: auto;
+  margin: 0 auto;
+  display: inline-block;
+  position: relative;
+}
+/* line 105, coupon.less */
+#detail-box-2 {
+  position: absolute;
+  left: 0;
+  top: 19%;
+  width: 100%;
+  height: 15%;
+  text-align: center;
+  color: #ffffff;
+}
+/* line 115, coupon.less */
+#reduction {
+  font-family: "Arial Black", Helvetica, Tahoma, sans-serif;
+  font-size: 44px;
+  line-height: 90%;
+  width: auto;
+  margin: 0 auto;
+  display: inline-block;
+  position: relative;
+}
+/* line 125, coupon.less */
+#activity4 {
+  font-family: "Arial Black", Helvetica, Tahoma, sans-serif;
+  font-size: 44px;
+  line-height: 90%;
+  width: auto;
+  margin: 0 auto;
+  display: inline-block;
+  position: relative;
+}
+/* line 135, coupon.less */
+#interval2 {
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 4px;
+}
+/* line 141, coupon.less */
+#unit1 {
+  font-family: "Arial Black", Helvetica, Tahoma, sans-serif;
+  position: absolute;
+  top: -22%;
+  color: #ffffff;
+  font-size: 18px;
+  width: 20px;
+  left: -16px;
+}
+/* line 151, coupon.less */
+#text {
+  text-align: left;
+  margin: 9px;
+  padding: 9px 18px;
+  height: 130px;
+  background: #ffffff;
+  border-top-color: #fddc43;
+  border-top-width: 1px;
+  border-style: solid;
+  border-radius: 0px 0px 5px 5px;
+}
+/* line 163, coupon.less */
+#text1 {
+  color: #fddc43;
+  font-family: "Microsoft Yahei", "微软雅黑", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+}
+/* line 169, coupon.less */
+#text2 {
+  color: #0f0f0f;
+  font-family: "Microsoft Yahei", "微软雅黑", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  letter-spacing: 1px;
+  padding-top: 2%;
+}
+/* line 177, coupon.less */
+#text3 {
+  text-align: center;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 6%;
+  color: #c5c5c5;
+  font-family: "Microsoft Yahei", "微软雅黑", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
 /*# sourceMappingURL=coupon.css.map */
