@@ -13,7 +13,7 @@
   <!-- Application styles. -->
   <link rel="stylesheet" href="lib/styles.min.css" />
   <link rel="stylesheet" href="coupon.css" />
-
+  <script src="http://lib.sinaapp.com/js/jquery/1.9.1/jquery-1.9.1.min.js"></script>
 </head>
 
 <body>
@@ -36,65 +36,91 @@
     <!-- 最外层以 模块名+Wrapper 为id -->
     <div id="couponWrapper">
        <!-- 模块html begin -->
-        <!--折扣>
+        <!--满减 -->
         <div id="coupon">
-          <div id="coupon-banner" class="banner_orange">
-            <img src="images/banner_orange.jpg"></img>
-            <div id="detail-box" class="detail-box">
-              <div id="discount" class="discount">限时折扣</div>
-              <div id="number" class="number">
-                70<small id="unit" class="unit">%</small>
+          <div id="coupon-banner" class="coupon-banner-percentageDiscount">
+            <div class="coupon-banner-background"></div>
+            <div id="coupon-banner-detail">
+              <div class="subhead">限时折扣</div>
+              <div class="headline">
+                70<small class="append">%</small>
               </div>
-              <div id="interval1" class="interval1">全场通用</div>
+              <div id="coupon-scope">全场通用</div>
             </div>
           </div>
-        </div>
-        <!-- 模块html end -->
-        <!--满减>
-        <div id="coupon">
-          <div id="coupon-banner" class="banner_blue">
-            <img src="images/banner_blue.jpg"></img>
-            <div id="detail-box" class="detail-box">
-              <div id="meet" class="meet">
-                100
-                <small id="activity1" class="activity1">满</small>
-                <small id="activity2" class="activity2">元</small>
-              </div>
-            </div>
-            <div id="detail-box-2" class="detail-box-2">
-              <div id="reduction" class="reduction">
-                50
-                <small id="activity3" class="activity3">减</small>
-                <small id="activity5" class="activity5">元</small>
-              </div>
-              <div id="interval2" class="interval2">指定商品</div>
-            </div>
-          </div>
-        </div>
-        <!-- 模块html end -->
-        <div id="coupon">
-          <div id="coupon-banner" class="banner_yellow">
-            <div id="detail-box" class="detail-box">
-              <div id="interval2" class="interval2">现金红包</div>
-              <div id="number" class="number">
-                50<small id="unit1" class="unit1">¥</small>
-              </div>
-              <div id="interval2" class="interval2">指定商品</div>
-            </div>
-          </div>
-          <div id="text" class="text">
-            <div id="text1" class="text1">使用说明:</div>
-            <div id="text2" class="text2">党培养一个干部特别是高级干部是很不容易的。这些年，一些干部包括一些相当高层次的领导干部因违犯党纪国法落马，我们很痛心。</div>
-            <div id="text3" class="text3">有效期：剩余5天</div>
-
-            <div id="text4" class="text4">立即分享
+          <div id="info-card-percentageDiscount" class="info-card">
+            <div class="info-title">使用说明:</div>
+            <div class="info-detail">党培养一个干部特别是高级干部是很不容易的。这些年，一些干部包括一些相当高层次的领导干部因违犯党纪国法落马，我们很痛心。</div>
+            <div class="info-meta">有效期：剩余5天</div>
+            <div class="info-action">立即分享
               <div id="portrait" class="portrait"></div>
             </div>
-            <div id="text-number" id="text-number">
-              35<small id="text6" class="text6">人已使用，限量</small>60<small id="text6" id="text6">张！</small>
+            <div class="info-footer">
+              <em>35</em>人已使用，限量<em>60</em>张！
             </div>
-          </div> 
-        </div>        
+          </div>
+        </div>
+        <!-- 模块html end -->
+        
+        <div id="coupon">
+          <div id="coupon-banner" class="coupon-banner-amountOffOver">
+            <div class="coupon-banner-background"></div>
+            <div id="coupon-banner-detail">
+              <div class="subhead">
+                <div class="subhead-inner">
+                  100
+                  <small class="prepend">满</small>
+                  <small class="append">元</small>
+                </div>
+              </div>
+              <div class="headline">
+                <div class="headline-inner">
+                  50
+                  <small class="prepend">减</small>
+                  <small class="append">元</small>
+                </div>
+              </div>
+              <div id="coupon-scope">指定商品</div>
+            </div>
+          </div>
+          <div id="info-card-amountOffOver" class="info-card">
+            <div class="info-title">使用说明:</div>
+            <div class="info-detail">党培养一个干部特别是高级干部是很不容易的。这些年，一些干部包括一些相当高层次的领导干部因违犯党纪国法落马，我们很痛心。</div>
+            <div class="info-meta">有效期：剩余5天</div>
+            <div class="info-action">立即分享
+              <div id="portrait" class="portrait"></div>
+            </div>
+            <div class="info-footer">
+              <em>35</em>人已使用，限量<em>60</em>张！
+            </div>
+          </div>
+        </div>
+        <!-- 模块html end -->
+        <!--现金> -->
+        <div id="coupon">
+          <div id="coupon-banner" class="coupon-banner-fixedDiscount">
+            <div class="coupon-banner-background"></div>
+            <div id="coupon-banner-detail">
+              <div class="subhead">现金红包</div>
+              <div class="headline">
+                50<small class="prepend">¥</small>
+              </div>
+              <div  id="coupon-scope">指定商品</div>
+            </div>
+          </div>
+          <div id="info-card-fixedDiscount" class="info-card">
+            <div class="info-title">使用说明:</div>
+            <div class="info-detail">党培养一个干部特别是高级干部是很不容易的。这些年，一些干部包括一些相当高层次的领导干部因违犯党纪国法落马，我们很痛心。</div>
+            <div class="info-meta">有效期：剩余5天</div>
+            <div class="info-action">立即分享
+              <div class="portrait"></div>
+            </div>
+            <div class="info-footer">
+              <em>35</em>人已使用，限量<em>60</em>张！
+            </div>
+          </div>
+        </div>
+        <!-- 模块html end -->
     </div>
   </main>
 
@@ -110,4 +136,19 @@
   </div>
   <!-- /#control -->
 </body>
+<script type="text/javascript">
+  if ( window.DeviceOrientationEvent) {
+      window.addEventListener('deviceorientation', function(eventData){
+
+        var distanceBeta = eventData.beta  * 180;
+        var distanceGamma = eventData.gamma * 180;
+        var transform = "translate3d(" + distanceBeta + "px, " + distanceGamma + "px, 0);"
+        $('.coupon-banner-background')[0].style.webkitTransform = transform;
+        $('.coupon-banner-background')[0].style.transform = transform;
+                    
+      }, false);
+  }
+
+
+</script>
 </html>

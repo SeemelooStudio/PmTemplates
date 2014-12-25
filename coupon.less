@@ -5,145 +5,135 @@
 	padding-top:@bar-height;
 }
 
-#coupon-banner {
-	background: url(images/banner.png) center center;
-	background-size: 100% auto;
-	background-color: @color-yellow;
+.coupon-banner {
+	position:relative;
 	height: 180px;
+	.coupon-banner-background {
+		background: url(images/banner.9.png) center center;
+		background-size: 100% auto;
+		position:absolute;
+		left:0;
+		top:-70px;
+		width:100%;
+		height:320px;
+
+	}
+	.prepend {
+		font-family: @font-family-special;
+		position: absolute;
+		width: 20px;
+		left: -20px;
+		font-size: 18px;
+	}
+	.append {
+		position: absolute;
+		top: 0;
+		font-size: 18px;
+		width: 20px;
+	}
 }
 
-#detail-box {
-	position: absolute;
-	margin: @basic-gap*2.7 0;
-	width: 100%;
-	text-align: center;
-	color: @color-white;
+.centeredHeadline {
+		font-family: @font-family-special;
+		font-size: 44px;
+		line-height: 90%;
+		width: auto;
+		margin: 0 auto;
+		display: inline-block;
+		position: relative;	
 }
 
-#discount {
-	font-size: @font-size-big - 2;
-	letter-spacing: 1px;
+.coupon-banner-fixedDiscount {
+	.coupon-banner();
+	background-color: @color-yellow;
 	
-}
-#number {
-	font-family: @font-family-special;
-	font-size: 44px;
-	line-height: 90%;
-	width: auto;
-	margin: 0 auto;
-	display: inline-block;
-	position: relative;
+	.subhead {
+		font-size: 16px;
+		line-height: 140%;
+		letter-spacing: 4px;
+	}
+	.headline {
+		.centeredHeadline();
+	}
+	.prepend {
+		top: -22%;
+		left: -16px;
+	}
 }
 
-#unit {
-	font-family: @font-family-special;
+.coupon-banner-amountOffOver {
+	.coupon-banner();
+	background-color: @color-blue;
+
+	.headline {
+		margin: @basic-gap/4 0;
+	}
+	.subhead-inner {
+		.centeredHeadline();
+		font-size:18px;
+	
+		.prepend {
+			top: 0;
+		}
+
+		.append {
+			right: -20px;
+		}
+	}
+	.headline-inner {
+		.centeredHeadline();
+
+		.prepend {
+			bottom: -22%;
+			font-size: 16px;
+		}
+
+		.append {
+			bottom: -22%;
+			font-size: 16px;
+			right: -20px;
+		}
+	}
+}
+
+.coupon-banner-percentageDiscount {
+	.coupon-banner();
+	background-color: @color-orange;
+
+	#coupon-scope {
+		line-height: 150%;
+		letter-spacing: 1px;
+	}
+	.subhead {
+		font-size: 16px;
+		letter-spacing: 1px;
+	}
+	.headline {
+		.centeredHeadline();
+		
+	}
+	.append {
+			font-family: @font-family-special;
+			top: -22%;
+			right: -20px;
+	}
+}
+
+#coupon-banner-detail {
 	position: absolute;
-	top: -22%;
-	color: @color-white;
-	font-size: 18px;
-	width: 20px;
-	right: -20px;
-}
-
-#interval1 {
-	font-size: 16px;
-	line-height: 150%;
-	letter-spacing: 1px;
-}
-
-#activity1 {
-	position: absolute;
-	top: 0;
-	color: @color-white;
-	font-size: 18px;
-	width: 20px;
-	left: -20px;
-}
-
-#activity2 {
-	position: absolute;
-	top: 0;
-	color: @color-white;
-	font-size: 18px;
-	width: 20px;
-	right: -20px;
-}
-
-#activity3 {
-	position: absolute;
-	bottom: -22%;
-	color: @color-white;
-	font-size: 16px;
-	width: 20px;
-	left: -20px;
-}
-
-#activity5 {
-	position: absolute;
-	bottom: -22%;
-	color: @color-white;
-	font-size: 16px;
-	width: 20px;
-	right: -20px;
-}
-
-#meet {
-	font-family: @font-family-special;
-	font-size: 18px;
-	line-height: 90%;
-	width: auto;
-	margin: 0 auto;
-	display: inline-block;
-	position: relative;
-}
-
-#detail-box-2 {
-	position: absolute;
-	left: 0;
-	top: 17%;
+	margin: @basic-gap*2.9 0;
 	width: 100%;
-	height: 15%;
 	text-align: center;
 	color: @color-white;
 }
 
-#reduction {
-	font-family: @font-family-special;
-	font-size: 44px;
-	line-height: 90%;
-	width: auto;
-	margin: 0 auto;
-	display: inline-block;
-	position: relative;
-}
-
-#activity4 {
-	font-family: @font-family-special;
-	font-size: 44px;
-	line-height: 90%;
-	width: auto;
-	margin: 0 auto;
-	display: inline-block;
-	position: relative;
-}
-
-#interval2 {
+#coupon-scope {
 	font-size: 16px;
-	line-height: 150%;
+	line-height: 140%;
 	letter-spacing: 4px;
 }
 
-#unit1 {
-	font-family: @font-family-special;
-	position: absolute;
-	top: -22%;
-	color: @color-white;
-	font-size: 18px;
-	width: 20px;
-	left: -16px;
-}
-
-#text {
+.info-card {
 	text-align: left;
    	margin: @basic-gap/2;
     padding: @basic-gap @basic-gap @basic-gap/2 @basic-gap;
@@ -152,50 +142,71 @@
     letter-spacing: 1px;
     background: @color-white;
     border-radius: 0px 0px 2px 2px;
+    .info-detail {
+		color: @color-black;
+		font-size: 12px;
+		padding-top: @basic-gap/4;
+	}
+	.info-meta {
+		text-align: right;
+		padding: @basic-gap/2 0;
+		color: @color-black*12;	
+	}
+	.info-action {
+		font-size: 18px;
+		letter-spacing: 4px;
+		text-align: center;
+		color: @color-white;
+		padding: 0.5em 0;
+		border-radius: 2px;
+		.portrait {
+			position:absolute;
+			margin: -@basic-gap*3 0 0 @basic-gap;
+			width: 48px;
+			height: 48px;
+			border-radius: 100%;
+			background: @color-black;
+		}
+	}
 }
 
-#text1 {
-	color: @color-yellow;
- }
-
-#text2 {
-	color: @color-black;
-	font-size: 12px;
-	padding-top: @basic-gap/4;
+#info-card-fixedDiscount{
+	.info-title , .info-footer em {
+		color: @color-yellow;
+	}
+	.info-action {
+		background: @color-yellow;
+	}
 }
 
-#text3 {
-	text-align: right;
-	padding: @basic-gap/2 0;
-	color: @color-black*12;	
+#info-card-percentageDiscount{
+	.info-title , .info-footer em {
+		color: @color-orange;
+	}
+	.info-action {
+		background: @color-orange;
+	}	
 }
 
-#text4 {
-	font-size: 18px;
-	letter-spacing: 4px;
-	text-align: center;
-	color: @color-white;
-	padding: 0.5em 0;
-	background: @color-yellow;
-	border-radius: 2px;
+#info-card-amountOffOver{
+	.info-title , .info-footer em {
+		color: @color-blue;
+ 	}
+ 	.info-action {
+		background: @color-blue;
+	}
+	
 }
 
-#text-number {
+.info-footer{
 	text-align: center;
 	padding: @basic-gap/2;
-	color: @color-yellow;
-}
-
-#text6 {
 	color: @color-black*14;
+	em {
+		font-style: normal;
+	}
 }
 
-#portrait {
-	position:absolute;
-	margin: -@basic-gap*3 0 0 @basic-gap;
-	width: 48px;
-	height: 48px;
-	border-radius: 100%;
-	background: @color-black;
-}
+
+
 

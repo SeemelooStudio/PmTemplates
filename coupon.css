@@ -10,129 +10,212 @@
 #couponWrapper {
   padding-top: 45px;
 }
-#coupon-banner {
-  background: url(images/banner.png) center center;
-  background-size: 100% auto;
-  background-color: #fddc43;
+.coupon-banner {
+  position: relative;
   height: 180px;
 }
-#detail-box {
-  position: absolute;
-  margin: 48.6px 0;
-  width: 100%;
-  text-align: center;
-  color: #ffffff;
-}
-#discount {
-  font-size: 16px;
-  letter-spacing: 1px;
-}
-#number {
-  font-family: "Arial Black", Helvetica, Tahoma, sans-serif;
-  font-size: 44px;
-  line-height: 90%;
-  width: auto;
-  margin: 0 auto;
-  display: inline-block;
-  position: relative;
-}
-#unit {
-  font-family: "Arial Black", Helvetica, Tahoma, sans-serif;
-  position: absolute;
-  top: -22%;
-  color: #ffffff;
-  font-size: 18px;
-  width: 20px;
-  right: -20px;
-}
-#interval1 {
-  font-size: 16px;
-  line-height: 150%;
-  letter-spacing: 1px;
-}
-#activity1 {
-  position: absolute;
-  top: 0;
-  color: #ffffff;
-  font-size: 18px;
-  width: 20px;
-  left: -20px;
-}
-#activity2 {
-  position: absolute;
-  top: 0;
-  color: #ffffff;
-  font-size: 18px;
-  width: 20px;
-  right: -20px;
-}
-#activity3 {
-  position: absolute;
-  bottom: -22%;
-  color: #ffffff;
-  font-size: 16px;
-  width: 20px;
-  left: -20px;
-}
-#activity5 {
-  position: absolute;
-  bottom: -22%;
-  color: #ffffff;
-  font-size: 16px;
-  width: 20px;
-  right: -20px;
-}
-#meet {
-  font-family: "Arial Black", Helvetica, Tahoma, sans-serif;
-  font-size: 18px;
-  line-height: 90%;
-  width: auto;
-  margin: 0 auto;
-  display: inline-block;
-  position: relative;
-}
-#detail-box-2 {
+.coupon-banner .coupon-banner-background {
+  background: url(images/banner.9.png) center center;
+  background-size: 100% auto;
   position: absolute;
   left: 0;
-  top: 17%;
+  top: -70px;
   width: 100%;
-  height: 15%;
+  height: 320px;
+}
+.coupon-banner .prepend {
+  font-family: "Arial Black", Helvetica, Tahoma, sans-serif;
+  position: absolute;
+  width: 20px;
+  left: -20px;
+  font-size: 18px;
+}
+.coupon-banner .append {
+  position: absolute;
+  top: 0;
+  font-size: 18px;
+  width: 20px;
+}
+.centeredHeadline {
+  font-family: "Arial Black", Helvetica, Tahoma, sans-serif;
+  font-size: 44px;
+  line-height: 90%;
+  width: auto;
+  margin: 0 auto;
+  display: inline-block;
+  position: relative;
+}
+.coupon-banner-fixedDiscount {
+  position: relative;
+  height: 180px;
+  background-color: #fddc43;
+}
+.coupon-banner-fixedDiscount .coupon-banner-background {
+  background: url(images/banner.9.png) center center;
+  background-size: 100% auto;
+  position: absolute;
+  left: 0;
+  top: -70px;
+  width: 100%;
+  height: 320px;
+}
+.coupon-banner-fixedDiscount .prepend {
+  font-family: "Arial Black", Helvetica, Tahoma, sans-serif;
+  position: absolute;
+  width: 20px;
+  left: -20px;
+  font-size: 18px;
+}
+.coupon-banner-fixedDiscount .append {
+  position: absolute;
+  top: 0;
+  font-size: 18px;
+  width: 20px;
+}
+.coupon-banner-fixedDiscount .subhead {
+  font-size: 16px;
+  line-height: 140%;
+  letter-spacing: 4px;
+}
+.coupon-banner-fixedDiscount .headline {
+  font-family: "Arial Black", Helvetica, Tahoma, sans-serif;
+  font-size: 44px;
+  line-height: 90%;
+  width: auto;
+  margin: 0 auto;
+  display: inline-block;
+  position: relative;
+}
+.coupon-banner-fixedDiscount .prepend {
+  top: -22%;
+  left: -16px;
+}
+.coupon-banner-amountOffOver {
+  position: relative;
+  height: 180px;
+  background-color: #2980b9;
+}
+.coupon-banner-amountOffOver .coupon-banner-background {
+  background: url(images/banner.9.png) center center;
+  background-size: 100% auto;
+  position: absolute;
+  left: 0;
+  top: -70px;
+  width: 100%;
+  height: 320px;
+}
+.coupon-banner-amountOffOver .prepend {
+  font-family: "Arial Black", Helvetica, Tahoma, sans-serif;
+  position: absolute;
+  width: 20px;
+  left: -20px;
+  font-size: 18px;
+}
+.coupon-banner-amountOffOver .append {
+  position: absolute;
+  top: 0;
+  font-size: 18px;
+  width: 20px;
+}
+.coupon-banner-amountOffOver .headline {
+  margin: 4.5px 0;
+}
+.coupon-banner-amountOffOver .subhead-inner {
+  font-family: "Arial Black", Helvetica, Tahoma, sans-serif;
+  font-size: 44px;
+  line-height: 90%;
+  width: auto;
+  margin: 0 auto;
+  display: inline-block;
+  position: relative;
+  font-size: 18px;
+}
+.coupon-banner-amountOffOver .subhead-inner .prepend {
+  top: 0;
+}
+.coupon-banner-amountOffOver .subhead-inner .append {
+  right: -20px;
+}
+.coupon-banner-amountOffOver .headline-inner {
+  font-family: "Arial Black", Helvetica, Tahoma, sans-serif;
+  font-size: 44px;
+  line-height: 90%;
+  width: auto;
+  margin: 0 auto;
+  display: inline-block;
+  position: relative;
+}
+.coupon-banner-amountOffOver .headline-inner .prepend {
+  bottom: -22%;
+  font-size: 16px;
+}
+.coupon-banner-amountOffOver .headline-inner .append {
+  bottom: -22%;
+  font-size: 16px;
+  right: -20px;
+}
+.coupon-banner-percentageDiscount {
+  position: relative;
+  height: 180px;
+  background-color: #ff8c00;
+}
+.coupon-banner-percentageDiscount .coupon-banner-background {
+  background: url(images/banner.9.png) center center;
+  background-size: 100% auto;
+  position: absolute;
+  left: 0;
+  top: -70px;
+  width: 100%;
+  height: 320px;
+}
+.coupon-banner-percentageDiscount .prepend {
+  font-family: "Arial Black", Helvetica, Tahoma, sans-serif;
+  position: absolute;
+  width: 20px;
+  left: -20px;
+  font-size: 18px;
+}
+.coupon-banner-percentageDiscount .append {
+  position: absolute;
+  top: 0;
+  font-size: 18px;
+  width: 20px;
+}
+.coupon-banner-percentageDiscount #coupon-scope {
+  line-height: 150%;
+  letter-spacing: 1px;
+}
+.coupon-banner-percentageDiscount .subhead {
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+.coupon-banner-percentageDiscount .headline {
+  font-family: "Arial Black", Helvetica, Tahoma, sans-serif;
+  font-size: 44px;
+  line-height: 90%;
+  width: auto;
+  margin: 0 auto;
+  display: inline-block;
+  position: relative;
+}
+.coupon-banner-percentageDiscount .append {
+  font-family: "Arial Black", Helvetica, Tahoma, sans-serif;
+  top: -22%;
+  right: -20px;
+}
+#coupon-banner-detail {
+  position: absolute;
+  margin: 52.2px 0;
+  width: 100%;
   text-align: center;
   color: #ffffff;
 }
-#reduction {
-  font-family: "Arial Black", Helvetica, Tahoma, sans-serif;
-  font-size: 44px;
-  line-height: 90%;
-  width: auto;
-  margin: 0 auto;
-  display: inline-block;
-  position: relative;
-}
-#activity4 {
-  font-family: "Arial Black", Helvetica, Tahoma, sans-serif;
-  font-size: 44px;
-  line-height: 90%;
-  width: auto;
-  margin: 0 auto;
-  display: inline-block;
-  position: relative;
-}
-#interval2 {
+#coupon-scope {
   font-size: 16px;
-  line-height: 150%;
+  line-height: 140%;
   letter-spacing: 4px;
 }
-#unit1 {
-  font-family: "Arial Black", Helvetica, Tahoma, sans-serif;
-  position: absolute;
-  top: -22%;
-  color: #ffffff;
-  font-size: 18px;
-  width: 20px;
-  left: -16px;
-}
-#text {
+.info-card {
   text-align: left;
   margin: 9px;
   padding: 18px 18px 9px 18px;
@@ -142,41 +225,58 @@
   background: #ffffff;
   border-radius: 0px 0px 2px 2px;
 }
-#text1 {
-  color: #fddc43;
-}
-#text2 {
+.info-card .info-detail {
   color: #0f0f0f;
   font-size: 12px;
   padding-top: 4.5px;
 }
-#text3 {
+.info-card .info-meta {
   text-align: right;
   padding: 9px 0;
   color: #b4b4b4;
 }
-#text4 {
+.info-card .info-action {
   font-size: 18px;
   letter-spacing: 4px;
   text-align: center;
   color: #ffffff;
   padding: 0.5em 0;
-  background: #fddc43;
   border-radius: 2px;
 }
-#text-number {
-  text-align: center;
-  padding: 9px;
-  color: #fddc43;
-}
-#text6 {
-  color: #d2d2d2;
-}
-#portrait {
+.info-card .info-action .portrait {
   position: absolute;
   margin: -54px 0 0 18px;
   width: 48px;
   height: 48px;
   border-radius: 100%;
   background: #0f0f0f;
+}
+#info-card-fixedDiscount .info-title,
+#info-card-fixedDiscount .info-footer em {
+  color: #fddc43;
+}
+#info-card-fixedDiscount .info-action {
+  background: #fddc43;
+}
+#info-card-percentageDiscount .info-title,
+#info-card-percentageDiscount .info-footer em {
+  color: #ff8c00;
+}
+#info-card-percentageDiscount .info-action {
+  background: #ff8c00;
+}
+#info-card-amountOffOver .info-title,
+#info-card-amountOffOver .info-footer em {
+  color: #2980b9;
+}
+#info-card-amountOffOver .info-action {
+  background: #2980b9;
+}
+.info-footer {
+  text-align: center;
+  padding: 9px;
+  color: #d2d2d2;
+}
+.info-footer em {
+  font-style: normal;
 }
