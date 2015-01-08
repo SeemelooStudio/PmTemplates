@@ -1,0 +1,252 @@
+.pabsolute {
+  position: absolute;
+}
+.prelative {
+  position: relative;
+}
+.with-padding {
+  padding: 9px;
+}
+#tour {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+#pagesWrapper {
+  width: 400%;
+  height: 100%;
+}
+.page {
+  width: 25%;
+  height: 100%;
+}
+.shapesWrapper {
+  margin: 0 auto;
+  position: relative;
+  width: 320px;
+  height: 320px;
+}
+/*
+#shop-shape {
+	position: absolute;
+	top: 50%;
+	margin-top: -100px;
+	left: 50%;
+	margin-left: -80px;
+	width: 160px;
+	height: 200px;
+	background-color: #55a5db;
+}
+
+#shadow1 {
+	position: absolute;
+	top: 50%;
+	margin-top: -56px;
+	left: 50%;
+	margin-left: -74px;
+	width: 148px;
+	height: 156px;
+	background-color: #0d2f3f;
+}
+
+#shadow2 {
+	position: absolute;
+	top: 50%;
+	margin-top: -56px;
+	left: 50%;
+	margin-left: -80px;
+	width: 160px;
+	height: 20px;
+	background-color: #36698c;
+}
+
+#roof{
+	position: absolute;
+	top: 50%;
+	margin-top: -70px;
+	left: 50%;
+	margin-left: -95px;
+	background: url(app/images/roof.png);
+	background-size: 190px 30px;
+	width: 190px;
+	height: 30px;
+}
+
+#shop-logo{
+	position: absolute;
+	top: 50%;
+	margin-top: -118px;
+	left: 50%;
+	margin-left: -20px;
+	background: url(app/images/logo.png);
+	background-size: 40px 40px;
+	width: 40px;
+	height: 40px;
+}
+
+
+#chair{
+	position: absolute;
+	top: 50%;
+	margin-top: 36px;
+	left: 50%;
+	margin-left: 0px;
+	background: url(app/images/chair.png);
+	background-size: 64px 64px;
+	width: 64px;
+	height: 64px;
+}
+
+
+#breakfast{
+	position: absolute;
+	top: 50%;
+	margin-top: 56px;
+	left: 50%;
+	margin-left: -60px;
+	background: url(app/images/breakfast.png);
+	background-size: 44px 44px;
+	width: 44px;
+	height: 44px;
+}
+
+#shoes{
+	position: absolute;
+	top: 50%;
+	margin-top: 10px;
+	left: 50%;
+	margin-left: -52px;
+	background: url(app/images/shoes.png);
+	background-size: 36px 36px;
+	width: 36px;
+	height: 36px;
+}
+
+#bag{
+	position: absolute;
+	top: 50%;
+	margin-top: -49px;
+	left: 50%;
+	margin-left: -60px;
+	background: url(app/images/bag.png);
+	background-size: 50px 50px;
+	width: 50px;
+	height: 50px;
+}
+
+#iphone{
+	position: absolute;
+	top: 50%;
+	margin-top: -54px;
+	left: 50%;
+	margin-left: -23px;
+	background: url(app/images/iphone.png);
+	background-size: 82px 82px;
+	width: 82px;
+	height: 82px;
+}
+
+#iwatch{
+	position: absolute;
+	top: 50%;
+	margin-top: -22px;
+	left: 50%;
+	margin-left: 32px;
+	background: url(app/images/iwatch.png);
+	background-size: 44px 44px;
+	width: 44px;
+	height: 44px;
+}
+*/
+/*
+#pm{
+	position: absolute;
+	top: 50%;
+	margin-top: -140px;
+	left: 50%;
+	margin-left: -140px;
+	background: url(app/images/pm.png);
+	background-size: 280px 280px;
+	width: 280px;
+	height: 280px;
+}
+
+#designer{
+	position: absolute;
+	top: 50%;
+	margin-top: -140px;
+	left: 50%;
+	margin-left: -140px;
+	background: url(app/images/designer.png);
+	background-size: 280px 280px;
+	width: 280px;
+	height: 280px;
+}
+
+#engineer{
+	position: absolute;
+	top: 50%;
+	margin-top: -140px;
+	left: 50%;
+	margin-left: -140px;
+	background: url(app/images/engineer.png);
+	background-size: 280px 280px;
+	width: 280px;
+	height: 280px;
+}
+
+.eyes{
+	position: absolute;
+	background-color: #373737;
+	border-radius: 100%;
+	width: 3px;
+	height: 3px;
+}
+
+#eyes1{
+	top: 50%;
+	margin-top: 8px;
+	left: 50%;
+	margin-left: -41px;
+}
+
+#eyes2{
+	top: 50%;
+	margin-top: 8px;
+	left: 50%;
+	margin-left: -52px;
+}
+*/
+#cloud {
+  position: absolute;
+  top: 50%;
+  margin-top: -150px;
+  left: 50%;
+  margin-left: -150px;
+  background: url(app/images/cloud.png);
+  background-size: 300px 300px;
+  width: 300px;
+  height: 300px;
+}
+#earth {
+  position: absolute;
+  top: 50%;
+  margin-top: -150px;
+  left: 50%;
+  margin-left: -150px;
+  background: url(app/images/earth.png);
+  background-size: 300px 300px;
+  width: 300px;
+  height: 300px;
+}
+#hot {
+  position: absolute;
+  top: 50%;
+  margin-top: -150px;
+  left: 50%;
+  margin-left: -150px;
+  background: url(app/images/hot.png);
+  background-size: 300px 300px;
+  width: 280px;
+  height: 280px;
+}

@@ -15,7 +15,7 @@
   height: 180px;
 }
 .coupon-banner .coupon-banner-background {
-  background: url(images/banner.9.png) center center;
+  background: url(images/banner.20.png) center center;
   background-size: 100% auto;
   position: absolute;
   left: 0;
@@ -51,7 +51,7 @@
   background-color: #fddc43;
 }
 .coupon-banner-fixedDiscount .coupon-banner-background {
-  background: url(images/banner.9.png) center center;
+  background: url(images/banner.20.png) center center;
   background-size: 100% auto;
   position: absolute;
   left: 0;
@@ -96,7 +96,7 @@
   background-color: #2980b9;
 }
 .coupon-banner-amountOffOver .coupon-banner-background {
-  background: url(images/banner.9.png) center center;
+  background: url(images/banner.20.png) center center;
   background-size: 100% auto;
   position: absolute;
   left: 0;
@@ -160,7 +160,7 @@
   background-color: #ff8c00;
 }
 .coupon-banner-percentageDiscount .coupon-banner-background {
-  background: url(images/banner.9.png) center center;
+  background: url(images/banner.20.png) center center;
   background-size: 100% auto;
   position: absolute;
   left: 0;
