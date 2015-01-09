@@ -211,7 +211,60 @@
 	background-size: 300px 300px;
 	width: 300px;
 	height: 300px;
+
+	animation-name:myfirst;
+	animation-duration:35s;
+	animation-timing-function:linear;
+	animation-delay:0s;
+	animation-iteration-count:infinite;
+	animation-direction:normal;
+	animation-play-state:running;
+	/* Firefox: */
+	-moz-animation-name:myfirst;
+	-moz-animation-duration:35s;
+	-moz-animation-timing-function:linear;
+	-moz-animation-delay:0s;
+	-moz-animation-iteration-count:infinite;
+	-moz-animation-direction:normal;
+	-moz-animation-play-state:running;
+	/* Safari and Chrome: */
+	-webkit-animation-name:myfirst;
+	-webkit-animation-duration:35s;
+	-webkit-animation-timing-function:linear;
+	-webkit-animation-delay:0s;
+	-webkit-animation-iteration-count:infinite;
+	-webkit-animation-direction:normal;
+	-webkit-animation-play-state:running;
 }
+
+@keyframes myfirst{
+	0%   {transform:rotate(0deg); width: 300px; height: 300px;}
+	25%  {transform:rotate(90deg); width: 300px; height: 300px;}
+	50%  {transform:rotate(180deg); width: 300px; height: 300px;}
+	75%  {transform:rotate(270deg); width: 300px; height: 300px;}
+	100% {transform:rotate(360deg); width: 300px; height: 300px;}
+}
+/* Firefox: */
+@-moz-keyframes myfirst{
+	0%   {transform:rotate(0deg); width: 300px; height: 300px;}
+	25%  {transform:rotate(90deg); width: 300px; height: 300px;}
+	50%  {transform:rotate(180deg); width: 300px; height: 300px;}
+	75%  {transform:rotate(270deg); width: 300px; height: 300px;}
+	100% {transform:rotate(360deg); width: 300px; height: 300px;}
+}
+/* Safari and Chrome: */
+@-webkit-keyframes myfirst{
+	0%   {transform:rotate(0deg); width: 300px; height: 300px;}
+	25%  {transform:rotate(90deg); width: 300px; height: 300px;}
+	50%  {transform:rotate(180deg); width: 300px; height: 300px;}
+	75%  {transform:rotate(270deg); width: 300px; height: 300px;}
+	100% {transform:rotate(360deg); width: 300px; height: 300px;}
+}
+
+
+
+
+
 
 #earth{
 	position: absolute;
@@ -231,6 +284,30 @@
 	background-size: 300px 300px;
 	width: 300px;
 	height: 300px;
+
+	animation-name:myfirst;
+	animation-duration:80s;
+	animation-timing-function:linear;
+	animation-delay:0s;
+	animation-iteration-count:infinite;
+	animation-direction:normal;
+	animation-play-state:running;
+	/* Firefox: */
+	-moz-animation-name:myfirst;
+	-moz-animation-duration:80s;
+	-moz-animation-timing-function:linear;
+	-moz-animation-delay:0s;
+	-moz-animation-iteration-count:infinite;
+	-moz-animation-direction:normal;
+	-moz-animation-play-state:running;
+	/* Safari and Chrome: */
+	-webkit-animation-name:myfirst;
+	-webkit-animation-duration:80s;
+	-webkit-animation-timing-function:linear;
+	-webkit-animation-delay:0s;
+	-webkit-animation-iteration-count:infinite;
+	-webkit-animation-direction:normal;
+	-webkit-animation-play-state:running;
 }
 
 
