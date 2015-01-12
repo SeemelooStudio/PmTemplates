@@ -1,464 +1,495 @@
 @import "lib/variables.less";
 @import "lib/mixins.less";
+.transform( @property: none) {
+    -webkit-transform: @property;
+    -moz-transform: @property;
+    -ms-transform: @property;
+    -o-transform: @property;
+    transform: @property;
+}
+@tour-timing-function: cubic-bezier(.36, 0, .15, 1);
 
+.tour-animation(@name, @duration, @delay: 0, @count: 1, @fill-mode: both) {
+    -webkit-animation: @name @duration @delay @count @tour-timing-function @fill-mode;
+    -moz-animation: @name @duration @delay @count @tour-timing-function @fill-mode;
+    -ms-animation: @name @duration @delay @count @tour-timing-function @fill-mode;
+    -o-animation: @name @duration @delay @count @tour-timing-function @fill-mode;
+    animation: @name @duration @delay @count @tour-timing-function @fill-mode;
+}
 
+.resetTranslate {
+	.transform(translate3d(0,0,0));
+}
+
+.resetAllTransform {
+	.transform(translate3d(0,0,0) scale3d(1,1,1) rotate3d(0,0,1,0deg));
+}
 #tour {
-	width: 100%;
-	height: 100%;
-	overflow: hidden;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 }
-
-#pagesWrapper{
-	width: 400%;
-	height: 100%;
+#pagesWrapper {
+    width: 1280px;
+    height: 100%;
+    transition:.3s;
 }
-
 .page {
-	width: 25%;
-	height: 100%;
+    width: 320px;
+    height: 100%;
+    float: left;
+    display: inline-block;
+    position:relative;
 }
-
-.shapesWrapper{
-	margin: 0 auto;
-	position: relative;
-	width: 320px;
-	height: 320px;
+#page1 {
+	z-index:4;
 }
+#page2 {
+	z-index:3;
+}
+#page3 {
+	z-index:2;
+}
+#page4 {
+	z-index:1;
+}
+.shapesWrapper {
+    margin: 0 auto;
+    position: relative;
+    width: 320px;
+    height: 320px;
+    
+    
+}
+.from0to1 {
+	.transform(translate3d(0, 0, 0));
+}
+.from1to2 {
+	.transform(translate3d(-25%, 0, 0));
 
-
-
-
-
-
-/*
+	#shop-shape {
+	    .tour-animation(shop-shape, 0.6s);
+	    -webkit-transform-origin: center bottom;
+	}
+	#shadow1 {
+		.tour-animation(shadow1, 0.4s, 0.8s);
+	    -webkit-transform-origin: center top;
+	}
+	#shadow2 {
+		.tour-animation(shadow1, 0.3s, 0.9s);
+        -webkit-transform-origin: center top;
+	}
+	#roof {
+		.tour-animation(roof, 0.6s, 0.6s);
+        -webkit-transform-origin: center top;
+	}
+	#shop-logo {
+	.tour-animation(logo, 0.6s, 0.6s);
+	}
+}
+.from2to3 {
+	.transform(translate3d(-50%, 0, 0));
+}
 #shop-shape {
-	position: absolute;
-	top: 50%;
-	margin-top: -100px;
-	left: 50%;
-	margin-left: -85px;
-	width: 170px;
-	height: 200px;
-	background-color: #55a5db;
+    position: absolute;
+    top: 50%;
+    margin-top: -100px;
+    left: 50%;
+    margin-left: -85px;
+    width: 170px;
+    height: 200px;
+    background-color: #55a5db;
 }
-
+@-webkit-keyframes shop-shape {
+    0% {
+        transform: scale3d(1, 0, 1);
+    }
+    80% {
+        transform: scale3d(1, 1.2, 1);
+    }
+    100% {
+        transform: scale3d(1, 1, 1);
+    }
+}
 #shadow1 {
-	position: absolute;
-	bottom: 0;
-	left: 6px;
-	width: 158px;
-	height: 156px;
-	background-color: #0d2f3f;
+    position: absolute;
+    bottom: 0;
+    left: 6px;
+    width: 158px;
+    height: 160px;
+    background-color: #0d2f3f;
+    
 }
-
+@-webkit-keyframes shadow1 {
+    0% {
+        transform: scale3d(1, 0, 1);
+    }
+    100% {
+        transform: scale3d(1, 1, 1);
+    }
+}
 #shadow2 {
-	position: absolute;
-	top: 44px;
-	left: 0;
-	width: 170px;
-	height: 20px;
-	background-color: #36698c;
+    position: absolute;
+    top: 44px;
+    left: 0;
+    width: 170px;
+    height: 20px;
+    background-color: #36698c;
+    
 }
-
-#roof{
-	position: absolute;
-	top: 30px;
-	left: -10px;
-	background: url(app/images/roof.png);
-	background-size: 190px 30px;
-	width: 190px;
-	height: 30px;
+#roof {
+    position: absolute;
+    top: 30px;
+    left: -10px;
+    background: url(app/images/roof.png);
+    background-size: 190px 30px;
+    width: 190px;
+    height: 30px;
+    
 }
-
-#shop-logo{
-	position: absolute;
-	top: -22px;
-	left: 63px;
-	background: url(app/images/logo.png);
-	background-size: 44px 44px;
-	width: 44px;
-	height: 44px;
+@-webkit-keyframes roof {
+    0% {
+        transform: rotate3d(1, 0, 0, 90deg);
+    }
+    100% {
+        transform: rotate3d(1, 0, 0, 0deg);
+    }
 }
-
-#chair{
-	position: absolute;
-	bottom: 0;
-	right: 20px;
-	background: url(app/images/chair.png);
-	background-size: 64px 64px;
-	width: 64px;
-	height: 64px;
+#shop-logo {
+    position: absolute;
+    top: -22px;
+    left: 63px;
+    background: url(app/images/logo.png);
+    background-size: 44px 44px;
+    width: 44px;
+    height: 44px;
+    
 }
-
-#breakfast{
-	position: absolute;
-	bottom: 0;
-	left: 25px;
-	background: url(app/images/breakfast.png);
-	background-size: 44px 44px;
-	width: 44px;
-	height: 44px;
+@-webkit-keyframes logo {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, -320px, 0) rotate3d(0, 0, 1, -720deg) scale3d(5.0, 5.0, 1);
+    }
+    100% {
+        opacity: 1;
+        .resetAllTransform();
+    }
 }
-
-#shoes{
-	position: absolute;
-	top: 110px;
-	left: 32px;
-	background: url(app/images/shoes.png);
-	background-size: 36px 36px;
-	width: 36px;
-	height: 36px;
+.tour-page1-items-animation(@name, @duration: 0.6s, @delay: 1s) {
+    .tour-animation(@name, @duration, @delay);
 }
-
-#bag{
-	position: absolute;
-	top: 52px;
-	left: 25px;
-	background: url(app/images/bag.png);
-	background-size: 50px 50px;
-	width: 50px;
-	height: 50px;
+#chair {
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+    background: url(app/images/chair.png);
+    background-size: 64px 64px;
+    width: 64px;
+    height: 64px;
+    .tour-page1-items-animation(chair);
 }
-
-#iphone{
-	position: absolute;
-	top: 47px;
-	left: 62px;
-	background: url(app/images/iphone.png);
-	background-size: 82px 82px;
-	width: 82px;
-	height: 82px;
+@-webkit-keyframes chair {
+    0% {
+        transform: translate3d(320px, 300px, 0);
+    }
+    100% {
+        .resetTranslate();
+    }
 }
-
-#iwatch{
-	position: absolute;
-	top: 80px;
-	right: 7px;
-	background: url(app/images/iwatch.png);
-	background-size: 44px 44px;
-	width: 44px;
-	height: 44px;
+#breakfast {
+    position: absolute;
+    bottom: 0;
+    left: 25px;
+    background: url(app/images/breakfast.png);
+    background-size: 44px 44px;
+    width: 44px;
+    height: 44px;
+    .tour-page1-items-animation(breakfast);
 }
-*/
-
-
-
-
-
-
-
-
-/*
-#pm{
-	position: absolute;
-	top: 20px;
-	left: 20px;
-	background: url(app/images/pm.png);
-	background-size: 290px 290px;
-	width: 290px;
-	height: 290px;
+@-webkit-keyframes breakfast {
+    0% {
+        transform: translate3d(-320px, 300px, 0);
+    }
+    100% {
+        .resetTranslate();
+    }
 }
-
-#designer{
-	position: absolute;
-	top: 20px;
-	left: 20px;
-	background: url(app/images/designer.png);
-	background-size: 290px 290px;
-	width: 290px;
-	height: 290px;
+#shoes {
+    position: absolute;
+    top: 110px;
+    left: 32px;
+    background: url(app/images/shoes.png);
+    background-size: 36px 36px;
+    width: 36px;
+    height: 36px;
+    .tour-page1-items-animation(shoes);
 }
-
-#engineer{
-	position: absolute;
-	top: 20px;
-	left: 20px;
-	background: url(app/images/engineer.png);
-	background-size: 290px 290px;
-	width: 290px;
-	height: 290px;
+@-webkit-keyframes shoes {
+    0% {
+        transform: translate3d(-320px, 0px, 0);
+    }
+    100% {
+        .resetTranslate();
+    }
 }
-
-.eyes{
-	position: absolute;
-	background-color: #373737;
-	border-radius: 100%;
-	width: 3px;
-	height: 3px;
+#bag {
+    position: absolute;
+    top: 52px;
+    left: 25px;
+    background: url(app/images/bag.png);
+    background-size: 50px 50px;
+    width: 50px;
+    height: 50px;
+    .tour-page1-items-animation(bag);
 }
-
-#eyes1{
-	top: 173px;
-	left: 122px;
+@-webkit-keyframes bag {
+    0% {
+        transform: translate3d(-320px, -250px, 0);
+    }
+    100% {
+        .resetTranslate();
+    }
 }
-
-#eyes2{
-	top: 173px;
-	left: 110px;
+#iphone {
+    position: absolute;
+    top: 47px;
+    left: 62px;
+    background: url(app/images/iphone.png);
+    background-size: 82px 82px;
+    width: 82px;
+    height: 82px;
+    .tour-page1-items-animation(iphone);
 }
-*/
-
-
-
-
-
-
-#cloud{
-	position: absolute;
-	top: 10px;
-	left: 10px;
-	background: url(app/images/cloud.png);
-	background-size: 300px 300px;
-	width: 300px;
-	height: 300px;
-
-	animation-name:myfirst;
-	animation-duration:35s;
-	animation-timing-function:linear;
-	animation-delay:0s;
-	animation-iteration-count:infinite;
-	animation-direction:normal;
-	animation-play-state:running;
-	/* Firefox: */
-	-moz-animation-name:myfirst;
-	-moz-animation-duration:35s;
-	-moz-animation-timing-function:linear;
-	-moz-animation-delay:0s;
-	-moz-animation-iteration-count:infinite;
-	-moz-animation-direction:normal;
-	-moz-animation-play-state:running;
-	/* Safari and Chrome: */
-	-webkit-animation-name:myfirst;
-	-webkit-animation-duration:35s;
-	-webkit-animation-timing-function:linear;
-	-webkit-animation-delay:0s;
-	-webkit-animation-iteration-count:infinite;
-	-webkit-animation-direction:normal;
-	-webkit-animation-play-state:running;
+@-webkit-keyframes iphone {
+    0% {
+        transform: translate3d(320px, 0px, 0);
+    }
+    100% {
+        .resetTranslate();
+    }
 }
-
-@keyframes myfirst{
-	0%   {transform:rotate(0deg); width: 300px; height: 300px;}
-	25%  {transform:rotate(90deg); width: 300px; height: 300px;}
-	50%  {transform:rotate(180deg); width: 300px; height: 300px;}
-	75%  {transform:rotate(270deg); width: 300px; height: 300px;}
-	100% {transform:rotate(360deg); width: 300px; height: 300px;}
+#iwatch {
+    position: absolute;
+    top: 80px;
+    right: 7px;
+    background: url(app/images/iwatch.png);
+    background-size: 44px 44px;
+    width: 44px;
+    height: 44px;
+    .tour-page1-items-animation(iwatch);
 }
-/* Firefox: */
-@-moz-keyframes myfirst{
-	0%   {transform:rotate(0deg); width: 300px; height: 300px;}
-	25%  {transform:rotate(90deg); width: 300px; height: 300px;}
-	50%  {transform:rotate(180deg); width: 300px; height: 300px;}
-	75%  {transform:rotate(270deg); width: 300px; height: 300px;}
-	100% {transform:rotate(360deg); width: 300px; height: 300px;}
+@-webkit-keyframes iwatch {
+    0% {
+        transform: translate3d(320px, -350px, 0);
+    }
+    100% {
+        .resetTranslate();
+    }
 }
-/* Safari and Chrome: */
-@-webkit-keyframes myfirst{
-	0%   {transform:rotate(0deg); width: 300px; height: 300px;}
-	25%  {transform:rotate(90deg); width: 300px; height: 300px;}
-	50%  {transform:rotate(180deg); width: 300px; height: 300px;}
-	75%  {transform:rotate(270deg); width: 300px; height: 300px;}
-	100% {transform:rotate(360deg); width: 300px; height: 300px;}
+#pm {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: url(app/images/pm.png);
+    background-size: 290px 290px;
+    width: 290px;
+    height: 290px;
 }
-
-
-
-
-
-
-#earth{
-	position: absolute;
-	top: 10px;
-	left: 10px;
-	background: url(app/images/earth.png);
-	background-size: 300px 300px;
-	width: 300px;
-	height: 300px;
+#designer {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: url(app/images/designer.png);
+    background-size: 290px 290px;
+    width: 290px;
+    height: 290px;
 }
-
-#hot{
-	position: absolute;
-	top: 10px;
-	left: 10px;
-	background: url(app/images/hot.png);
-	background-size: 300px 300px;
-	width: 300px;
-	height: 300px;
-
-	animation-name:myfirst;
-	animation-duration:80s;
-	animation-timing-function:linear;
-	animation-delay:0s;
-	animation-iteration-count:infinite;
-	animation-direction:normal;
-	animation-play-state:running;
-	/* Firefox: */
-	-moz-animation-name:myfirst;
-	-moz-animation-duration:80s;
-	-moz-animation-timing-function:linear;
-	-moz-animation-delay:0s;
-	-moz-animation-iteration-count:infinite;
-	-moz-animation-direction:normal;
-	-moz-animation-play-state:running;
-	/* Safari and Chrome: */
-	-webkit-animation-name:myfirst;
-	-webkit-animation-duration:80s;
-	-webkit-animation-timing-function:linear;
-	-webkit-animation-delay:0s;
-	-webkit-animation-iteration-count:infinite;
-	-webkit-animation-direction:normal;
-	-webkit-animation-play-state:running;
+#engineer {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: url(app/images/engineer.png);
+    background-size: 290px 290px;
+    width: 290px;
+    height: 290px;
 }
-
-
-
-
-
-
-
-
-/*
-.card{
-	position: absolute;
-	top: 50%;
-	margin-top: -100px;
-	left: 50%;
-	margin-left: -75px;
-	border-radius: 0 0 4px 4px;
-	width: 150px;
-	height: 200px;
-	background-color: #f6f6f6;
-	background-size: 150px 200px;
+.eyes {
+    position: absolute;
+    background-color: #373737;
+    border-radius: 100%;
+    width: 3px;
+    height: 3px;
 }
-
-#card-show5{
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 150px;
-	height: 150px;
-	background-size: 150px 150px;
-	background-color: #fdd835;
+#eyes1 {
+    top: 173px;
+    left: 122px;
 }
-
-#card-show4{
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 150px;
-	height: 150px;
-	background-size: 150px 150px;
-	background-color: #7cb342;
+#eyes2 {
+    top: 173px;
+    left: 110px;
 }
-
-#card-show3{
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 150px;
-	height: 150px;
-	background-size: 150px 150px;
-	background-color: #00acc1;
+#cloud {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: url(app/images/cloud.png);
+    background-size: 300px 300px;
+    width: 300px;
+    height: 300px;
+    -webkit-animation: cloud 35s infinite;
 }
-
-#card-show2{
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 150px;
-	height: 150px;
-	background-size: 150px 150px;
-	background-color: #3949ab;
+@-webkit-keyframes cloud {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
-
-#card-show1{
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 150px;
-	height: 150px;
-	background-size: 150px 150px;
-	background-color: #00897b;
+#earth {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: url(app/images/earth.png);
+    background-size: 300px 300px;
+    width: 300px;
+    height: 300px;
 }
-
-#card-bag{
-	position: absolute;
-	top: 10px;
-	left: 10px;
-	background: url(app/images/bag.png);
-	background-size: 130px 130px;
-	width: 130px;
-	height: 130px;
+#hot {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: url(app/images/hot.png);
+    background-size: 300px 300px;
+    width: 300px;
+    height: 300px;
+    -webkit-animation: cloud 80s infinite;
 }
-
-#card-shoes{
-	position: absolute;
-	top: 15px;
-	left: 15px;
-	background: url(app/images/shoes.png);
-	background-size: 120px 120px;
-	width: 120px;
-	height: 120px;
+.card {
+    position: absolute;
+    top: 50%;
+    margin-top: -100px;
+    left: 50%;
+    margin-left: -75px;
+    border-radius: 0 0 4px 4px;
+    width: 150px;
+    height: 200px;
+    background-color: #f6f6f6;
+    background-size: 150px 200px;
 }
-
-#card-chair{
-	position: absolute;
-	top: 10px;
-	left: 10px;
-	background: url(app/images/chair.png);
-	background-size: 130px 130px;
-	width: 130px;
-	height: 130px;
+#card-show5 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 150px;
+    background-size: 150px 150px;
+    background-color: #fdd835;
 }
-
-#card-iwatch{
-	position: absolute;
-	top: 10px;
-	left: 10px;
-	background: url(app/images/iwatch.png);
-	background-size: 130px 130px;
-	width: 130px;
-	height: 130px;
+#card-show4 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 150px;
+    background-size: 150px 150px;
+    background-color: #7cb342;
 }
-
-#card-breakfast{
-	position: absolute;
-	top: 20px;
-	left: 20px;
-	background: url(app/images/breakfast.png);
-	background-size: 110px 110px;
-	width: 110px;
-	height: 110px;
+#card-show3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 150px;
+    background-size: 150px 150px;
+    background-color: #00acc1;
 }
-
-#card-content1{
-	position: absolute;
-	top: 163px;
-	left: 14px;
-	background-color: #eee;
-	background-size: 90px 10px;
-	width: 90px;
-	height: 10px;
+#card-show2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 150px;
+    background-size: 150px 150px;
+    background-color: #3949ab;
 }
-
-#card-content2{
-	position: absolute;
-	bottom: 12px;
-	left: 14px;
-	background-color: #eee;
-	background-size: 70px 10px;
-	width: 70px;
-	height: 10px;
+#card-show1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 150px;
+    background-size: 150px 150px;
+    background-color: #00897b;
 }
-
-.icon-shopping-cart{
-	position: absolute;
-	bottom: 12px;
-	right: 10px;
-	color: #ef6f59;
-	width: 26px;
-	height: 26px;
+#card-bag {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: url(app/images/bag.png);
+    background-size: 130px 130px;
+    width: 130px;
+    height: 130px;
 }
-
-*/
-
+#card-shoes {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: url(app/images/shoes.png);
+    background-size: 120px 120px;
+    width: 120px;
+    height: 120px;
+}
+#card-chair {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: url(app/images/chair.png);
+    background-size: 130px 130px;
+    width: 130px;
+    height: 130px;
+}
+#card-iwatch {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: url(app/images/iwatch.png);
+    background-size: 130px 130px;
+    width: 130px;
+    height: 130px;
+}
+#card-breakfast {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: url(app/images/breakfast.png);
+    background-size: 110px 110px;
+    width: 110px;
+    height: 110px;
+}
+#card-content1 {
+    position: absolute;
+    top: 163px;
+    left: 14px;
+    background-color: #eee;
+    background-size: 90px 10px;
+    width: 90px;
+    height: 10px;
+}
+#card-content2 {
+    position: absolute;
+    bottom: 12px;
+    left: 14px;
+    background-color: #eee;
+    background-size: 70px 10px;
+    width: 70px;
+    height: 10px;
+}
+.icon-shopping-cart {
+    position: absolute;
+    bottom: 12px;
+    right: 10px;
+    color: #ef6f59;
+    width: 26px;
+    height: 26px;
+}
