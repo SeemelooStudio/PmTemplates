@@ -58,8 +58,6 @@
     position: relative;
     width: 320px;
     height: 320px;
-    
-    
 }
 .from0to1 {
 	.transform(translate3d(0, 0, 0));
@@ -84,12 +82,84 @@
         -webkit-transform-origin: center top;
 	}
 	#shop-logo {
-	.tour-animation(logo, 0.6s, 0.6s);
+		.tour-animation(logo, 0.6s, 0.6s);
+	}
+	#bag {
+		.tour-page1-items-animation(bag);
+	}
+	#chair {
+	    .tour-page1-items-animation(chair);
+	}
+	#breakfast {
+    	.tour-page1-items-animation(breakfast);
+	}
+	#shoes {
+		.tour-page1-items-animation(shoes);
+	}
+	#iphone {
+	    .tour-page1-items-animation(iphone);
+	}
+	#iwatch {
+	    .tour-page1-items-animation(iwatch);
 	}
 }
 .from2to3 {
 	.transform(translate3d(-50%, 0, 0));
+	#bag {
+
+	}
+	#card5 {
+		-webkit-transform-origin: center 400px;
+    	.tour-animation(card5, 1s, 0.6s);
+    	.card();
+    	background-color: @color-black*15.4;
+	}
+	#card4 {
+		-webkit-transform-origin: center 400px;
+    	.tour-animation(card4, 1s, 0.6s);
+    	.card();
+    	background-color: @color-black*15.4;
+	}
+	#card3 {
+	    -webkit-transform-origin: center 400px;
+    	.tour-animation(card3, 1s, 0.6s);
+    	.card();
+    	background-color: @color-black*16.2;
+	}
+	#card2 {
+	    -webkit-transform-origin: center 400px;
+    	.tour-animation(card2, 1s, 0.6s);
+    	.card();
+    	background-color: @color-black*16.2;
+	}
+	#card1 {
+		.card();
+		background-color: @color-black*17;
+	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+.from3to4 {
+	.transform(translate3d(-75%, 0, 0));
+	#cloud {
+		-webkit-animation: cloud 35s infinite;
+	}
+	#hot {
+	    -webkit-animation: cloud 80s infinite;
+	}
+}
+
 #shop-shape {
     position: absolute;
     top: 50%;
@@ -118,7 +188,6 @@
     width: 158px;
     height: 160px;
     background-color: #0d2f3f;
-    
 }
 @-webkit-keyframes shadow1 {
     0% {
@@ -135,7 +204,6 @@
     width: 170px;
     height: 20px;
     background-color: #36698c;
-    
 }
 #roof {
     position: absolute;
@@ -145,7 +213,6 @@
     background-size: 190px 30px;
     width: 190px;
     height: 30px;
-    
 }
 @-webkit-keyframes roof {
     0% {
@@ -162,8 +229,7 @@
     background: url(app/images/logo.png);
     background-size: 44px 44px;
     width: 44px;
-    height: 44px;
-    
+    height: 44px;    
 }
 @-webkit-keyframes logo {
     0% {
@@ -186,7 +252,6 @@
     background-size: 64px 64px;
     width: 64px;
     height: 64px;
-    .tour-page1-items-animation(chair);
 }
 @-webkit-keyframes chair {
     0% {
@@ -204,7 +269,6 @@
     background-size: 44px 44px;
     width: 44px;
     height: 44px;
-    .tour-page1-items-animation(breakfast);
 }
 @-webkit-keyframes breakfast {
     0% {
@@ -222,7 +286,6 @@
     background-size: 36px 36px;
     width: 36px;
     height: 36px;
-    .tour-page1-items-animation(shoes);
 }
 @-webkit-keyframes shoes {
     0% {
@@ -240,7 +303,6 @@
     background-size: 50px 50px;
     width: 50px;
     height: 50px;
-    .tour-page1-items-animation(bag);
 }
 @-webkit-keyframes bag {
     0% {
@@ -258,7 +320,6 @@
     background-size: 82px 82px;
     width: 82px;
     height: 82px;
-    .tour-page1-items-animation(iphone);
 }
 @-webkit-keyframes iphone {
     0% {
@@ -276,7 +337,6 @@
     background-size: 44px 44px;
     width: 44px;
     height: 44px;
-    .tour-page1-items-animation(iwatch);
 }
 @-webkit-keyframes iwatch {
     0% {
@@ -336,7 +396,6 @@
     background-size: 300px 300px;
     width: 300px;
     height: 300px;
-    -webkit-animation: cloud 35s infinite;
 }
 @-webkit-keyframes cloud {
     0% {
@@ -363,133 +422,156 @@
     background-size: 300px 300px;
     width: 300px;
     height: 300px;
-    -webkit-animation: cloud 80s infinite;
 }
+
 .card {
     position: absolute;
     top: 50%;
-    margin-top: -100px;
+    margin-top: -80px;
     left: 50%;
-    margin-left: -75px;
+    margin-left: -60px;
     border-radius: 0 0 4px 4px;
-    width: 150px;
-    height: 200px;
-    background-color: #f6f6f6;
-    background-size: 150px 200px;
+    width: 120px;
+    height: 160px;
+    background-size: 120px 160px;
 }
-#card-show5 {
+
+@-webkit-keyframes card5 {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(14deg);
+    }
+}
+
+@-webkit-keyframes card4 {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-14deg);
+    }
+}
+
+@-webkit-keyframes card3 {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-7deg);
+    }
+}
+
+@-webkit-keyframes card2 {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(7deg);
+    }
+}
+
+.card-show {
     position: absolute;
     top: 0;
     left: 0;
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
     background-size: 150px 150px;
-    background-color: #fdd835;
 }
-#card-show4 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 150px;
-    height: 150px;
-    background-size: 150px 150px;
+
+#card-show1 {
+	.card-show();
+	background-color: #fdd835;
+}
+#card-show2 {
+    .card-show();
     background-color: #7cb342;
 }
 #card-show3 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 150px;
-    height: 150px;
-    background-size: 150px 150px;
+    .card-show();
     background-color: #00acc1;
 }
-#card-show2 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 150px;
-    height: 150px;
-    background-size: 150px 150px;
+
+#card-show4 {
+    .card-show();
     background-color: #3949ab;
 }
-#card-show1 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 150px;
-    height: 150px;
-    background-size: 150px 150px;
+
+#card-show5 {
+    .card-show();
     background-color: #00897b;
 }
+
 #card-bag {
     position: absolute;
     top: 10px;
     left: 10px;
     background: url(app/images/bag.png);
-    background-size: 130px 130px;
-    width: 130px;
-    height: 130px;
+    background-size: 100px 100px;
+    width: 100px;
+    height: 100px;
 }
 #card-shoes {
     position: absolute;
     top: 15px;
     left: 15px;
     background: url(app/images/shoes.png);
-    background-size: 120px 120px;
-    width: 120px;
-    height: 120px;
+    background-size: 90px 90px;
+    width: 90px;
+    height: 90px;
 }
 #card-chair {
     position: absolute;
     top: 10px;
     left: 10px;
     background: url(app/images/chair.png);
-    background-size: 130px 130px;
-    width: 130px;
-    height: 130px;
+    background-size: 100px 100px;
+    width: 100px;
+    height: 100px;
 }
 #card-iwatch {
     position: absolute;
     top: 10px;
     left: 10px;
     background: url(app/images/iwatch.png);
-    background-size: 130px 130px;
-    width: 130px;
-    height: 130px;
+    background-size: 100px 100px;
+    width: 100px;
+    height: 100px;
 }
 #card-breakfast {
     position: absolute;
     top: 20px;
     left: 20px;
     background: url(app/images/breakfast.png);
-    background-size: 110px 110px;
-    width: 110px;
-    height: 110px;
+    background-size: 80px 80px;
+    width: 80px;
+    height: 80px;
 }
 #card-content1 {
     position: absolute;
-    top: 163px;
+    top: 128px;
     left: 14px;
-    background-color: #eee;
-    background-size: 90px 10px;
-    width: 90px;
-    height: 10px;
-}
-#card-content2 {
-    position: absolute;
-    bottom: 12px;
-    left: 14px;
-    background-color: #eee;
+    background-color: @color-black*16.7;
     background-size: 70px 10px;
     width: 70px;
     height: 10px;
 }
+#card-content2 {
+    position: absolute;
+    bottom: 8px;
+    left: 14px;
+    background-color: @color-black*16.7;
+    background-size: 50px 10px;
+    width: 50px;
+    height: 10px;
+}
 .icon-shopping-cart {
     position: absolute;
-    bottom: 12px;
+    bottom: 8px;
     right: 10px;
     color: #ef6f59;
-    width: 26px;
-    height: 26px;
+    width: 22px;
+    height: 22px;
 }
