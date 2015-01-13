@@ -16,6 +16,13 @@
     -o-animation: @name @duration @delay @count @tour-timing-function @fill-mode;
     animation: @name @duration @delay @count @tour-timing-function @fill-mode;
 }
+.tour-animation-linear(@name, @duration, @delay: 0, @count: 1, @fill-mode: both) {
+    -webkit-animation: @name @duration @delay @count linear @fill-mode;
+    -moz-animation: @name @duration @delay @count linear @fill-mode;
+    -ms-animation: @name @duration @delay @count linear @fill-mode;
+    -o-animation: @name @duration @delay @count linear @fill-mode;
+    animation: @name @duration @delay @count linear @fill-mode;
+}
 
 .resetTranslate {
 	.transform(translate3d(0,0,0));
@@ -112,29 +119,34 @@
 .from2to3 {
 	.transform(translate3d(-50%, 0, 0));
 	#bag {
-
+		-webkit-transform-origin: center center;
+    	.tour-animation-linear(bag-out, 1.2s);
+	}
+	#card-bag {
+		-webkit-transform-origin: center center;
+    	.tour-animation-linear(card-bag, .1s, 0.9s);
 	}
 	#card5 {
 		-webkit-transform-origin: center 400px;
-    	.tour-animation(card5, 1s, 0.6s);
+    	.tour-animation(card5, 0.8s, 1.1s);
     	.card();
     	background-color: @color-black*15.4;
 	}
 	#card4 {
 		-webkit-transform-origin: center 400px;
-    	.tour-animation(card4, 1s, 0.6s);
+    	.tour-animation(card4, 0.8s, 1.1s);
     	.card();
     	background-color: @color-black*15.4;
 	}
 	#card3 {
 	    -webkit-transform-origin: center 400px;
-    	.tour-animation(card3, 1s, 0.6s);
+    	.tour-animation(card3, 0.7s, 1s);
     	.card();
     	background-color: @color-black*16.2;
 	}
 	#card2 {
 	    -webkit-transform-origin: center 400px;
-    	.tour-animation(card2, 1s, 0.6s);
+    	.tour-animation(card2, 0.7s, 1s);
     	.card();
     	background-color: @color-black*16.2;
 	}
@@ -143,13 +155,42 @@
 		background-color: @color-black*17;
 	}
 }
+@-webkit-keyframes bag-out {
+	48%, 72%, 75%{
+    transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+    0% {
+        .resetTranslate();
+    }
+    48% {
+        .transform(translate3d(355px, 3px, 0) rotate3d(0,0,1,-380deg) scale3d(2,2,1));
+    }
+    72% {
+        .transform(translate3d(355px, 3px, 0) rotate3d(0,0,1,-358deg) scale3d(2,2,1));
+    }
+  
+ 	75% {
+        .transform(translate3d(355px, 3px, 0) rotate3d(0,0,1,-360deg) scale3d(2,2,1));
+    }
 
+    99% {
+    	.transform(translate3d(355px, 3px, 0) rotate3d(0,0,1,-360deg) scale3d(2,2,1));
+        opacity: 1;
+    }
+    100%  {
+    	.transform(translate3d(355px, 3px, 0) rotate3d(0,0,1,-360deg) scale3d(2,2,1));
+    	display: none;
+    }
 
-
-
-
-
-
+}
+@-webkit-keyframes card-bag {
+	0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 
 
 
@@ -159,15 +200,136 @@
 .from3to4 {
 	.transform(translate3d(-75%, 0, 0));
 	#cloud {
-		.tour-animation(cloud,35s);
+		.tour-animation-linear(cloud, 20s, 0, infinite);
 		-webkit-transform-origin: center center;
 	}
 	#hot {
-		.tour-animation(cloud,80s);
+		.tour-animation-linear(cloud, 65s, 0, infinite);
 		-webkit-transform-origin: center center;
 	}
+	#card5 {
+		-webkit-transform-origin: center center;
+    	.tour-animation-linear(card5-out, 1.5s, 1.1s);
+    	.card();
+    	background-color: @color-black*15.4;
+	}
+	#card4 {
+		-webkit-transform-origin: center center;
+    	.tour-animation-linear(card4-out, 1.5s, 0.9s);
+    	.card();
+    	background-color: @color-black*15.4;
+	}
+	#card3 {
+	    -webkit-transform-origin: center center;
+    	.tour-animation-linear(card3-out, 1.5s, 0.7s);
+    	.card();
+    	background-color: @color-black*16.2;
+	}
+	#card2 {
+	    -webkit-transform-origin: center center;
+    	.tour-animation-linear(card2-out, 1.5s, 0.6s);
+    	.card();
+    	background-color: @color-black*16.2;
+	}
+	#card1 {
+		-webkit-transform-origin: center center;
+    	.tour-animation-linear(card1-out, 1.5s, 0.5s);
+		.card();
+		background-color: @color-black*17;
+	}
+	#dialog-pome {
+    .tour-animation-linear(dialog-pome, 0.22s, 2.7s);
+    -webkit-transform-origin: center top;
 }
-
+}
+@-webkit-keyframes card1-out {
+    0% {
+        .transform(translate3d(0px, 0px, 0) rotate3d(0,0,1,0deg) scale3d(1,1,1));
+    }
+    20% {
+        .transform(translate3d(110px, -105px, 0) rotate3d(0,0,1,90deg) scale3d(0.4,0.4,1));
+    }
+    40% {
+        .transform(translate3d(230px, -85px, 0) rotate3d(0,0,1,180deg) scale3d(0.3,0.3,1));
+    }
+ 	60% {
+        .transform(translate3d(312px, -61px, 0) rotate3d(0,0,1,270deg) scale3d(0.2,0.2,1));
+    }
+    80%  {
+    	.transform(translate3d(372px, -24px, 0) rotate3d(0,0,1,360deg) scale3d(0.1,0.1,1));
+    }
+    100%  {
+    	.transform(translate3d(410px, 33px, 0) rotate3d(0,0,1,450deg) scale3d(0,0,1));
+    }
+}
+@-webkit-keyframes card2-out {
+    0% {
+        .transform(translate3d(0px, 0px, 0) rotate3d(0,0,1,0deg) scale3d(1,1,1));
+    }
+    25% {
+        .transform(translate3d(102px, 132px, 0) rotate3d(0,0,1,90deg) scale3d(0.3,0.3,1));
+    }
+    50% {
+        .transform(translate3d(172px, 112px, 0) rotate3d(0,0,1,180deg) scale3d(0.2,0.2,1));
+    }
+ 	75% {
+        .transform(translate3d(254px, 89px, 0) rotate3d(0,0,1,270deg) scale3d(0.1,0.1,1));
+    }
+    100%  {
+    	.transform(translate3d(314px, 72px, 0) rotate3d(0,0,1,360deg) scale3d(0,0,1));
+    }
+}
+@-webkit-keyframes card3-out {
+    0% {
+        .transform(translate3d(0px, 0px, 0) rotate3d(0,0,1,0deg) scale3d(1,1,1));
+    }
+    25% {
+        .transform(translate3d(137px, -89px, 0) rotate3d(0,0,1,90deg) scale3d(0.4,0.4,1));
+    }
+    50% {
+        .transform(translate3d(257px, -88px, 0) rotate3d(0,0,1,180deg) scale3d(0.27,0.27,1));
+    }
+ 	75% {
+        .transform(translate3d(317px, -87px, 0) rotate3d(0,0,1,270deg) scale3d(0.13,0.13,1));
+    }
+    100%  {
+    	.transform(translate3d(363px, -86px, 0) rotate3d(0,0,1,360deg) scale3d(0,0,1));
+    }
+}
+@-webkit-keyframes card4-out {
+    0% {
+        .transform(translate3d(0px, 0px, 0) rotate3d(0,0,1,0deg) scale3d(1,1,1));
+    }
+    25% {
+        .transform(translate3d(80px, -80px, 0) rotate3d(0,0,1,90deg) scale3d(0.4,0.4,1));
+    }
+    50% {
+        .transform(translate3d(180px, -79px, 0) rotate3d(0,0,1,180deg) scale3d(0.3,0.3,1));
+    }
+ 	75% {
+        .transform(translate3d(240px, -78px, 0) rotate3d(0,0,1,270deg) scale3d(0.15,0.15,1));
+    }
+    100%  {
+    	.transform(translate3d(286px, -77px, 0) rotate3d(0,0,1,360deg) scale3d(0,0,1));
+    }
+}
+@-webkit-keyframes card5-out {
+    0% {
+        .transform(translate3d(0px, 0px, 0) rotate3d(0,0,1,0deg) scale3d(1,1,1));
+    }
+    25% {
+        .transform(translate3d(106px, -25px, 0) rotate3d(0,0,1,90deg) scale3d(0.5,0.5,1));
+    }
+    50% {
+        .transform(translate3d(226px, -23px, 0) rotate3d(0,0,1,180deg) scale3d(0.4,0.4,1));
+    }
+ 	75% {
+        .transform(translate3d(296px, -21px, 0) rotate3d(0,0,1,270deg) scale3d(0.2,0.2,1));
+    }
+    100%  {
+    	.transform(translate3d(334px, -18px, 0) rotate3d(0,0,1,360deg) scale3d(0,0,1));
+    }
+}
 #shop-shape {
     position: absolute;
     top: 50%;
@@ -249,9 +411,11 @@
         .resetAllTransform();
     }
 }
+
 .tour-page1-items-animation(@name, @duration: 0.6s, @delay: 1s) {
     .tour-animation(@name, @duration, @delay);
 }
+
 #chair {
     position: absolute;
     bottom: 0;
@@ -406,12 +570,11 @@
     height: 300px;
 }
 @-webkit-keyframes cloud {
-    0% {
-        .rotateZ();
-    }
-    100% {
-        .rotateZ(360deg);
-    }
+    0%   { .rotateZ(); }
+    25%  { .rotateZ(90deg); }
+    50%  { .rotateZ(180deg); }
+    75%  { .rotateZ(270deg); }
+    100% { .rotateZ(360deg); }
 }
 #earth {
     position: absolute;
@@ -431,7 +594,43 @@
     width: 300px;
     height: 300px;
 }
-
+#dialog-pome {
+	position: absolute;
+	top: 156px;
+	left: 134px;
+	background-color: @color-white;
+	background-size: 60px 30px;
+	border-radius: 20px;
+	width: 60px;
+	height: 30px;
+}
+@-webkit-keyframes dialog-pome {
+    0% {
+        .transform(scale3d(0, 0, 1));
+    }
+    100% {
+        .transform(scale3d(1, 1, 1));
+    }
+}
+#dialog-text{
+	color: @color-red;
+	font-size: 16px;
+    text-align: center;
+    font-style: normal;
+    padding-top: 2px;
+}
+#dialog-pome:before{
+	position: absolute;
+	top: -12px;
+	left: 38px;
+    border-style: solid solid solid solid;
+    border-width: 0 3px 13px 3px;
+    border-color: transparent transparent @color-white transparent;
+    width: 0;
+    height: 0;
+    display: block;
+    content: '';
+}
 .card {
     position: absolute;
     top: 50%;
