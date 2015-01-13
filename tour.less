@@ -1,5 +1,5 @@
 @import "lib/variables.less";
-@import "lib/mixins.less";
+
 .transform( @property: none) {
     -webkit-transform: @property;
     -moz-transform: @property;
@@ -781,4 +781,19 @@
     color: #ef6f59;
     width: 22px;
     height: 22px;
+}
+
+.pageInfo {
+    text-align: center;
+    padding: 0 @basic-gap @basic-gap;
+    line-height: 1.2;
+}
+.pageTitle {
+    color:#dd4b39;
+    margin-bottom: @basic-gap/2;
+    font-size: 20px;
+}
+.pageDetail {
+    color: #757575;
+    font-size: 12px;
 }
