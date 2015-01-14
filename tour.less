@@ -66,6 +66,9 @@
     width: 320px;
     height: 320px;
 }
+#cardsWrapper {
+	height: 100%;
+}
 .from0to1 {
 	.transform(translate3d(0, 0, 0));
 }
@@ -73,23 +76,24 @@
 	.transform(translate3d(-25%, 0, 0));
 
 	#shop-shape {
-	    .tour-animation(shop-shape, 0.6s);
+	    .tour-animation(shop-shape, 0.7s);
 	    -webkit-transform-origin: center bottom;
 	}
 	#shadow1 {
-		.tour-animation(shadow1, 0.3s, 0.8s);
+		.tour-animation(shadow1, 0.2s, 0.8s);
 	    -webkit-transform-origin: center top;
 	}
 	#shadow2 {
-		.tour-animation(roof, 0.85s, 0.75s);
+		.tour-animation(shadow1, 0.3s, 0.7s);
         -webkit-transform-origin: center top;
 	}
 	#roof {
-		.tour-animation(roof, 0.85s, 0.75s);
+		.tour-animation(roof, 0.77s, 0.4s);
         -webkit-transform-origin: center top;
 	}
 	#shop-logo {
-		.tour-animation(logo, 0.5s, 0.05s);
+		.tour-animation(logo, 0.59s, 2.2s);
+		-webkit-transform-origin: center bottom;
 	}
 	#bag {
 		.tour-page1-items-animation(bag);
@@ -114,33 +118,33 @@
 	.transform(translate3d(-50%, 0, 0));
 	#bag {
 		-webkit-transform-origin: center center;
-    	.tour-animation-linear(bag-out, 1.2s, 0.3s);
+    	.tour-animation-linear(bag-out, 1.2s, 0.4s);
 	}
 	#card-bag {
 		-webkit-transform-origin: center center;
-    	.tour-animation-linear(card-bag, 0.1s, 1.1s);
+    	.tour-animation-linear(card-bag, 0.1s, 1.5s);
 	}
 	#card5 {
 		-webkit-transform-origin: center 400px;
-    	.tour-animation(card5, 0.8s, 1.4s);
+    	.tour-animation(card5, 0.8s, 1.6s);
     	.card-small();
     	background-color: @color-black*15.4;
 	}
 	#card4 {
 		-webkit-transform-origin: center 400px;
-    	.tour-animation(card4, 0.8s, 1.4s);
+    	.tour-animation(card4, 0.8s, 1.6s);
     	.card-small();
     	background-color: @color-black*15.4;
 	}
 	#card3 {
 	    -webkit-transform-origin: center 400px;
-    	.tour-animation(card3, 0.7s, 1.3s);
+    	.tour-animation(card3, 0.7s, 1.5s);
     	.card-small();
     	background-color: @color-black*16.2;
 	}
 	#card2 {
 	    -webkit-transform-origin: center 400px;
-    	.tour-animation(card2, 0.7s, 1.3s);
+    	.tour-animation(card2, 0.7s, 1.5s);
     	.card-small();
     	background-color: @color-black*16.2;
 	}
@@ -148,11 +152,16 @@
 		.card();
 		background-color: @color-black*17;
 	}
+	#cardsWrapper {
+		-webkit-transform-origin: center center;
+		.tour-animation(cardsWrapper, 0.7s, 0.7s);
+
+	}
 	#card-content1{
-    	.tour-animation(card-content1, 0.3s, 1.3s);
+    	.tour-animation(card-content1, 0.3s, 1.5s);
 	}
 	#card-content2{
-    	.tour-animation(card-content1, 0.3s, 1.3s);
+    	.tour-animation(card-content1, 0.3s, 1.5s);
 	}
 }
 @-webkit-keyframes bag-out {
@@ -168,18 +177,14 @@
     72% {
         .transform(translate3d(355px, 3px, 0) rotate3d(0,0,1,-358deg) scale3d(2,2,1));
     }
-  
  	75% {
         .transform(translate3d(355px, 3px, 0) rotate3d(0,0,1,-360deg) scale3d(2,2,1));
     }
-
     99% {
     	.transform(translate3d(355px, 3px, 0) rotate3d(0,0,1,-360deg) scale3d(2,2,1));
-        opacity: 1;
     }
     100%  {
     	.transform(translate3d(355px, 3px, 0) rotate3d(0,0,1,-360deg) scale3d(2,2,1));
-    	display: none;
     }
 }
 @-webkit-keyframes card-bag {
@@ -379,13 +384,10 @@
 }
 @-webkit-keyframes roof {
     0% {
-        .transform(rotate3d(1, 0, 0, 90deg));
+        .transform(rotate3d(1,0,0,90deg));
     }
-    50% {
-        .transform(rotate3d(1, 0, 0, -60deg));
-    }   
     100% {
-        .transform(rotate3d(1, 0, 0, 30deg));
+        .transform(rotate3d(1,0,0,0deg));
     }
 }
 #shop-logo {
@@ -399,24 +401,15 @@
 }
 @-webkit-keyframes logo {
     0% {
-        .transform(rotate3d(0, 0, 1, -360deg) scale3d(0, 0, 1));
-    }
-    40% {
-        .transform(rotate3d(0, 0, 1, -270deg) scale3d(0, 0, 1));
-    }
-    60% {       
-        .transform(rotate3d(0, 0, 1, -180deg) scale3d(0.5, 0.5, 1));
-    }
-    80% {
-        .transform(rotate3d(0, 0, 1, -90deg) scale3d(0.7, 0.7, 1));
+        .transform(rotate3d(0,0,1,90deg) scale3d(0, 0, 1));
     }
     100% {
-        .transform(rotate3d(0, 0, 1, 0deg) scale3d(1, 1, 1));
+        .transform(rotate3d(0,0,1,0deg) scale3d(1, 1, 1));
     }
 }
 
 
-.tour-page1-items-animation(@name, @duration: 0.6s, @delay: 0.85s) {
+.tour-page1-items-animation(@name, @duration: 1s, @delay: 1.2s) {
     .tour-animation(@name, @duration, @delay);
 }
 
@@ -684,10 +677,18 @@
 }
 @-webkit-keyframes card2 {
     0% {
-        .rotateZ();
+    	.rotateZ();
     }
     100% {
-        .rotateZ(7deg);
+    	.rotateZ(7deg);  
+    }
+}
+@-webkit-keyframes cardsWrapper {
+    0% {
+        .transform(scale3d(0, 0, 1));
+    }
+    100% {
+        .transform(scale3d(1, 1, 1));
     }
 }
 .card-show {
