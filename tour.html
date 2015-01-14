@@ -29,21 +29,30 @@
                     <div id="primary">
                         <div id="welcome">
                             <div id="tour">
-                                <div id="pagesWrapper" class="from2to3">
+                                <div id="pagesWrapper" class="from0to1">
                                     <div id="page1" class="page">
+                                        <div class="pageInfo">
+                                            <div class="pageTitle">30秒闪电到岗</div>
+                                            <div class="pageDetail">高级攻城狮，熟练射计湿，资深PM<br />注册了石榴集市，他们立即为您服务</div>
+                                        </div>
                                         <div class="shapesWrapper">
-                                            <div id="people-shape">
+                                            <div id="peoplesWrapper">
                                                 <div id="pm"></div>
                                                 <div id="designer"></div>
-                                                <div id="engineer"></div>
-                                                <div id="eyes1" class="eyes"></div>
-                                                <div id="eyes2" class="eyes"></div>
+                                                <div id="engineer">
+                                                    <div id="eyes1" class="eyes"></div>
+                                                    <div id="eyes2" class="eyes"></div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div><!-- page1 people -->
                                     <div id="page2" class="page">
+                                        <div class="pageInfo">
+                                            <div class="pageTitle">随时随地开店</div>
+                                            <div class="pageDetail">一键上货很轻松<br />...</div>
+                                        </div>
                                         <div class="shapesWrapper">              
-                                            <div id="shop-shape">
+                                            <div id="shopsWrapper">
                                                 <div id="shadow2"></div>
                                                 <div id="shadow1"></div>
                                                 <div id="shop-logo"></div>
@@ -58,6 +67,10 @@
                                         </div>
                                     </div><!-- page2 shop -->
                                     <div id="page3" class="page">
+                                        <div class="pageInfo">
+                                            <div class="pageTitle">随时随地开店</div>
+                                            <div class="pageDetail">一键上货很轻松<br />...</div>
+                                        </div>
                                         <div class="shapesWrapper">
                                             <div id="cardsWrapper">
                                                 <div id="card5">
@@ -92,13 +105,18 @@
                                         </div>
                                     </div><!-- page3 card -->
                                     <div id="page4" class="page">
+                                        <div class="pageInfo">
+                                            <div class="pageTitle">走向世界各地</div>
+                                            <div class="pageDetail">到处都有石榴<br />...</div>
+                                        </div>
                                         <div class="shapesWrapper">
-                                            <div id="earth-shape">
-                                                <div id="cloud"></div>
-                                                <div id="earth"></div>
-                                                <div id="hot"></div>
-                                                <div id="dialog-pome">
-                                                    <p id="dialog-text">Pome</p>
+                                            <div id="earthsWrapper">
+                                                <div id="earth">
+                                                    <div id="cloud"></div>
+                                                    <div id="hot"></div>
+                                                    <div id="dialog-pome">
+                                                        <p id="dialog-text">Pome</p>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -124,7 +142,36 @@
     </main>
 
 
+<script type="text/javascript">
+    var startPage = 1;
+    var nextPage = 2;
+    var pageSize = 4;
+    var pagesWrapper = $('#pagesWrapper');
+    var interval = setInterval(function() {
+        var className = 'from' + startPage + 'to' + nextPage;
+        pagesWrapper.attr('class', className);
 
+        startPage = nextPage;
+        nextPage++;
+        if ( nextPage > pageSize ) {
+            nextPage = 0;
+        }
+
+        if ( startPage === 0 ) {
+            var timeout = setTimeout(function() {
+                var className = 'from' + startPage + 'to' + nextPage;
+                pagesWrapper.attr('class', className);
+                startPage = nextPage;
+                nextPage++;
+                if ( nextPage > pageSize ) {
+                    nextPage = 0;
+                }
+
+                clearTimout(timeout);
+            }, 1500);
+        }
+    },5000);
+</script>
 </body>
 
 </html>
