@@ -1,0 +1,989 @@
+@import "bower_components/bourbon/app/assets/stylesheets/bourbon";
+@import "lib/settings";
+@import "lib/mixins";
+
+@mixin tour-animation($name, $duration, $delay: 0, $count: 1, $fill-mode: both) {
+    @include animation($name $duration $delay $count $default-timing-function $fill-mode);
+}
+@mixin tour-animation-linear($name, $duration, $delay: 0, $count: 1, $fill-mode: both) {
+    @include animation($name $duration $delay $count linear $fill-mode);
+}
+
+@mixin tour-page1-items-animation($name, $duration: 1s, $delay: 1.4s) {
+    @include tour-animation($name, $duration, $delay);
+}
+#tour {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+#pagesWrapper {
+    width: 1280px;
+    height: 100%;
+    transition:1.4s;
+}
+.page {
+    width: 320px;
+    height: 100%;
+    float: left;
+    display: inline-block;
+    position:relative;
+}
+#page1 {
+    z-index:4;
+}
+#page2 {
+    z-index:3;
+}
+#page3 {
+    z-index:2;
+}
+#page4 {
+    z-index:1;
+}
+.shapesWrapper {
+    margin: 0 auto;
+    position: relative;
+    width: 320px;
+    height: 320px;
+}
+#cardsWrapper {
+    height: 100%;
+}
+.from4to0 {
+    #page1 .shapesWrapper, #page2 .shapesWrapper,#page3 .shapesWrapper {
+        display: none;
+    }
+    
+}
+
+@include keyframes(fadeIn) {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.from0to1 {
+    #page2 .shapesWrapper,#page3 .shapesWrapper,#page4 .shapesWrapper {
+        display: none;
+    }
+    #page1 {
+        .pageTitle {
+            @include tour-animation(fadeIn, 1s, 0);
+        }
+        .pageDetail {
+            @include tour-animation(fadeIn, 1s, 0.5s);
+        }
+    }
+}
+.from1to2 {
+    #page3 .shapesWrapper,#page4 .shapesWrapper {
+        display: none;
+    }
+    #page2 {
+
+        .pageDetail {
+            @include tour-animation(fadeIn, 1s, 0.5s);
+
+        }
+    }
+}
+.from2to3 {
+    #page4 .shapesWrapper {
+        display: none;
+    }
+    #page3 {
+
+        .pageDetail {
+            @include tour-animation(fadeIn, 1s, 0.5s);
+        }
+    }
+}
+.from3to4 {
+    #page4 {
+
+        .pageDetail {
+            @include tour-animation(fadeIn, 1s, 0.5s);
+        }
+    }
+}
+.from0to1 {
+    @include transform(translate3d(0, 0, 0));
+    &#pagesWrapper {
+        transition:none;
+    }
+    
+    #designer {
+        @include tour-animation(designer, 0.9s, 0.6s);
+    }
+    #engineer {
+        @include tour-animation(engineer, 0.9s, 0.8s);
+    }
+    #eyes1 {
+        @include tour-animation-linear(eyes1, 2s, 0, infinite);
+    }
+    #eyes2 {
+        @include tour-animation-linear(eyes1, 2s, 0, infinite);
+    }
+    #pm {
+        @include tour-animation(pm, 0.7s, 1.5s);
+    }
+}
+.from1to2 {
+    @include transform(translate3d(-25%, 0, 0));
+
+    #shopsWrapper {
+        @include tour-animation(shopsWrapper, 0.7s, 0.9s);
+        @include transform-origin(center bottom);
+    }
+    #shadow1 {
+        @include tour-animation(shadow1, 0.2s, 1.6s);
+        @include transform-origin(center top);
+    }
+    #shadow2 {
+        @include tour-animation(shadow1, 0.3s, 1.4s);
+        @include transform-origin(center top);
+    }
+    #roof {
+        @include tour-animation(roof, 0.77s, 1.2s);
+        @include transform-origin(center top);
+    }
+    #shop-logo {
+        @include tour-animation(logo, 0.6s, 2.5s);
+        @include transform-origin(center bottom);
+    }
+    #bag {
+        @include tour-page1-items-animation(bag);
+    }
+    #chair {
+        @include tour-page1-items-animation(chair);
+    }
+    #breakfast {
+        @include tour-page1-items-animation(breakfast);
+    }
+    #shoes {
+        @include tour-page1-items-animation(shoes);
+    }
+    #iphone {
+        @include tour-page1-items-animation(iphone);
+    }
+    #iwatch {
+        @include tour-page1-items-animation(iwatch);
+    }
+}
+.from2to3 {
+    @include transform(translate3d(-50%, 0, 0));
+    #bag {
+        @include transform-origin(center center);
+        @include tour-animation-linear(bag-out, 0.8s, 0.1s);
+        @include animation-timing-function(cubic-bezier(.6, .07, .86,.49));
+    }
+    #card-bag {
+        @include transform-origin(center center);
+        @include tour-animation-linear(card-bag, 0.1s, 1.5s);
+    }
+    #card5 {
+        @include transform-origin(center 355px);
+        @include tour-animation(card5, 0.8s, 1.6s);
+        @extend .card-small;
+        background-color: $black*15.4;
+    }
+    #card4 {
+        @include transform-origin(center 355px);
+        @include tour-animation(card4, 0.8s, 1.6s);
+        @extend .card-small;
+        background-color: $black*15.4;
+    }
+    #card3 {
+        @include transform-origin(center 355px);
+        @include tour-animation(card3, 0.7s, 1.5s);
+        @extend .card-small;
+        background-color: $black*16.2;
+    }
+    #card2 {
+        @include transform-origin(center 355px);
+        @include tour-animation(card2, 0.7s, 1.5s);
+        @extend .card-small;
+        background-color: $black*16.2;
+    }
+    #card1 {
+        @extend .card;
+        background-color: $black*17;
+    }
+    #cardsWrapper {
+        @include transform-origin(center center);
+        @include tour-animation(cardsWrapper, 0.7s, 0.7s);
+
+    }
+    #card-content1{
+        @include tour-animation(card-content1, 0.3s, 1.5s);
+    }
+    #card-content2{
+        @include tour-animation(card-content1, 0.3s, 1.5s);
+    }
+}
+@include keyframes(bag-out) {
+
+    0% {
+        @include resetTranslate();
+    }
+    12% {
+        @include transform(translate3d(85px, 1px, 0) rotate3d(0,0,1,-90deg) scale3d(2,2,1));
+    }
+    24% {
+        @include transform(translate3d(175px, 2px, 0) rotate3d(0,0,1,-180deg) scale3d(2,2,1));
+    }
+    36% {
+        @include transform(translate3d(275px, 3px, 0) rotate3d(0,0,1,-270deg) scale3d(2,2,1));
+    }
+    48% {
+        @include transform(translate3d(355px, 3px, 0) rotate3d(0,0,1,-360deg) scale3d(2,2,1));
+    }
+    55% {
+        @include transform(translate3d(355px, 3px, 0) rotate3d(0,0,1,-380deg) scale3d(2,2,1));
+    }
+    72% {
+        @include transform(translate3d(355px, 3px, 0) rotate3d(0,0,1,-358deg) scale3d(2,2,1));
+    }
+    75% {
+        @include transform(translate3d(355px, 3px, 0) rotate3d(0,0,1,-360deg) scale3d(2,2,1));
+    }
+    100% {
+        @include transform(translate3d(355px, 3px, 0) rotate3d(0,0,1,-360deg) scale3d(2,2,1));
+    }
+
+}
+@include keyframes(card-bag) {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.from3to4 {
+    @include transform(translate3d(-75%, 0, 0));
+    #cloud {
+        @include tour-animation-linear(cloud, 20s, 0, infinite);
+        @include transform-origin(center center);
+    }
+    #hot {
+        @include tour-animation-linear(cloud, 65s, 0, infinite);
+        @include transform-origin(center center);
+    }
+    #card5 {
+        @include tour-animation-linear(card5-out, 1.9s, 0);
+        @extend .card-small;
+        background-color: $black*15.4;
+    }
+    #card4 {
+        @include tour-animation-linear(card4-out, 1.9s);
+        @extend .card-small;
+        background-color: $black*15.4;
+    }
+    #card3 {
+        @include tour-animation-linear(card3-out, 1.9s, 0);
+        @extend .card-small;
+        background-color: $black*16.2;
+    }
+    #card2 {
+        @include tour-animation-linear(card2-out, 1.9s, 0);
+        @extend .card-small;
+        background-color: $black*16.2;
+    }
+    #card1 {
+        @include tour-animation-linear(card1-out, 1.5s, 0);
+        @extend .card;
+        background-color: $black*17;
+    }
+    #earthsWrapper {
+        @include transform-origin(center 180px);
+        @include tour-animation(cardsWrapper, 0.7s, 0.7s);
+    }
+    #dialog-pome {
+        @include tour-animation-linear(dialog-pome, 0.22s, 2.2s);
+        @include transform-origin(center top);
+    }
+    
+}
+.from4to0 {
+    @include transform(translate3d(-100%, 0, 0));
+
+    #earth {
+        @include tour-animation-linear(earth-out, 0.8s);
+        @include transform-origin(center 180px);
+    }
+}
+
+@include keyframes(earth-out) {
+    0% {
+        opacity: 1;
+        @include transform(scale3d(1,1,1));
+    }
+    100%  {
+        opacity: 0;
+        @include transform(scale3d(2,2,1));
+    }
+}
+@include keyframes(card1-out) {
+    20%,40%,60%,80%,100% {
+        @include transform-origin(center center);
+    }
+    0% {
+        @include transform(translate3d(0px, 0px, 0) rotate3d(0,0,1,0deg) scale3d(1,1,1));
+    }
+    20% {
+        @include transform(translate3d(110px, -105px, 0) rotate3d(0,0,1,90deg) scale3d(0.4,0.4,1));
+    }
+    40% {
+        @include transform(translate3d(230px, -85px, 0) rotate3d(0,0,1,180deg) scale3d(0.3,0.3,1));
+    }
+    60% {
+        @include transform(translate3d(312px, -61px, 0) rotate3d(0,0,1,270deg) scale3d(0.2,0.2,1));
+    }
+    80%  {
+        @include transform(translate3d(372px, -24px, 0) rotate3d(0,0,1,360deg) scale3d(0.1,0.1,1));
+    }
+    100%  {
+        @include transform(translate3d(410px, 33px, 0) rotate3d(0,0,1,450deg) scale3d(0,0,1));
+    }
+}
+@include keyframes(card2-out) {
+    20%,40%,60%,80%,100% {
+        @include transform-origin(center center);
+    }
+    0% {
+        @include transform(translate3d(0px, 0px, 0) rotate3d(0,0,1,0deg) scale3d(1,1,1));
+    }
+    25% {
+        @include transform(translate3d(102px, 132px, 0) rotate3d(0,0,1,90deg) scale3d(0.3,0.3,1));
+    }
+    50% {
+        @include transform(translate3d(172px, 112px, 0) rotate3d(0,0,1,180deg) scale3d(0.2,0.2,1));
+    }
+    75% {
+        @include transform(translate3d(254px, 89px, 0) rotate3d(0,0,1,270deg) scale3d(0.1,0.1,1));
+    }
+    100%  {
+        @include transform(translate3d(314px, 72px, 0) rotate3d(0,0,1,360deg) scale3d(0,0,1));
+    }
+}
+@include keyframes(card3-out) {
+    1%,20%,40%,60%,80%,100%  {
+        @include transform-origin(center center);
+    }
+    0% {
+        @include transform(translate3d(0px, 0px, 0) rotate3d(0,0,1,0deg) scale3d(1,1,1));
+    }
+    25% {
+        @include transform(translate3d(137px, -89px, 0) rotate3d(0,0,1,90deg) scale3d(0.4,0.4,1));
+    }
+    50% {
+        @include transform(translate3d(257px, -88px, 0) rotate3d(0,0,1,180deg) scale3d(0.27,0.27,1));
+    }
+    75% {
+        @include transform(translate3d(317px, -87px, 0) rotate3d(0,0,1,270deg) scale3d(0.13,0.13,1));
+    }
+    100%  {
+        @include transform(translate3d(363px, -86px, 0) rotate3d(0,0,1,360deg) scale3d(0,0,1));
+    }
+}
+@include keyframes(card4-out) {
+    10%,20%,40%,60%,80%,100% {
+        @include transform-origin(center center);
+    }
+    0% {
+
+    }
+    10% {
+        @include transform(translate3d(0px, 0px, 0) rotate3d(0,0,1,0deg) scale3d(1,1,1));
+    }
+    25% {
+        @include transform(translate3d(80px, -80px, 0) rotate3d(0,0,1,90deg) scale3d(0.4,0.4,1));
+    }
+    50% {
+        @include transform(translate3d(180px, -79px, 0) rotate3d(0,0,1,180deg) scale3d(0.3,0.3,1));
+    }
+    75% {
+        @include transform(translate3d(240px, -78px, 0) rotate3d(0,0,1,270deg) scale3d(0.15,0.15,1));
+    }
+    100%  {
+        @include transform(translate3d(286px, -77px, 0) rotate3d(0,0,1,360deg) scale3d(0,0,1));
+    }
+}
+@include keyframes(card5-out) {
+    10%,20%,40%,60%,80%,100% {
+        @include transform-origin(center center);
+    }
+    0% {
+
+    }
+    10% {
+        @include transform(translate3d(0px, 0px, 0) rotate3d(0,0,1,0deg) scale3d(1,1,1));
+    }
+    25% {
+        @include transform(translate3d(106px, -25px, 0) rotate3d(0,0,1,90deg) scale3d(0.5,0.5,1));
+    }
+    50% {
+        @include transform(translate3d(226px, -23px, 0) rotate3d(0,0,1,180deg) scale3d(0.4,0.4,1));
+    }
+    75% {
+        @include transform(translate3d(296px, -21px, 0) rotate3d(0,0,1,270deg) scale3d(0.2,0.2,1));
+    }
+    100%  {
+        @include transform(translate3d(334px, -18px, 0) rotate3d(0,0,1,360deg) scale3d(0,0,1));
+    }
+}
+#shopsWrapper {
+    position: absolute;
+    top: 50%;
+    margin-top: -100px;
+    left: 50%;
+    margin-left: -85px;
+    width: 170px;
+    height: 200px;
+    background-color: #55a5db;
+}
+@include keyframes(shopsWrapper) {
+    0% {
+        @include transform(scale3d(1, 0, 1));
+    }
+    80% {
+        @include transform(scale3d(1, 1.2, 1));
+    }
+    100% {
+        @include transform(scale3d(1, 1, 1));
+    }
+}
+#shadow1 {
+    position: absolute;
+    bottom: 0;
+    left: 6px;
+    width: 158px;
+    height: 160px;
+    background-color: #0d2f3f;
+}
+@include keyframes(shadow1) {
+    0% {
+        @include transform(scale3d(1, 0, 1));
+    }
+    100% {
+        @include transform(scale3d(1, 1, 1));
+    }
+}
+#shadow2 {
+    position: absolute;
+    top: 44px;
+    left: 0;
+    width: 170px;
+    height: 20px;
+    background-color: #36698c;
+}
+#roof {
+    position: absolute;
+    top: 30px;
+    left: -10px;
+    background: url($images-dir + "roof.png");
+    background-size: 190px 30px;
+    width: 190px;
+    height: 30px;
+}
+@include keyframes(roof) {
+    0% {
+        @include transform(rotate3d(1,0,0,90deg));
+    }
+    100% {
+        @include transform(rotate3d(1,0,0,0deg));
+    }
+}
+#shop-logo {
+    position: absolute;
+    top: -24px;
+    left: 62px;
+    background: url($images-dir + "logo.png");
+    background-size: 48px 48px;
+    width: 48px;
+    height: 48px;
+}
+@include keyframes(logo) {
+    0% {
+        @include transform(rotate3d(0,0,1,90deg) scale3d(0, 0, 1));
+    }
+    100% {
+        @include transform(rotate3d(0,0,1,0deg) scale3d(1, 1, 1));
+    }
+}
+
+
+
+
+#chair {
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+    background: url($images-dir + "chair.png");
+    background-size: 64px 64px;
+    width: 64px;
+    height: 64px;
+}
+@include keyframes(chair) {
+    0% {
+        @include transform(translate3d(320px, 300px, 0));
+    }
+    100% {
+        @include resetTranslate();
+    }
+}
+#breakfast {
+    position: absolute;
+    bottom: 0;
+    left: 25px;
+    background: url( $images-dir + "breakfast.png");
+    background-size: 44px 44px;
+    width: 44px;
+    height: 44px;
+}
+@include keyframes(breakfast) {
+    0% {
+        @include transform(translate3d(-320px, 300px, 0));
+    }
+    100% {
+        @include resetTranslate();
+    }
+}
+#shoes {
+    position: absolute;
+    top: 110px;
+    left: 32px;
+    background: url($images-dir + "shoes.png");
+    background-size: 36px 36px;
+    width: 36px;
+    height: 36px;
+}
+@include keyframes(shoes) {
+    0% {
+        @include transform(translate3d(-320px, 0px, 0));
+    }
+    100% {
+        @include resetTranslate();
+    }
+}
+#bag {
+    position: absolute;
+    top: 52px;
+    left: 25px;
+    background: url($images-dir + "bag.png");
+    background-size: 50px 50px;
+    width: 50px;
+    height: 50px;
+}
+@include keyframes(bag) {
+    0% {
+        @include transform(translate3d(-640px, -250px, 0));
+    }
+    100% {
+        @include resetTranslate();
+    }
+}
+#iphone {
+    position: absolute;
+    top: 47px;
+    left: 62px;
+    background: url($images-dir + "iphone.png");
+    background-size: 82px 82px;
+    width: 82px;
+    height: 82px;
+}
+@include keyframes(iphone) {
+    0% {
+        @include transform(translate3d(320px, 0px, 0));
+    }
+    100% {
+        @include resetTranslate();
+    }
+}
+#iwatch {
+    position: absolute;
+    top: 80px;
+    right: 7px;
+    background: url($images-dir + "iwatch.png");
+    background-size: 44px 44px;
+    width: 44px;
+    height: 44px;
+}
+@include keyframes(iwatch) {
+    0% {
+        @include transform(translate3d(320px, -350px, 0));
+    }
+    100% {
+        @include resetTranslate();
+    }
+}
+#pm {
+    position: absolute;
+    top: 20px;
+    left: 29px;
+    background: url($images-dir + "pm.png");
+    background-size: 260px 260px;
+    width: 260px;
+    height: 260px;
+}
+#designer {
+    position: absolute;
+    top: 20px;
+    left: 29px;
+    background: url($images-dir + "designer.png");
+    background-size: 260px 260px;
+    width: 260px;
+    height: 260px;
+}
+#engineer {
+    position: absolute;
+    top: 20px;
+    left: 29px;
+    background: url($images-dir + "engineer.png");
+    background-size: 260px 260px;
+    width: 260px;
+    height: 260px;
+}
+.eyes {
+    position: absolute;
+    background-color: #373737;
+    border-radius: 100%;
+    width: 2px;
+    height: 2px;
+}
+#eyes1 {
+    top: 138px;
+    left: 91px;
+}
+#eyes2 {
+    top: 138px;
+    left: 81px;
+}
+@include keyframes(pm) {
+    0% {
+        @include transform(translate3d(-320px, 0px, 0));
+    }
+    60% {
+        @include transform(translate3d(10px, 0px, 0));
+    }
+    100% {
+        @include resetTranslate();
+    }
+}
+@include keyframes(designer) {
+    0% {
+        @include transform(translate3d(-320px, 0px, 0));
+    }
+    100% {
+        @include resetTranslate();
+    }
+}
+@include keyframes(eyes1) {
+    0% {
+        @include transform(translate3d(0, 0, 0));
+    }
+    50% {
+        @include transform(translate3d(4px, 0, 0));
+    }
+    100% {
+        @include transform(translate3d(0, 0, 0));
+    }
+}
+@include keyframes(engineer) {
+    0% {
+        @include transform(translate3d(-320px, 0px, 0));
+    }
+    20% {
+        @include transform(translate3d(0, 0, 0));
+    }
+    100% {
+        @include resetTranslate();
+    }
+}
+#cloud {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: url($images-dir + "cloud.png");
+    background-size: 300px 300px;
+    width: 300px;
+    height: 300px;
+}
+@include keyframes(cloud) {
+    0%   { @include rotateZ(); }
+    25%  { @include rotateZ(90deg); }
+    50%  { @include rotateZ(180deg); }
+    75%  { @include rotateZ(270deg); }
+    100% { @include rotateZ(360deg); }
+}
+@include keyframes(earthsWrapper) {
+    0% {
+        @include transform(scale3d(1, 0, 1));
+    }
+    80% {
+        @include transform(scale3d(1, 1.2, 1));
+    }
+    100% {
+        @include transform(scale3d(1, 1, 1));
+    }
+}
+#earth {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: url($images-dir + "earth.png");
+    background-size: 300px 300px;
+    width: 300px;
+    height: 300px;
+}
+#hot {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: url($images-dir + "hot.png");
+    background-size: 300px 300px;
+    width: 300px;
+    height: 300px;
+}
+#dialog-pome {
+    position: absolute;
+    top: 145px;
+    left: 122px;
+    background-color: $white;
+    background-size: 60px 30px;
+    border-radius: 20px;
+    width: 60px;
+    height: 30px;
+}
+@include keyframes(dialog-pome) {
+    0% {
+        @include transform(scale3d(0, 0, 1));
+    }
+    100% {
+        @include transform(scale3d(1, 1, 1));
+    }
+}
+#dialog-text{
+    color: $red;
+    font-size: 16px;
+    text-align: center;
+    font-style: normal;
+    padding-top: 2px;
+}
+#dialog-pome:before{
+    position: absolute;
+    top: -12px;
+    left: 38px;
+    border-style: solid solid solid solid;
+    border-width: 0 3px 13px 3px;
+    border-color: transparent transparent $white transparent;
+    width: 0;
+    height: 0;
+    display: block;
+    content: '';
+}
+.card {
+    position: absolute;
+    top: 50%;
+    margin-top: -80px;
+    left: 50%;
+    margin-left: -60px;
+    border-radius: 0 0 4px 4px;
+    width: 120px;
+    height: 160px;
+    background-size: 120px 160px;
+}
+.card-small {
+    position: absolute;
+    top: 50%;
+    margin-top: -75px;
+    left: 50%;
+    margin-left: -55px;
+    border-radius: 0 0 4px 4px;
+    width: 110px;
+    height: 150px;
+    background-size: 110px 150px;
+}
+@include keyframes(card5) {
+    0% {
+        @include rotateZ();
+    }
+    100% {
+        @include rotateZ(14deg);
+    }
+}
+@include keyframes(card4) {
+    0% {
+        @include rotateZ(0);
+    }
+    100% {
+        @include rotateZ(-14deg);
+    }
+}
+@include keyframes(card3) {
+    0% {
+        @include rotateZ();
+    }
+    100% {
+        @include rotateZ(-7deg);
+    }
+}
+@include keyframes(card2) {
+    0% {
+        @include rotateZ();
+    }
+    100% {
+        @include rotateZ(7deg);  
+    }
+}
+@include keyframes(cardsWrapper) {
+    0% {
+        @include transform(scale3d(0, 0, 1));
+    }
+    100% {
+        @include transform(scale3d(1, 1, 1));
+    }
+}
+.card-show {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: 120px 120px;
+}
+#card-show1 {
+    @extend .card-show;
+    width: 120px;
+    height: 120px;
+    background-color: #fdd835;
+}
+#card-show2 {
+    @extend .card-show;
+    width: 110px;
+    height: 110px;
+    background-color: #7cb342;
+}
+#card-show3 {
+    @extend .card-show;
+    width: 110px;
+    height: 110px;
+    background-color: #00acc1;
+}
+
+#card-show4 {
+    @extend .card-show;
+    width: 110px;
+    height: 110px;
+    background-color: #3949ab;
+}
+#card-show5 {
+    @extend .card-show;
+    width: 110px;
+    height: 110px;
+    background-color: #00897b;
+}
+#card-bag {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: url($images-dir + "bag.png");
+    background-size: 100px 100px;
+    width: 100px;
+    height: 100px;
+}
+#card-shoes {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: url($images-dir + "shoes.png");
+    background-size: 80px 80px;
+    width: 80px;
+    height: 80px;
+}
+#card-chair {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: url($images-dir + "chair.png");
+    background-size: 90px 90px;
+    width: 90px;
+    height: 90px;
+}
+#card-iwatch {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: url($images-dir + "iwatch.png");
+    background-size: 90px 90px;
+    width: 90px;
+    height: 90px;
+}
+#card-breakfast {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: url($images-dir + "breakfast.png");
+    background-size: 70px 70px;
+    width: 70px;
+    height: 70px;
+}
+#card-content1 {
+    position: absolute;
+    top: 128px;
+    left: 14px;
+    background-color: $black*16.7;
+    background-size: 70px 10px;
+    width: 70px;
+    height: 10px;
+}
+@include keyframes(card-content1) {
+    0% {
+        @include transform(scale3d(0,0,1));
+    }
+    100% {
+        @include transform(scale3d(1,1,1));
+    }
+}
+#card-content2 {
+    position: absolute;
+    bottom: 8px;
+    left: 14px;
+    background-color: $black*16.7;
+    background-size: 50px 10px;
+    width: 50px;
+    height: 10px;
+}
+@include keyframes(card-content2) {
+    0% {
+        @include transform(scale3d(0,0,1));
+    }
+    100% {
+        @include transform(scale3d(1,1,1));
+    }
+}
+.icon-shopping-cart {
+    position: absolute;
+    bottom: 4px;
+    right: 10px;
+    color: $red;
+    width: 15px;
+    height: 24px;
+}
+
+.pageInfo {
+    text-align: center;
+    padding: 0 $basic-gap $basic-gap;
+    line-height: 1.2;
+}
+.pageTitle {
+    color:#dd4b39;
+    margin-bottom: $basic-gap/2;
+    font-size: 20px;
+}
+.pageDetail {
+    color: #757575;
+    font-size: 12px;
+}

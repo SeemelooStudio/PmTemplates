@@ -1,0 +1,125 @@
+.clearListStyle {
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+.clearUserSelect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.hideBackface {
+    backface-visibility:hidden;
+    -webkit-backface-visibility:hidden; /* Chrome and Safari */
+    -moz-backface-visibility:hidden; /* Firefox */
+    -ms-backface-visibility:hidden; /* Internet Explorer 10+ */
+}
+.reset-transform {
+    @include transform(translate3d(0,0,0) scale3d(1,1,1));
+    @extend .hideBackface;
+    -webkit-transform-style: preserve-3d;
+}
+
+%clearfix {
+    @include clearfix;
+}
+
+@mixin horizontal-center {
+    margin-left: auto;
+    margin-right: auto;
+}
+%horizontal-center {
+    @include horizontal-center;
+}
+
+// rotate
+@mixin rotate ($deg) {
+  @include transform(rotate(#{$deg}deg));
+}
+ 
+// scale
+@mixin scale($scale) {
+     @include transform(scale($scale));
+} 
+// translate
+@mixin translate ($x, $y) {
+   @include transform(translate($x, $y));
+}
+// skew
+@mixin skew ($x, $y) {
+   @include transform(skew(#{$x}deg, #{$y}deg));
+}
+//transform origin
+@mixin transform-origin ($origin) {
+    moz-transform-origin: $origin;
+         -o-transform-origin: $origin;
+        -ms-transform-origin: $origin;
+    -webkit-transform-origin: $origin;
+          transform-origin: $origin;
+}
+
+@mixin transition($transition-property:all, $transition-time:.3s, $method:cubic-bezier(.36,0,.15,1)) {
+    -webkit-transition: $transition-property $transition-time $method;
+    -moz-transition: $transition-property $transition-time $method;
+    -ms-transition: $transition-property $transition-time $method;
+    -o-transition: $transition-property $transition-time $method;
+    transition: $transition-property $transition-time $method;
+}
+
+.clearListStyle {
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+.clearUserSelect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.hideBackface {
+    backface-visibility:hidden;
+    -webkit-backface-visibility:hidden; /* Chrome and Safari */
+    -moz-backface-visibility:hidden; /* Firefox */
+    -ms-backface-visibility:hidden; /* Internet Explorer 10+ */
+}
+.reset-transform {
+    @include transform(translate3d(0,0,0) scale3d(1,1,1));
+    @extend .hideBackface;
+    -webkit-transform-style: preserve-3d;
+}
+
+%clearfix {
+    @include clearfix;
+}
+
+@mixin horizontal-center {
+    margin-left: auto;
+    margin-right: auto;
+}
+%horizontal-center {
+    @include horizontal-center;
+}
+
+
+
+@mixin transition($transition-property:all, $transition-time:.3s, $method:cubic-bezier(.36,0,.15,1)) {
+    @include transition( $transition-property $transition-time $method);
+}
+
+@mixin resetTranslate {
+    @include transform(translate3d(0,0,0));
+}
+@mixin resetAllTransform {
+    @include transform(translate3d(0,0,0) scale3d(1,1,1) rotate3d(0,0,1,0deg));
+}
+@mixin rotateZ($angle: 0deg) {
+    @include transform(rotate3d(0, 0, 1, $angle));
+}

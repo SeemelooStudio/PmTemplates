@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"page",
+				"pageSize"
+			],
+			[
+				"cla",
+				"className"
+			],
+			[
+				"pages",
+				"pagesWrapper"
+			],
+			[
 				"wet",
 				"webkit-transform"
 			],
@@ -252,10 +264,6 @@
 				"searchInfo"
 			],
 			[
-				"page",
-				"page_index"
-			],
-			[
 				"tag",
 				"tag_ids"
 			],
@@ -423,7 +431,7 @@
 			"file": "tour.html",
 			"settings":
 			{
-				"buffer_size": 7568,
+				"buffer_size": 8569,
 				"line_ending": "Unix"
 			}
 		},
@@ -783,15 +791,15 @@
 					"file": "tour.html",
 					"settings":
 					{
-						"buffer_size": 7568,
+						"buffer_size": 8569,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2777,
-								2537
+								7940,
+								7940
 							]
 						],
 						"settings":
@@ -801,7 +809,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 457.0,
+						"translation.y": 1585.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
