@@ -431,7 +431,7 @@
 			"file": "tour.html",
 			"settings":
 			{
-				"buffer_size": 8569,
+				"buffer_size": 9147,
 				"line_ending": "Unix"
 			}
 		},
@@ -439,7 +439,55 @@
 			"file": "tour.less",
 			"settings":
 			{
-				"buffer_size": 17073,
+				"buffer_size": 21098,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "tour.scss",
+			"settings":
+			{
+				"buffer_size": 22315,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Gruntfile.js",
+			"settings":
+			{
+				"buffer_size": 1894,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "package.json",
+			"settings":
+			{
+				"buffer_size": 335,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "tour.css",
+			"settings":
+			{
+				"buffer_size": 72645,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "lib/_settings.scss",
+			"settings":
+			{
+				"buffer_size": 2774,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "coupon.less",
+			"settings":
+			{
+				"buffer_size": 3946,
 				"line_ending": "Unix"
 			}
 		}
@@ -492,6 +540,8 @@
 	},
 	"file_history":
 	[
+		"/Users/yuhong/Documents/Projects/PomeMarketTemplates/lib/_mixins.scss",
+		"/Users/yuhong/Documents/Projects/PomeMarketTemplates/tour.sass",
 		"/Users/daxiong/Desktop/PmTemplates/coupon.html",
 		"/Users/daxiong/Desktop/PmTemplates/lib/variables.less",
 		"/Users/yuhong/Documents/Projects/PomeMarket/themes/salome/style.less",
@@ -617,9 +667,7 @@
 		"/Users/yuhong/Documents/Projects/PomeMarket/app/modules/Coupons.js",
 		"/Users/yuhong/Documents/Projects/PomeMarket/app/models/Cms.js",
 		"/Users/yuhong/Documents/Projects/PomeMarket/app/models/Cart.js",
-		"/Users/yuhong/Documents/Projects/PomeMarket/themes/pantene/index.html",
-		"/Users/yuhong/Documents/Projects/PomeMarket/themes/vs/index.html",
-		"/Users/yuhong/Documents/Projects/PomeMarket/app/modules/Cart.js"
+		"/Users/yuhong/Documents/Projects/PomeMarket/themes/pantene/index.html"
 	],
 	"find":
 	{
@@ -783,7 +831,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 7,
 			"sheets":
 			[
 				{
@@ -791,15 +839,15 @@
 					"file": "tour.html",
 					"settings":
 					{
-						"buffer_size": 8569,
+						"buffer_size": 9147,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								7940,
-								7940
+								8216,
+								8216
 							]
 						],
 						"settings":
@@ -809,7 +857,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1585.0,
+						"translation.y": 1661.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -819,15 +867,15 @@
 					"file": "tour.less",
 					"settings":
 					{
-						"buffer_size": 17073,
+						"buffer_size": 21098,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								16713,
-								16713
+								2460,
+								2460
 							]
 						],
 						"settings":
@@ -837,7 +885,173 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 10517.0,
+						"translation.y": 1317.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "tour.scss",
+					"settings":
+					{
+						"buffer_size": 22315,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								702,
+								702
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "Gruntfile.js",
+					"settings":
+					{
+						"buffer_size": 1894,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1131,
+								1131
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 384.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "package.json",
+					"settings":
+					{
+						"buffer_size": 335,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								252,
+								234
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "tour.css",
+					"settings":
+					{
+						"buffer_size": 72645,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								65246,
+								65246
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 2.0,
+						"translation.y": 22258.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "lib/_settings.scss",
+					"settings":
+					{
+						"buffer_size": 2774,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2769,
+								2769
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1350.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "coupon.less",
+					"settings":
+					{
+						"buffer_size": 3946,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								672,
+								672
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LESS/LESS.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -890,6 +1104,38 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"coupon",
+				"coupon.less"
+			],
+			[
+				"sett",
+				"lib/_settings.scss"
+			],
+			[
+				"tour.css",
+				"tour.css"
+			],
+			[
+				"pac",
+				"package.json"
+			],
+			[
+				"grunt",
+				"Gruntfile.js"
+			],
+			[
+				"mix",
+				"lib/_mixins.scss"
+			],
+			[
+				"tour",
+				"tour.scss"
+			],
+			[
+				"tour.sass",
+				"tour.sass"
+			],
 			[
 				"",
 				"tour.html"
@@ -1351,10 +1597,6 @@
 				"app/templates/cartempty.html"
 			],
 			[
-				"coupon",
-				"app/templates/coupons.html"
-			],
-			[
 				"cartview",
 				"app/views/CartView.js"
 			],
@@ -1373,34 +1615,6 @@
 			[
 				"intro",
 				"app/views/IntroView.js"
-			],
-			[
-				"aboutvi",
-				"app/views/AboutView.js"
-			],
-			[
-				"aboutve",
-				"app/views/AboutView.js"
-			],
-			[
-				"aboutview",
-				"app/views/AboutView.js"
-			],
-			[
-				"pomemode",
-				"app/models/PomeModel.js"
-			],
-			[
-				"wechat",
-				"app/libs/wechat.js"
-			],
-			[
-				"orderdeta",
-				"app/templates/order_detail.html"
-			],
-			[
-				"va",
-				"app/less/variables.less"
 			]
 		],
 		"width": 0.0
