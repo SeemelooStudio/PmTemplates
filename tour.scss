@@ -20,8 +20,6 @@
     background: url($images-dir +  $image-file-name);
     background-size: $width $height;
 }
-
-
 @include keyframes(fadeIn) {
     0% {
         opacity: 0;
@@ -30,8 +28,6 @@
         opacity: 1;
     }
 }
-
-
 //基本结构
 #tour {
     @include size(100%);
@@ -86,8 +82,6 @@
     color: #757575;
     font-size: 12px;
 }
-
-
 //过渡动画
 .from0to1 {
     #page2 .shapesWrapper, #page3 .shapesWrapper, #page4 .shapesWrapper {
@@ -200,39 +194,29 @@
     }
     #card-bag {
         @include transform-origin(center center);
-        @include tour-animation-linear(card-bag, 0.1s, 1.5s);
+        @include tour-animation-linear(fadeIn, 0.1s, 0.8s);
     }
     #card5 {
         @include transform-origin(center 355px);
-        @include tour-animation(card5, 0.8s, 1.6s);
-        @extend .card-small;
-        background-color: $black*15.4;
+        @include tour-animation(card5, 0.8s, 1.8s);
+
     }
     #card4 {
         @include transform-origin(center 355px);
-        @include tour-animation(card4, 0.8s, 1.6s);
-        @extend .card-small;
-        background-color: $black*15.4;
+        @include tour-animation(card4, 0.8s, 1.8s);
     }
     #card3 {
         @include transform-origin(center 355px);
-        @include tour-animation(card3, 0.7s, 1.5s);
-        @extend .card-small;
-        background-color: $black*16.2;
+        @include tour-animation(card3, 0.7s, 1.7s);
     }
     #card2 {
         @include transform-origin(center 355px);
-        @include tour-animation(card2, 0.7s, 1.5s);
-        @extend .card-small;
-        background-color: $black*16.2;
+        @include tour-animation(card2, 0.7s, 1.7s);
     }
-    #card1 {
-        @extend .card;
-        background-color: $black*17;
-    }
+
     #cardsWrapper {
         @include transform-origin(center center);
-        @include tour-animation(cardsWrapper, 0.7s, 0.7s);
+        @include tour-animation(cardsWrapper, 0.5s, 0.2s);
     }
     #card-content1 {
         @include tour-animation(card-content1, 0.3s, 1.5s);
@@ -241,7 +225,6 @@
         @include tour-animation(card-content1, 0.3s, 1.5s);
     }
 }
-
 .from3to4 {
     @include transform(translate3d(-75%, 0, 0));
     #cloud {
@@ -254,28 +237,23 @@
     }
     #card5 {
         @include tour-animation-linear(card5-out, 1.9s, 0);
-        @extend .card-small;
-        background-color: $black*15.4;
+
     }
     #card4 {
         @include tour-animation-linear(card4-out, 1.9s);
-        @extend .card-small;
-        background-color: $black*15.4;
+
     }
     #card3 {
         @include tour-animation-linear(card3-out, 1.9s, 0);
-        @extend .card-small;
-        background-color: $black*16.2;
+
     }
     #card2 {
         @include tour-animation-linear(card2-out, 1.9s, 0);
-        @extend .card-small;
-        background-color: $black*16.2;
+
     }
     #card1 {
         @include tour-animation-linear(card1-out, 1.5s, 0);
-        @extend .card;
-        background-color: $black*17;
+
     }
     #earthsWrapper {
         @include transform-origin(center 180px);
@@ -293,31 +271,18 @@
         @include transform-origin(center 180px);
     }
 }
-
 //Page1
 #pm {
     @include position(absolute, 20px null null 29px);
-    @include size(260px);
-    background: url($images-dir + "pm.png");
-    background-size: 260px 260px;
+    @include sizeAndBackground(260px, 260px, "pm.png");
 }
 #designer {
-    position: absolute;
-    top: 20px;
-    left: 29px;
-    background: url($images-dir + "designer.png");
-    background-size: 260px 260px;
-    width: 260px;
-    height: 260px;
+    @include position(absolute, 20px null null 29px);
+    @include sizeAndBackground(260px, 260px, "designer.png");
 }
 #engineer {
-    position: absolute;
-    top: 20px;
-    left: 29px;
-    background: url($images-dir + "engineer.png");
-    background-size: 260px 260px;
-    width: 260px;
-    height: 260px;
+    @include position(absolute, 20px null null 29px);
+    @include sizeAndBackground(260px, 260px, "engineer.png");
 }
 .eyes {
     position: absolute;
@@ -400,25 +365,25 @@
     75% {
         @include transform(translate3d(355px, 3px, 0) rotate3d(0, 0, 1, -360deg) scale3d(2, 2, 1));
     }
+    99% {
+        @include transform(translate3d(355px, 3px, 0) rotate3d(0, 0, 1, -360deg) scale3d(2, 2, 1));
+        opacity: 1;
+    }
     100% {
         @include transform(translate3d(355px, 3px, 0) rotate3d(0, 0, 1, -360deg) scale3d(2, 2, 1));
+        opacity: 0;
     }
 }
-
-
-
 //Page2 商店
 #shopsWrapper {
     @include centerAndOffset(170px, 200px);
     background-color: #55a5db;
 }
-
 #shadow1 {
     @include position(absolute, null null 0 6px);
     @include size(158px 160px);
     background-color: #0d2f3f;
 }
-
 #shadow2 {
     @include position(absolute, 44px null null 0);
     @include size(170px 20px);
@@ -426,76 +391,36 @@
 }
 #roof {
     @include position(absolute, 30px null null -10px);
-    @include size(190px 30px);
-    background: url($images-dir + "roof.png");
-    background-size: 190px 30px;
+    @include sizeAndBackground(190px, 30px, "roof.png");
 }
-
 #shop-logo {
     @include position(absolute, -24px null null 62px);
-    @include size(48px);
-    background: url($images-dir + "logo.png");
-    background-size: 48px 48px;
+    @include sizeAndBackground(48px, 48px, "logo.png");
 }
-
 #chair {
     @include position(absolute, null 20px 0 null);
-    @include size(64px);
-
-    background: url($images-dir + "chair.png");
-    background-size: 64px 64px;
-
+    @include sizeAndBackground(64px, 64px, "chair.png");
 }
-
 #breakfast {
     @include position(absolute, null null 0 25px);
-    @include size(44px);
-
-    background: url($images-dir + "breakfast.png");
-    background-size: 44px 44px;
-
+    @include sizeAndBackground(44px, 44px, "breakfast.png");
 }
-
 #shoes {
-    position: absolute;
-    top: 110px;
-    left: 32px;
-    background: url($images-dir + "shoes.png");
-    background-size: 36px 36px;
-    width: 36px;
-    height: 36px;
+    @include position(absolute, 110px null null 32px);
+    @include sizeAndBackground(36px, 36px, "shoes.png")
 }
-
 #bag {
-    position: absolute;
-    top: 52px;
-    left: 25px;
-    background: url($images-dir + "bag.png");
-    background-size: 50px 50px;
-    width: 50px;
-    height: 50px;
+    @include position(absolute, 52px null null 25px);
+    @include sizeAndBackground(50px, 50px, "bag.png");
 }
-
 #iphone {
-    position: absolute;
-    top: 47px;
-    left: 62px;
-    background: url($images-dir + "iphone.png");
-    background-size: 82px 82px;
-    width: 82px;
-    height: 82px;
+    @include position(absolute, 47px 26px null null);
+    @include sizeAndBackground(82px, 82px, "iphone.png");
 }
-
 #iwatch {
-    position: absolute;
-    top: 80px;
-    right: 7px;
-    background: url($images-dir + "iwatch.png");
-    background-size: 44px 44px;
-    width: 44px;
-    height: 44px;
+    @include position(absolute, 80px 7px null null);
+    @include sizeAndBackground(44px, 44px, "iwatch.png");
 }
-
 @include keyframes(shopsWrapper) {
     0% {
         @include transform(scale3d(1, 0, 1));
@@ -579,140 +504,78 @@
         @include resetTranslate();
     }
 }
-
-
-
 //Page3
 .card {
-    position: absolute;
-    top: 50%;
-    margin-top: -80px;
-    left: 50%;
-    margin-left: -60px;
+    @include centerAndOffset(120px 160px);
     border-radius: 0 0 4px 4px;
-    width: 120px;
-    height: 160px;
-    background-size: 120px 160px;
 }
 .card-small {
-    position: absolute;
-    top: 50%;
-    margin-top: -75px;
-    left: 50%;
-    margin-left: -55px;
+    @include centerAndOffset(110px, 150px);
     border-radius: 0 0 4px 4px;
-    width: 110px;
-    height: 150px;
-    background-size: 110px 150px;
 }
-.card-show {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-size: 120px 120px;
+.card-image {
+    @include position(absolute, 0 null null 0);
+    @include size(110px);
 }
 #card-show1 {
-    @extend .card-show;
-    width: 120px;
-    height: 120px;
+    @include size(120px);
     background-color: #fdd835;
 }
 #card-show2 {
-    @extend .card-show;
-    width: 110px;
-    height: 110px;
     background-color: #7cb342;
 }
 #card-show3 {
-    @extend .card-show;
-    width: 110px;
-    height: 110px;
     background-color: #00acc1;
 }
 #card-show4 {
-    @extend .card-show;
-    width: 110px;
-    height: 110px;
     background-color: #3949ab;
 }
 #card-show5 {
-    @extend .card-show;
-    width: 110px;
-    height: 110px;
     background-color: #00897b;
 }
+#card1 {
+    background: $white;
+}
+#card2,#card3 {
+    background: darken($white,10%);
+}
+#card4,#card5 {
+    background: darken($white,20%);
+}
 #card-bag {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    background: url($images-dir + "bag.png");
-    background-size: 100px 100px;
-    width: 100px;
-    height: 100px;
+    @include position(absolute, 10px null null 10px);
+    @include sizeAndBackground(100px, 100px, "bag.png");
 }
 #card-shoes {
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    background: url($images-dir + "shoes.png");
-    background-size: 80px 80px;
-    width: 80px;
-    height: 80px;
+    @include position(absolute, 15px null null 15px);
+    @include sizeAndBackground(80px, 80px, "shoes.png");
 }
 #card-chair {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    background: url($images-dir + "chair.png");
-    background-size: 90px 90px;
-    width: 90px;
-    height: 90px;
+    @include position(absolute, 10px null null 10px);
+    @include sizeAndBackground(90px, 90px, "chair.png");
 }
 #card-iwatch {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    background: url($images-dir + "iwatch.png");
-    background-size: 90px 90px;
-    width: 90px;
-    height: 90px;
+    @include position(absolute, 10px null null 10px);
+    @include sizeAndBackground(90px, 90px, "iwatch.png");
 }
 #card-breakfast {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    background: url($images-dir + "breakfast.png");
-    background-size: 70px 70px;
-    width: 70px;
-    height: 70px;
+    @include position(absolute, 20px null null 20px);
+    @include sizeAndBackground(70px, 70px, "breakfast.png");
 }
-
-
 #card-content1 {
-    position: absolute;
-    top: 128px;
-    left: 14px;
+    @include position(absolute, 128px null null 14px);
+    @include size(70px 10px);
     background-color: $black*16.7;
-    background-size: 70px 10px;
-    width: 70px;
-    height: 10px;
 }
 #card-content2 {
-    position: absolute;
-    bottom: 8px;
-    left: 14px;
+    @include position(absolute, null null 8px 14px);
+    @include size(50px 10px);
     background-color: $black*16.7;
-    background-size: 50px 10px;
-    width: 50px;
-    height: 10px;
 }
 .icon-shopping-cart {
-    position: absolute;
-    bottom: 4px;
-    right: 10px;
+    @include position(absolute, null 10px 4px null);
+    @include size(15px 24px);
     color: $red;
-    width: 15px;
-    height: 24px;
 }
 @include keyframes(card5) {
     0% {
@@ -754,7 +617,6 @@
         @include transform(scale3d(1, 1, 1));
     }
 }
-
 @include keyframes(card-content1) {
     0% {
         @include transform(scale3d(0, 0, 1));
@@ -763,7 +625,6 @@
         @include transform(scale3d(1, 1, 1));
     }
 }
-
 @include keyframes(card-content2) {
     0% {
         @include transform(scale3d(0, 0, 1));
@@ -875,7 +736,6 @@
         @include transform(translate3d(334px, -18px, 0) rotate3d(0, 0, 1, 360deg) scale3d(0, 0, 1));
     }
 }
-
 @include keyframes(card-bag) {
     0% {
         opacity: 0;
@@ -884,32 +744,25 @@
         opacity: 1;
     }
 }
-
-
 //Page4
 #cloud {
     @include position(absolute, 10px null null 10px);
-    @include sizeAndBackground(300px,300px,"cloud.png");
-
+    @include sizeAndBackground(300px, 300px, "cloud.png");
 }
 #earth {
     @include position(absolute, 10px null null 10px);
-    @include sizeAndBackground(300px,300px,"earth.png");
+    @include sizeAndBackground(300px, 300px, "earth.png");
 }
 #hot {
     @include position(absolute, 10px null null 10px);
     @include sizeAndBackground(300px, 300px, "hot.png");
 }
 #dialog-pome {
-    position: absolute;
-    top: 145px;
-    left: 122px;
+    @include position(absolute, 145px null null 122px);
+    @include size(60px 30px);
     background-color: $white;
     border-radius: 20px;
-    width: 60px;
-    height: 30px;
 }
-
 #dialog-text {
     color: $red;
     font-size: 16px;
@@ -918,14 +771,11 @@
     padding-top: 2px;
 }
 #dialog-pome:before {
-    position: absolute;
-    top: -12px;
-    left: 38px;
+    @include position(absolute, -12px null null 38px);
+    @include size(0px);
     border-style: solid solid solid solid;
     border-width: 0 3px 13px 3px;
     border-color: transparent transparent $white transparent;
-    width: 0;
-    height: 0;
     display: block;
     content: '';
 }
@@ -975,4 +825,3 @@
         @include transform(scale3d(2, 2, 1));
     }
 }
-

@@ -287,60 +287,54 @@
     -ms-transform-origin: center center;
     -webkit-transform-origin: center center;
     transform-origin: center center;
-    -webkit-animation: card-bag 0.1s 1.5s 1 linear both;
-    -moz-animation: card-bag 0.1s 1.5s 1 linear both;
-    animation: card-bag 0.1s 1.5s 1 linear both; }
+    -webkit-animation: fadeIn 0.1s 0.8s 1 linear both;
+    -moz-animation: fadeIn 0.1s 0.8s 1 linear both;
+    animation: fadeIn 0.1s 0.8s 1 linear both; }
   .from2to3 #card5 {
     moz-transform-origin: center 355px;
     -o-transform-origin: center 355px;
     -ms-transform-origin: center 355px;
     -webkit-transform-origin: center 355px;
     transform-origin: center 355px;
-    -webkit-animation: card5 0.8s 1.6s 1 cubic-bezier(0.36, 0, 0.15, 1) both;
-    -moz-animation: card5 0.8s 1.6s 1 cubic-bezier(0.36, 0, 0.15, 1) both;
-    animation: card5 0.8s 1.6s 1 cubic-bezier(0.36, 0, 0.15, 1) both;
-    background-color: white; }
+    -webkit-animation: card5 0.8s 1.8s 1 cubic-bezier(0.36, 0, 0.15, 1) both;
+    -moz-animation: card5 0.8s 1.8s 1 cubic-bezier(0.36, 0, 0.15, 1) both;
+    animation: card5 0.8s 1.8s 1 cubic-bezier(0.36, 0, 0.15, 1) both; }
   .from2to3 #card4 {
     moz-transform-origin: center 355px;
     -o-transform-origin: center 355px;
     -ms-transform-origin: center 355px;
     -webkit-transform-origin: center 355px;
     transform-origin: center 355px;
-    -webkit-animation: card4 0.8s 1.6s 1 cubic-bezier(0.36, 0, 0.15, 1) both;
-    -moz-animation: card4 0.8s 1.6s 1 cubic-bezier(0.36, 0, 0.15, 1) both;
-    animation: card4 0.8s 1.6s 1 cubic-bezier(0.36, 0, 0.15, 1) both;
-    background-color: white; }
+    -webkit-animation: card4 0.8s 1.8s 1 cubic-bezier(0.36, 0, 0.15, 1) both;
+    -moz-animation: card4 0.8s 1.8s 1 cubic-bezier(0.36, 0, 0.15, 1) both;
+    animation: card4 0.8s 1.8s 1 cubic-bezier(0.36, 0, 0.15, 1) both; }
   .from2to3 #card3 {
     moz-transform-origin: center 355px;
     -o-transform-origin: center 355px;
     -ms-transform-origin: center 355px;
     -webkit-transform-origin: center 355px;
     transform-origin: center 355px;
-    -webkit-animation: card3 0.7s 1.5s 1 cubic-bezier(0.36, 0, 0.15, 1) both;
-    -moz-animation: card3 0.7s 1.5s 1 cubic-bezier(0.36, 0, 0.15, 1) both;
-    animation: card3 0.7s 1.5s 1 cubic-bezier(0.36, 0, 0.15, 1) both;
-    background-color: white; }
+    -webkit-animation: card3 0.7s 1.7s 1 cubic-bezier(0.36, 0, 0.15, 1) both;
+    -moz-animation: card3 0.7s 1.7s 1 cubic-bezier(0.36, 0, 0.15, 1) both;
+    animation: card3 0.7s 1.7s 1 cubic-bezier(0.36, 0, 0.15, 1) both; }
   .from2to3 #card2 {
     moz-transform-origin: center 355px;
     -o-transform-origin: center 355px;
     -ms-transform-origin: center 355px;
     -webkit-transform-origin: center 355px;
     transform-origin: center 355px;
-    -webkit-animation: card2 0.7s 1.5s 1 cubic-bezier(0.36, 0, 0.15, 1) both;
-    -moz-animation: card2 0.7s 1.5s 1 cubic-bezier(0.36, 0, 0.15, 1) both;
-    animation: card2 0.7s 1.5s 1 cubic-bezier(0.36, 0, 0.15, 1) both;
-    background-color: white; }
-  .from2to3 #card1 {
-    background-color: white; }
+    -webkit-animation: card2 0.7s 1.7s 1 cubic-bezier(0.36, 0, 0.15, 1) both;
+    -moz-animation: card2 0.7s 1.7s 1 cubic-bezier(0.36, 0, 0.15, 1) both;
+    animation: card2 0.7s 1.7s 1 cubic-bezier(0.36, 0, 0.15, 1) both; }
   .from2to3 #cardsWrapper {
     moz-transform-origin: center center;
     -o-transform-origin: center center;
     -ms-transform-origin: center center;
     -webkit-transform-origin: center center;
     transform-origin: center center;
-    -webkit-animation: cardsWrapper 0.7s 0.7s 1 cubic-bezier(0.36, 0, 0.15, 1) both;
-    -moz-animation: cardsWrapper 0.7s 0.7s 1 cubic-bezier(0.36, 0, 0.15, 1) both;
-    animation: cardsWrapper 0.7s 0.7s 1 cubic-bezier(0.36, 0, 0.15, 1) both; }
+    -webkit-animation: cardsWrapper 0.5s 0.2s 1 cubic-bezier(0.36, 0, 0.15, 1) both;
+    -moz-animation: cardsWrapper 0.5s 0.2s 1 cubic-bezier(0.36, 0, 0.15, 1) both;
+    animation: cardsWrapper 0.5s 0.2s 1 cubic-bezier(0.36, 0, 0.15, 1) both; }
   .from2to3 #card-content1 {
     -webkit-animation: card-content1 0.3s 1.5s 1 cubic-bezier(0.36, 0, 0.15, 1) both;
     -moz-animation: card-content1 0.3s 1.5s 1 cubic-bezier(0.36, 0, 0.15, 1) both;
@@ -377,28 +371,23 @@
   .from3to4 #card5 {
     -webkit-animation: card5-out 1.9s 0 1 linear both;
     -moz-animation: card5-out 1.9s 0 1 linear both;
-    animation: card5-out 1.9s 0 1 linear both;
-    background-color: white; }
+    animation: card5-out 1.9s 0 1 linear both; }
   .from3to4 #card4 {
     -webkit-animation: card4-out 1.9s 0 1 linear both;
     -moz-animation: card4-out 1.9s 0 1 linear both;
-    animation: card4-out 1.9s 0 1 linear both;
-    background-color: white; }
+    animation: card4-out 1.9s 0 1 linear both; }
   .from3to4 #card3 {
     -webkit-animation: card3-out 1.9s 0 1 linear both;
     -moz-animation: card3-out 1.9s 0 1 linear both;
-    animation: card3-out 1.9s 0 1 linear both;
-    background-color: white; }
+    animation: card3-out 1.9s 0 1 linear both; }
   .from3to4 #card2 {
     -webkit-animation: card2-out 1.9s 0 1 linear both;
     -moz-animation: card2-out 1.9s 0 1 linear both;
-    animation: card2-out 1.9s 0 1 linear both;
-    background-color: white; }
+    animation: card2-out 1.9s 0 1 linear both; }
   .from3to4 #card1 {
     -webkit-animation: card1-out 1.5s 0 1 linear both;
     -moz-animation: card1-out 1.5s 0 1 linear both;
-    animation: card1-out 1.5s 0 1 linear both;
-    background-color: white; }
+    animation: card1-out 1.5s 0 1 linear both; }
   .from3to4 #earthsWrapper {
     moz-transform-origin: center 180px;
     -o-transform-origin: center 180px;
@@ -447,19 +436,19 @@
   position: absolute;
   top: 20px;
   left: 29px;
-  background: url("app/images/designer.png");
-  background-size: 260px 260px;
+  height: 260px;
   width: 260px;
-  height: 260px; }
+  background: url("app/images/designer.png");
+  background-size: 260px 260px; }
 
 #engineer {
   position: absolute;
   top: 20px;
   left: 29px;
-  background: url("app/images/engineer.png");
-  background-size: 260px 260px;
+  height: 260px;
   width: 260px;
-  height: 260px; }
+  background: url("app/images/engineer.png");
+  background-size: 260px 260px; }
 
 .eyes {
   position: absolute;
@@ -615,8 +604,12 @@
     -webkit-transform: translate3d(355px, 3px, 0) rotate3d(0, 0, 1, -358deg) scale3d(2, 2, 1); }
   75% {
     -webkit-transform: translate3d(355px, 3px, 0) rotate3d(0, 0, 1, -360deg) scale3d(2, 2, 1); }
+  99% {
+    -webkit-transform: translate3d(355px, 3px, 0) rotate3d(0, 0, 1, -360deg) scale3d(2, 2, 1);
+    opacity: 1; }
   100% {
-    -webkit-transform: translate3d(355px, 3px, 0) rotate3d(0, 0, 1, -360deg) scale3d(2, 2, 1); } }
+    -webkit-transform: translate3d(355px, 3px, 0) rotate3d(0, 0, 1, -360deg) scale3d(2, 2, 1);
+    opacity: 0; } }
 @-moz-keyframes bag-out {
   0% {
     -moz-transform: translate3d(0, 0, 0); }
@@ -634,8 +627,12 @@
     -moz-transform: translate3d(355px, 3px, 0) rotate3d(0, 0, 1, -358deg) scale3d(2, 2, 1); }
   75% {
     -moz-transform: translate3d(355px, 3px, 0) rotate3d(0, 0, 1, -360deg) scale3d(2, 2, 1); }
+  99% {
+    -moz-transform: translate3d(355px, 3px, 0) rotate3d(0, 0, 1, -360deg) scale3d(2, 2, 1);
+    opacity: 1; }
   100% {
-    -moz-transform: translate3d(355px, 3px, 0) rotate3d(0, 0, 1, -360deg) scale3d(2, 2, 1); } }
+    -moz-transform: translate3d(355px, 3px, 0) rotate3d(0, 0, 1, -360deg) scale3d(2, 2, 1);
+    opacity: 0; } }
 @keyframes bag-out {
   0% {
     -webkit-transform: translate3d(0, 0, 0);
@@ -685,12 +682,20 @@
     -ms-transform: translate3d(355px, 3px, 0) rotate3d(0, 0, 1, -360deg) scale3d(2, 2, 1);
     -o-transform: translate3d(355px, 3px, 0) rotate3d(0, 0, 1, -360deg) scale3d(2, 2, 1);
     transform: translate3d(355px, 3px, 0) rotate3d(0, 0, 1, -360deg) scale3d(2, 2, 1); }
+  99% {
+    -webkit-transform: translate3d(355px, 3px, 0) rotate3d(0, 0, 1, -360deg) scale3d(2, 2, 1);
+    -moz-transform: translate3d(355px, 3px, 0) rotate3d(0, 0, 1, -360deg) scale3d(2, 2, 1);
+    -ms-transform: translate3d(355px, 3px, 0) rotate3d(0, 0, 1, -360deg) scale3d(2, 2, 1);
+    -o-transform: translate3d(355px, 3px, 0) rotate3d(0, 0, 1, -360deg) scale3d(2, 2, 1);
+    transform: translate3d(355px, 3px, 0) rotate3d(0, 0, 1, -360deg) scale3d(2, 2, 1);
+    opacity: 1; }
   100% {
     -webkit-transform: translate3d(355px, 3px, 0) rotate3d(0, 0, 1, -360deg) scale3d(2, 2, 1);
     -moz-transform: translate3d(355px, 3px, 0) rotate3d(0, 0, 1, -360deg) scale3d(2, 2, 1);
     -ms-transform: translate3d(355px, 3px, 0) rotate3d(0, 0, 1, -360deg) scale3d(2, 2, 1);
     -o-transform: translate3d(355px, 3px, 0) rotate3d(0, 0, 1, -360deg) scale3d(2, 2, 1);
-    transform: translate3d(355px, 3px, 0) rotate3d(0, 0, 1, -360deg) scale3d(2, 2, 1); } }
+    transform: translate3d(355px, 3px, 0) rotate3d(0, 0, 1, -360deg) scale3d(2, 2, 1);
+    opacity: 0; } }
 #shopsWrapper {
   position: absolute;
   top: 50%;
@@ -757,37 +762,37 @@
   position: absolute;
   top: 110px;
   left: 32px;
-  background: url("app/images/shoes.png");
-  background-size: 36px 36px;
+  height: 36px;
   width: 36px;
-  height: 36px; }
+  background: url("app/images/shoes.png");
+  background-size: 36px 36px; }
 
 #bag {
   position: absolute;
   top: 52px;
   left: 25px;
-  background: url("app/images/bag.png");
-  background-size: 50px 50px;
+  height: 50px;
   width: 50px;
-  height: 50px; }
+  background: url("app/images/bag.png");
+  background-size: 50px 50px; }
 
 #iphone {
   position: absolute;
   top: 47px;
-  left: 62px;
-  background: url("app/images/iphone.png");
-  background-size: 82px 82px;
+  right: 26px;
+  height: 82px;
   width: 82px;
-  height: 82px; }
+  background: url("app/images/iphone.png");
+  background-size: 82px 82px; }
 
 #iwatch {
   position: absolute;
   top: 80px;
   right: 7px;
-  background: url("app/images/iwatch.png");
-  background-size: 44px 44px;
+  height: 44px;
   width: 44px;
-  height: 44px; }
+  background: url("app/images/iwatch.png");
+  background-size: 44px 44px; }
 
 @-webkit-keyframes shopsWrapper {
   0% {
@@ -1029,129 +1034,125 @@
     -ms-transform: translate3d(0, 0, 0);
     -o-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0); } }
-.card, .from2to3 #card1, .from3to4 #card1 {
+.card {
   position: absolute;
   top: 50%;
-  margin-top: -80px;
   left: 50%;
-  margin-left: -60px;
-  border-radius: 0 0 4px 4px;
-  width: 120px;
-  height: 160px;
-  background-size: 120px 160px; }
+  margin-top: 0-120px 160px/20;
+  margin-left: 0-120px 160px/20;
+  border-radius: 0 0 4px 4px; }
 
-.card-small, .from2to3 #card5, .from2to3 #card4, .from2to3 #card3, .from2to3 #card2, .from3to4 #card5, .from3to4 #card4, .from3to4 #card3, .from3to4 #card2 {
+.card-small {
   position: absolute;
   top: 50%;
-  margin-top: -75px;
   left: 50%;
-  margin-left: -55px;
-  border-radius: 0 0 4px 4px;
-  width: 110px;
   height: 150px;
-  background-size: 110px 150px; }
+  width: 110px;
+  margin-top: -75px;
+  margin-left: -55px;
+  border-radius: 0 0 4px 4px; }
 
-.card-show, #card-show1, #card-show2, #card-show3, #card-show4, #card-show5 {
+.card-image {
   position: absolute;
   top: 0;
   left: 0;
-  background-size: 120px 120px; }
+  height: 110px;
+  width: 110px; }
 
 #card-show1 {
-  width: 120px;
   height: 120px;
+  width: 120px;
   background-color: #fdd835; }
 
 #card-show2 {
-  width: 110px;
-  height: 110px;
   background-color: #7cb342; }
 
 #card-show3 {
-  width: 110px;
-  height: 110px;
   background-color: #00acc1; }
 
 #card-show4 {
-  width: 110px;
-  height: 110px;
   background-color: #3949ab; }
 
 #card-show5 {
-  width: 110px;
-  height: 110px;
   background-color: #00897b; }
+
+#card1 {
+  background: #FFF; }
+
+#card2, #card3 {
+  background: #e6e6e6; }
+
+#card4, #card5 {
+  background: #cccccc; }
 
 #card-bag {
   position: absolute;
   top: 10px;
   left: 10px;
-  background: url("app/images/bag.png");
-  background-size: 100px 100px;
+  height: 100px;
   width: 100px;
-  height: 100px; }
+  background: url("app/images/bag.png");
+  background-size: 100px 100px; }
 
 #card-shoes {
   position: absolute;
   top: 15px;
   left: 15px;
-  background: url("app/images/shoes.png");
-  background-size: 80px 80px;
+  height: 80px;
   width: 80px;
-  height: 80px; }
+  background: url("app/images/shoes.png");
+  background-size: 80px 80px; }
 
 #card-chair {
   position: absolute;
   top: 10px;
   left: 10px;
-  background: url("app/images/chair.png");
-  background-size: 90px 90px;
+  height: 90px;
   width: 90px;
-  height: 90px; }
+  background: url("app/images/chair.png");
+  background-size: 90px 90px; }
 
 #card-iwatch {
   position: absolute;
   top: 10px;
   left: 10px;
-  background: url("app/images/iwatch.png");
-  background-size: 90px 90px;
+  height: 90px;
   width: 90px;
-  height: 90px; }
+  background: url("app/images/iwatch.png");
+  background-size: 90px 90px; }
 
 #card-breakfast {
   position: absolute;
   top: 20px;
   left: 20px;
-  background: url("app/images/breakfast.png");
-  background-size: 70px 70px;
+  height: 70px;
   width: 70px;
-  height: 70px; }
+  background: url("app/images/breakfast.png");
+  background-size: 70px 70px; }
 
 #card-content1 {
   position: absolute;
   top: 128px;
   left: 14px;
-  background-color: white;
-  background-size: 70px 10px;
+  height: 10px;
   width: 70px;
-  height: 10px; }
+  background-color: white; }
 
 #card-content2 {
   position: absolute;
   bottom: 8px;
   left: 14px;
-  background-color: white;
-  background-size: 50px 10px;
+  height: 10px;
   width: 50px;
-  height: 10px; }
+  background-color: white; }
 
 .icon-shopping-cart {
   position: absolute;
-  bottom: 4px;
   right: 10px;
-  color: #F44336;
+  bottom: 4px;
+  height: 24px;
   width: 15px;
-  height: 24px; }
+  color: #F44336; }
 
 @-webkit-keyframes card5 {
   0% {
@@ -1725,10 +1726,10 @@
   position: absolute;
   top: 145px;
   left: 122px;
-  background-color: #FFF;
-  border-radius: 20px;
+  height: 30px;
   width: 60px;
-  height: 30px; }
+  background-color: #FFF;
+  border-radius: 20px; }
 
 #dialog-text {
   color: #F44336;
@@ -1741,11 +1742,11 @@
   position: absolute;
   top: -12px;
   left: 38px;
+  height: 0px;
+  width: 0px;
   border-style: solid solid solid solid;
   border-width: 0 3px 13px 3px;
   border-color: transparent transparent #FFF transparent;
-  width: 0;
-  height: 0;
   display: block;
   content: ''; }
 
