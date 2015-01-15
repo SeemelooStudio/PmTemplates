@@ -13,7 +13,7 @@
 @mixin centerAndOffset($width, $height:$width, $offsetX:0, $offsetY:$offsetX) {
     @include position(absolute, 50% null null 50%);
     @include size($width $height);
-    @include margin( 0-$height/2+$offsetY null null 0-$width/2+$offsetX);
+    @include margin((0-$height/2+$offsetY) null null (0-$width/2+$offsetX));
 }
 @mixin sizeAndBackground($width, $height, $image-file-name) {
     @include size($width $height);
@@ -506,7 +506,7 @@
 }
 //Page3
 .card {
-    @include centerAndOffset(120px 160px);
+    @include centerAndOffset(120px, 160px);
     border-radius: 0 0 4px 4px;
 }
 .card-small {
@@ -534,13 +534,13 @@
     background-color: #00897b;
 }
 #card1 {
-    background: $white;
+    background: darken($white,3%);
 }
 #card2,#card3 {
-    background: darken($white,10%);
+    background: darken($white,8%);
 }
 #card4,#card5 {
-    background: darken($white,20%);
+    background: darken($white,12%);
 }
 #card-bag {
     @include position(absolute, 10px null null 10px);

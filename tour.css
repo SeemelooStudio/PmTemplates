@@ -1038,8 +1038,10 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  margin-top: 0-120px 160px/20;
-  margin-left: 0-120px 160px/20;
+  height: 160px;
+  width: 120px;
+  margin-top: -80px;
+  margin-left: -60px;
   border-radius: 0 0 4px 4px; }
 
 .card-small {
@@ -1077,13 +1079,13 @@
   background-color: #00897b; }
 
 #card1 {
-  background: #FFF; }
+  background: #f7f7f7; }
 
 #card2, #card3 {
-  background: #e6e6e6; }
+  background: #ebebeb; }
 
 #card4, #card5 {
-  background: #cccccc; }
+  background: #e0e0e0; }
 
 #card-bag {
   position: absolute;
