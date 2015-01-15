@@ -4,6 +4,26 @@
 		"selected_items":
 		[
 			[
+				"siz",
+				"sizeAndBackground"
+			],
+			[
+				"center",
+				"centerAndOffset"
+			],
+			[
+				"off",
+				"offsetY"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"offset",
+				"offsetX"
+			],
+			[
 				"page",
 				"pageSize"
 			],
@@ -62,10 +82,6 @@
 			[
 				"time",
 				"timeStr"
-			],
-			[
-				"off",
-				"offsetTop"
 			],
 			[
 				"tran",
@@ -248,10 +264,6 @@
 				"orders_all"
 			],
 			[
-				"siz",
-				"sizeItem"
-			],
-			[
 				"orig",
 				"original_price"
 			],
@@ -431,15 +443,7 @@
 			"file": "tour.html",
 			"settings":
 			{
-				"buffer_size": 9147,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "tour.less",
-			"settings":
-			{
-				"buffer_size": 21098,
+				"buffer_size": 9949,
 				"line_ending": "Unix"
 			}
 		},
@@ -447,7 +451,7 @@
 			"file": "tour.scss",
 			"settings":
 			{
-				"buffer_size": 22315,
+				"buffer_size": 20696,
 				"line_ending": "Unix"
 			}
 		},
@@ -471,7 +475,7 @@
 			"file": "tour.css",
 			"settings":
 			{
-				"buffer_size": 72645,
+				"buffer_size": 72704,
 				"line_ending": "Unix"
 			}
 		},
@@ -479,7 +483,7 @@
 			"file": "lib/_settings.scss",
 			"settings":
 			{
-				"buffer_size": 2774,
+				"buffer_size": 2768,
 				"line_ending": "Unix"
 			}
 		},
@@ -540,6 +544,8 @@
 	},
 	"file_history":
 	[
+		"/Users/yuhong/Documents/Projects/PomeMarketTemplates/tour.less",
+		"/Users/yuhong/Documents/Projects/PomeMarketTemplates/node_modules/grunt-serve/pages/index.html",
 		"/Users/yuhong/Documents/Projects/PomeMarketTemplates/lib/_mixins.scss",
 		"/Users/yuhong/Documents/Projects/PomeMarketTemplates/tour.sass",
 		"/Users/daxiong/Desktop/PmTemplates/coupon.html",
@@ -665,9 +671,7 @@
 		"/Users/yuhong/Documents/Projects/PomeMarket/app/collections/Orders.js",
 		"/Users/yuhong/Documents/Projects/PomeMarket/app/models/Coupons.js",
 		"/Users/yuhong/Documents/Projects/PomeMarket/app/modules/Coupons.js",
-		"/Users/yuhong/Documents/Projects/PomeMarket/app/models/Cms.js",
-		"/Users/yuhong/Documents/Projects/PomeMarket/app/models/Cart.js",
-		"/Users/yuhong/Documents/Projects/PomeMarket/themes/pantene/index.html"
+		"/Users/yuhong/Documents/Projects/PomeMarket/app/models/Cms.js"
 	],
 	"find":
 	{
@@ -831,7 +835,7 @@
 	"groups":
 	[
 		{
-			"selected": 7,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -839,15 +843,15 @@
 					"file": "tour.html",
 					"settings":
 					{
-						"buffer_size": 9147,
+						"buffer_size": 9949,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								8216,
-								8216
+								1001,
+								1001
 							]
 						],
 						"settings":
@@ -857,53 +861,25 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1661.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "tour.less",
-					"settings":
-					{
-						"buffer_size": 21098,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2460,
-								2460
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/LESS/LESS.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1317.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
 					"file": "tour.scss",
 					"settings":
 					{
-						"buffer_size": 22315,
+						"buffer_size": 20696,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								702,
-								702
+								0,
+								0
 							]
 						],
 						"settings":
@@ -919,7 +895,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
+					"buffer": 2,
 					"file": "Gruntfile.js",
 					"settings":
 					{
@@ -937,7 +913,7 @@
 						"settings":
 						{
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
+							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
@@ -947,7 +923,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 3,
 					"file": "package.json",
 					"settings":
 					{
@@ -975,19 +951,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 4,
 					"file": "tour.css",
 					"settings":
 					{
-						"buffer_size": 72645,
+						"buffer_size": 72704,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								65246,
-								65246
+								0,
+								0
 							]
 						],
 						"settings":
@@ -997,25 +973,25 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 2.0,
-						"translation.y": 22258.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 5,
 					"file": "lib/_settings.scss",
 					"settings":
 					{
-						"buffer_size": 2774,
+						"buffer_size": 2768,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2769,
-								2769
+								245,
+								245
 							]
 						],
 						"settings":
@@ -1023,13 +999,13 @@
 							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 1350.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 6,
 					"file": "coupon.less",
 					"settings":
 					{
@@ -1040,8 +1016,8 @@
 						"selection":
 						[
 							[
-								672,
-								672
+								380,
+								380
 							]
 						],
 						"settings":
@@ -1105,6 +1081,22 @@
 		"selected_items":
 		[
 			[
+				"tour",
+				"tour.html"
+			],
+			[
+				"",
+				"lib/_settings.scss"
+			],
+			[
+				"setting",
+				"lib/_settings.scss"
+			],
+			[
+				"inde",
+				"node_modules/grunt-serve/pages/index.html"
+			],
+			[
 				"coupon",
 				"coupon.less"
 			],
@@ -1129,16 +1121,8 @@
 				"lib/_mixins.scss"
 			],
 			[
-				"tour",
-				"tour.scss"
-			],
-			[
 				"tour.sass",
 				"tour.sass"
-			],
-			[
-				"",
-				"tour.html"
 			],
 			[
 				"car",
@@ -1231,10 +1215,6 @@
 			[
 				"hns/",
 				"themes/hns/index.html"
-			],
-			[
-				"inde",
-				"index.html"
 			],
 			[
 				"mainv",
@@ -1611,10 +1591,6 @@
 			[
 				"aboutv",
 				"app/views/AboutView.js"
-			],
-			[
-				"intro",
-				"app/views/IntroView.js"
 			]
 		],
 		"width": 0.0

@@ -32,10 +32,13 @@
 #tour {
     @include size(100%);
     overflow: hidden;
+    position:relative;
+    top:-$bar-height;
 }
 #pagesWrapper {
     @include size(1280px 100%);
     transition: 1.4s;
+    position:relative;
 }
 .page {
     @include size(320px 100%);
@@ -72,6 +75,7 @@
     text-align: center;
     padding: 0 $basic-gap $basic-gap;
     line-height: 1.2;
+    @include transform(translate3d(0,$basic-gap,0));
 }
 .pageTitle {
     color: #dd4b39;

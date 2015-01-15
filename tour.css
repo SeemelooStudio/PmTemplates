@@ -76,12 +76,15 @@
 #tour {
   height: 100%;
   width: 100%;
-  overflow: hidden; }
+  overflow: hidden;
+  position: relative;
+  top: -56px; }
 
 #pagesWrapper {
   height: 100%;
   width: 1280px;
-  transition: 1.4s; }
+  transition: 1.4s;
+  position: relative; }
 
 .page {
   height: 100%;
@@ -117,7 +120,12 @@
 .pageInfo {
   text-align: center;
   padding: 0 16px 16px;
-  line-height: 1.2; }
+  line-height: 1.2;
+  -webkit-transform: translate3d(0, 16px, 0);
+  -moz-transform: translate3d(0, 16px, 0);
+  -ms-transform: translate3d(0, 16px, 0);
+  -o-transform: translate3d(0, 16px, 0);
+  transform: translate3d(0, 16px, 0); }
 
 .pageTitle {
   color: #dd4b39;
