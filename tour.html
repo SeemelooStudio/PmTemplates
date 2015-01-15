@@ -29,11 +29,12 @@
                     <div id="primary">
                         <div id="welcome">
                             <div id="tour">
-                                <div id="pagesWrapper" class="from0to1">
+                                <div id="pagesWrapper" class="from1to2">
                                     <div id="page1" class="page">
                                         <div class="pageInfo">
                                             <div class="pageTitle">15秒闪电入驻</div>
-                                            <div class="pageDetail">高级攻城狮，老练设计师，资深产品经理<br />三大角色，为您筑建财富</div>
+                                            <div class="pageDetail">高级攻城狮，老练设计师，资深产品经理
+                                                <br />三大角色，为您筑建财富</div>
                                         </div>
                                         <div class="shapesWrapper">
                                             <div id="peoplesWrapper">
@@ -45,13 +46,16 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div><!-- page1 people -->
+                                    </div>
+                                    <!-- page1 people -->
                                     <div id="page2" class="page">
                                         <div class="pageInfo">
                                             <div class="pageTitle">双线无缝管理</div>
-                                            <div class="pageDetail">手机端，电脑端，统一数据处理，店铺管理不再难<br />...</div>
+                                            <div class="pageDetail">手机端，电脑端，统一数据处理
+                                                <br />店铺管理不再难
+                                            </div>
                                         </div>
-                                        <div class="shapesWrapper">              
+                                        <div class="shapesWrapper">
                                             <div id="shopsWrapper">
                                                 <div id="shadow2"></div>
                                                 <div id="shadow1"></div>
@@ -65,11 +69,13 @@
                                                 <div id="iwatch"></div>
                                             </div>
                                         </div>
-                                    </div><!-- page2 shop -->
+                                    </div>
+                                    <!-- page2 shop -->
                                     <div id="page3" class="page">
                                         <div class="pageInfo">
                                             <div class="pageTitle">第一时间分销</div>
-                                            <div class="pageDetail">随时随地，抢先上货，快速出单<br />...</div>
+                                            <div class="pageDetail">随时随地，抢先上货，快速出单
+                                                <br />...</div>
                                         </div>
                                         <div class="shapesWrapper">
                                             <div id="cardsWrapper">
@@ -88,7 +94,7 @@
                                                         <div id="card-chair"></div>
                                                     </div>
                                                 </div>
-                                                 <div id="card2">
+                                                <div id="card2">
                                                     <div id="card-show2">
                                                         <div id="card-shoes"></div>
                                                     </div>
@@ -99,15 +105,19 @@
                                                     </div>
                                                     <div id="card-content1"></div>
                                                     <div id="card-content2"></div>
-                                                    <div><i class="icon icon-shopping-cart"></i></div>
+                                                    <div><i class="icon icon-shopping-cart"></i>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div><!-- page3 card -->
+                                    </div>
+                                    <!-- page3 card -->
                                     <div id="page4" class="page">
                                         <div class="pageInfo">
                                             <div class="pageTitle">走向世界各地</div>
-                                            <div class="pageDetail">超过五十项功能，服务费全免，数百家品牌都在使用——石榴集市<br />...</div>
+                                            <div class="pageDetail">超过五十项功能，服务费全免
+                                                <br />数百家品牌都在使用石榴集市
+                                            </div>
                                         </div>
                                         <div class="shapesWrapper">
                                             <div id="earthsWrapper">
@@ -120,16 +130,17 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div><!-- page4 earth -->
+                                    </div>
+                                    <!-- page4 earth -->
                                 </div>
                             </div>
                             <div id="welcome-bottom">
                                 <a id="welcome-login" class="welcome-bottom-left">
-    登录
-  </a>
-                                <a id="welcome-signin" href="/dashboard" class="welcome-bottom-right">
-    注册
-  </a>
+                                    登录
+                                </a>
+                                <a id="welcome-signup" class="welcome-bottom-right">
+                                    创建店铺
+                                </a>
                                 <div id="welcom-bottom-div"></div>
                             </div>
                         </div>
@@ -142,7 +153,7 @@
     </main>
 
 
-<script type="text/javascript">
+    <script type="text/javascript">
     var startPage = 1;
     var nextPage = 2;
     var pageSize = 4;
@@ -153,25 +164,25 @@
 
         startPage = nextPage;
         nextPage++;
-        if ( nextPage > pageSize ) {
+        if (nextPage > pageSize) {
             nextPage = 0;
         }
 
-        if ( startPage === 0 ) {
+        if (startPage === 0) {
             var timeout = setTimeout(function() {
                 var className = 'from' + startPage + 'to' + nextPage;
                 pagesWrapper.attr('class', className);
                 startPage = nextPage;
                 nextPage++;
-                if ( nextPage > pageSize ) {
+                if (nextPage > pageSize) {
                     nextPage = 0;
                 }
 
                 clearTimout(timeout);
             }, 1500);
         }
-    },5000);
-</script>
+    }, 5000);
+    </script>
 </body>
 
 </html>

@@ -13,7 +13,7 @@
 @mixin centerAndOffset($width, $height:$width, $offsetX:0, $offsetY:$offsetX) {
     @include position(absolute, 50% null null 50%);
     @include size($width $height);
-    @include margin( 0-$width/2+offsetX null null 0-$height/2+$offsetY);
+    @include margin( 0-$height/2+$offsetY null null 0-$width/2+$offsetX);
 }
 @mixin sizeAndBackground($width, $height, $image-file-name) {
     @include size($width $height);
@@ -432,7 +432,7 @@
 }
 
 #shop-logo {
-    @include position(absolute, -24px null null -62px);
+    @include position(absolute, -24px null null 62px);
     @include size(48px);
     background: url($images-dir + "logo.png");
     background-size: 48px 48px;
