@@ -78,7 +78,15 @@
   width: 100%;
   overflow: hidden;
   position: relative;
-  top: -56px; }
+  top: -56px;
+  display: none; }
+
+#welcome-cover {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0; }
 
 #pagesWrapper {
   height: 100%;

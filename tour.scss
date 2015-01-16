@@ -34,6 +34,11 @@
     overflow: hidden;
     position:relative;
     top:-$bar-height;
+    display: none;
+}
+#welcome-cover {
+    @include size(100%);
+    @include position(absolute, 0 null null 0);
 }
 #pagesWrapper {
     @include size(1280px 100%);
