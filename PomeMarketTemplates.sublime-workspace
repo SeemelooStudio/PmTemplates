@@ -443,7 +443,7 @@
 			"file": "tour.html",
 			"settings":
 			{
-				"buffer_size": 9949,
+				"buffer_size": 10080,
 				"line_ending": "Unix"
 			}
 		},
@@ -451,7 +451,7 @@
 			"file": "tour.scss",
 			"settings":
 			{
-				"buffer_size": 20696,
+				"buffer_size": 20928,
 				"line_ending": "Unix"
 			}
 		},
@@ -475,7 +475,7 @@
 			"file": "tour.css",
 			"settings":
 			{
-				"buffer_size": 72704,
+				"buffer_size": 73083,
 				"line_ending": "Unix"
 			}
 		},
@@ -843,15 +843,15 @@
 					"file": "tour.html",
 					"settings":
 					{
-						"buffer_size": 9949,
+						"buffer_size": 10080,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1001,
-								1001
+								5580,
+								5580
 							]
 						],
 						"settings":
@@ -871,15 +871,15 @@
 					"file": "tour.scss",
 					"settings":
 					{
-						"buffer_size": 20696,
+						"buffer_size": 20928,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								1245,
+								1245
 							]
 						],
 						"settings":
@@ -889,7 +889,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 181.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -955,7 +955,7 @@
 					"file": "tour.css",
 					"settings":
 					{
-						"buffer_size": 72704,
+						"buffer_size": 73083,
 						"regions":
 						{
 						},

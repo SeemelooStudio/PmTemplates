@@ -35,7 +35,8 @@ module.exports = function(grunt) {
         sass: {
             dist: {
                 files: {
-                    'tour.css': 'tour.scss'
+                    'tour.css': 'tour.scss',
+                    'dashboard.css': 'dashboard.scss'
                 }
             }
         },

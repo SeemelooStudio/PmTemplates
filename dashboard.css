@@ -1,0 +1,124 @@
+.clearListStyle {
+  list-style: none;
+  padding: 0;
+  margin: 0; }
+
+.clearUserSelect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+.hideBackface, .reset-transform {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  /* Chrome and Safari */
+  -moz-backface-visibility: hidden;
+  /* Firefox */
+  -ms-backface-visibility: hidden;
+  /* Internet Explorer 10+ */ }
+
+.reset-transform {
+  -webkit-transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+  -moz-transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+  -ms-transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+  -o-transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+  transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+  -webkit-transform-style: preserve-3d; }
+
+.clearListStyle {
+  list-style: none;
+  padding: 0;
+  margin: 0; }
+
+.clearUserSelect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+.hideBackface, .reset-transform {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  /* Chrome and Safari */
+  -moz-backface-visibility: hidden;
+  /* Firefox */
+  -ms-backface-visibility: hidden;
+  /* Internet Explorer 10+ */ }
+
+.reset-transform {
+  -webkit-transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+  -moz-transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+  -ms-transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+  -o-transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+  transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+  -webkit-transform-style: preserve-3d; }
+
+#dashboard {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2); }
+
+.dashboard-block {
+  padding: 16px 16px 16px 32px;
+  border-bottom: 1px solid #EEE;
+  position: relative;
+  background-color: #FFF; }
+  .dashboard-block:last-child {
+    border-bottom: none; }
+  .dashboard-block .caption {
+    font-size: 14px;
+    padding-left: 32px;
+    left: -32px;
+    position: relative;
+    margin-top: 8px; }
+    .dashboard-block .caption:first-child {
+      margin-top: 0; }
+    .dashboard-block .caption > .icon {
+      position: absolute;
+      left: 0;
+      top: 0px;
+      height: 32px;
+      width: 32px;
+      font-size: 16px;
+      text-align: center; }
+  .dashboard-block .action {
+    position: absolute;
+    right: 16px;
+    bottom: 13px; }
+
+.dashboard-number {
+  letter-spacing: -1px; }
+  .dashboard-number.display2 {
+    margin-bottom: -0.2em;
+    position: relative;
+    top: 0.1em; }
+  .dashboard-number.display1 {
+    position: relative;
+    top: 0.1em;
+    color: #6f6f6f; }
+
+.dashboard-left, .dashboard-right {
+  float: left;
+  display: inline-block;
+  width: 50%;
+  margin-right: -16px; }
+
+.dashboard-right {
+  width: auto;
+  margin-left: 48px; }
+
+.dashboard-center-div {
+  position: absolute;
+  height: 100%;
+  width: 1px;
+  background-color: #EEE;
+  left: 50%;
+  top: 0; }
+
+.dashboard-unit {
+  font-size: 14px; }
+
+/*# sourceMappingURL=dashboard.css.map */
