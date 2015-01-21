@@ -40,34 +40,72 @@
                         </ul>
                     </nav>
                 </div>
+
                 <div id="appContent">
                     <div id="primary">
-                        <section class="dashboard-block">
-                            <div class="caption"><i class="icon icon-today"></i> 昨日流水</div>
-                            <div class="display2 main-color dashboard-number">0.23<small class="dashboard-unit">元</small>
-                            </div>
-                        </section>
-                        <section class="dashboard-block">
 
-                            <div class="caption"><i class="icon icon-local-atm"></i> 总计收入</div>
-                            <div class="display1 dashboard-number">4041.23<small class="dashboard-unit">元  </small>
+                        <div id="dashboard-header">
+                            <div id="dashboard-background-logo"></div>
+                            <div id="dashboard-header-content">
+                                <div id="dashboard-header-buttons">
+                                    <div id="btn-add-product" class="dashboard-header-buttons">
+                                        <i class="icon icon-uniE685"></i>
+                                        <span class="btn-add-text">上货</span>
+                                    </div>
+                                    <div id="btn-add-cmsItem" class="dashboard-header-buttons">
+                                        <i class="icon icon-perm-media"></i>
+                                        <span class="btn-add-text">专题</span>
+                                    </div>
+                                    <div id="btn-add-coupon" class="dashboard-header-buttons">
+                                        <i class="icon icon-uniE66F"></i>
+                                        <span class="btn-add-text">优惠</span>
+                                    </div>
+                                    <div id="btn-add-category" class="dashboard-header-buttons">
+                                        <i class="icon icon-reorder"></i>
+                                        <span class="btn-add-text">分类</span>
+                                    </div>
+                                </div>
+                                
+                                <div id="dashboard-header-avatar">
+                                    <img src="app/images/bag.png" class="logobag">
+                                </div>
+                              
+                                <div id="dashboard-header-name">石榴集市店铺</div>
+                                <div id="dashboard-header-recent">
+                                    <i class="icon icon-alarm"></i>
+                                    <span class="recent-text1">最近操作</span>
+                                    <span class="recent-text2">冬季2015新款特价女士鞋子</span>
+                                </div>
                             </div>
-                            <div class="caption">帐户余额 1.23元</div>
-
-
-                        </section>
-                        <section class="dashboard-block clearfix">
-                            <div class="dashboard-left">
-                                <div class="caption"><i class="icon icon-check"></i> 待处理订单</div>
-                                <div class="display1 dashboard-number">4</div>
+                        </div>
+                        <!-- dashboard-heade -->
+                        <div id="dashboard-cards">
+                            <div id="card-unprocessedOrders" class="dashboard-cards">
+                                <header class="card-header">待处理</header>
+                                <div class="card-content">
+                                    <ul class="card-orders">
+                                        <li class="card-order-item">
+                                            <div class="card-order-meta">
+                                                <span class="order-item-status-paid">已支付</span> / 4小时前
+                                            </div>
+                                            <div class="card-order-detail">
+                                                <div class="card-order-price">
+                                                    <sup>¥</sup>56.36
+                                                </div>
+                                                <div class="card-order-info">买家：1231312@wqw
+                                                    <br>订单号：WXL966555544</div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- card-content -->
+                                <footer class="card-footer">
+                                    <i class="icon icon-done-all"></i>查看全部30件待处理订单
+                                </footer>
+                                <!-- card-footer -->
                             </div>
-                            <div class="dashboard-right">
-                                <div class="caption"><i class="icon icon-info-outline"></i> 退款请求</div>
-                                <div class="display1 dashboard-number">0</div>
-                            </div>
-                            <div class="dashboard-center-div">
-                            </div>
-                        </section>
+                        </div>
+                        <!-- dashboard-cards -->
 
                     </div>
                 </div>

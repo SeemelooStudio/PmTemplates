@@ -10,16 +10,7 @@
 @mixin tour-page1-items-animation($name, $duration: 1s, $delay: 1.4s) {
     @include tour-animation($name, $duration, $delay);
 }
-@mixin centerAndOffset($width, $height:$width, $offsetX:0, $offsetY:$offsetX) {
-    @include position(absolute, 50% null null 50%);
-    @include size($width $height);
-    @include margin((0-$height/2+$offsetY) null null (0-$width/2+$offsetX));
-}
-@mixin sizeAndBackground($width, $height, $image-file-name) {
-    @include size($width $height);
-    background: url($images-dir +  $image-file-name);
-    background-size: $width $height;
-}
+
 @include keyframes(fadeIn) {
     0% {
         opacity: 0;

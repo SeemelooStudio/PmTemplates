@@ -1,78 +1,69 @@
 @import "bower_components/bourbon/app/assets/stylesheets/bourbon";
 @import "lib/settings";
 @import "lib/mixins";
-
-#dashboard {
-    box-shadow:0 1px 1px rgba(0,0,0,0.2);
+#dashboard-header {
+    position: absolute;
+    width: 100%;
+    height: 180px;
+    background-color: #dd4b39;
+    top: 80px;
+    left: 0px;
 }
-.dashboard-block {
-    padding:$basic-gap $basic-gap $basic-gap 32px;
-    border-bottom:1px solid $border-color;
-    position:relative;
-    background-color:$content-background-color;
-
-    &:last-child {
-        border-bottom:none;
-    }
-
-    .caption {
-        font-size: $body-size;
-        padding-left:32px;
-        left: -32px;
-        position:relative;
-        margin-top:$basic-gap/2;
-
-        &:first-child {
-            margin-top:0;
-        }
-        >.icon {
-            position:absolute;
-            left:0;
-            top:0px;
-            height:32px;
-            width:32px;
-            font-size:16px;
-            text-align:center;
-        }
-    }
-    .action {
-        position:absolute;
-        right:$basic-gap;
-        bottom:$basic-gap/2 + 5;
+#dashboard-background-logo {
+    @include sizeAndBackground(100%, 100%, "pome_background_logo.png");
+    @include position(absolute, 0 null null 0);
+    opacity: 0.3;
+}
+#dashboard-header-avatar {
+    @include position(absolute, 57px null null 130px);
+    @include size(60px);
+    >img {
+        /*Chrome,Safari*/
+        
+        -webkit-clip-path: url(app/images/logo.svg) no-repeat;
+        /* Firefox*/
+        
+        clip-path: url(app/images/logo.svg#svgClip) no-repeat;
+        /* iOS support */
+        
+        -webkit-mask: url(app/images/logo.svg) no-repeat;
     }
 }
-.dashboard-number {
-    &.display2 {
-        margin-bottom:-0.2em;
-        position:relative;
-        top:0.1em;
+.dashboard-header-buttons {
+    background-color: #ff8a80;
+    border-radius: 48px;
+    color: $white;
+    font-size: 12px;
+    line-height: 12px;
+    text-align: center;
+    @include centerAndOffset(48px);
+    >.icon {
+        display: block;
+        font-size: 24px;
+        line-height: 28px;
     }
-    &.display1 {
-        position:relative;
-        top:0.1em;
-        color:lighten($black,30%);
-    }
-    letter-spacing:-1px;
 }
-.dashboard-left,.dashboard-right {
-    float:left;
-    display:inline-block;
-    width:50%;
-    margin-right:-16px;
+#btn-add-category {
+   
 }
-.dashboard-right {
-    width:auto;
-    margin-left:48px;
+.btn-add-text {
+    display: block;
+    font-size: 12px;
 }
-.dashboard-center-div {
-    position:absolute;
-    height:100%;
-    width:1px;
-    background-color:$border-color;
-    left:50%;
-    top:0;
+#dashboard-header-name {
+    @include centerAndOffset(100%, 18px, 0, 44px);
+    color: $white;
+    font-size: 16px;
+    line-height: 18px;
+    overflow: hidden;
+    text-align: center;
 }
-.dashboard-unit {
-    font-size:$body-size;
-
+#dashboard-header-recent {
+    @include position(absolute, null null 16px 0);
+    color: $white;
+    font-size: 12px;
+    @include size(100% 14px);
+    line-height: 14px;
+    overflow: hidden;
+    text-align: center;
 }
