@@ -21,7 +21,7 @@
     <!-- Application container. -->
     <main role="main" id="mainWrapper">
         <div id="main">
-            <div id="content" class="snap-content">
+            <div id="content" class="snap-content" style="overflow-y:scroll">
                 <div id="topbarWrapper" style="display: block;">
                     <nav id="topbar" class="navbar">
                         <ul class="nav navbar-left navbar-nav">
@@ -43,7 +43,6 @@
 
                 <div id="appContent">
                     <div id="primary">
-
                         <div id="dashboard-header">
                             <div id="dashboard-background-logo"></div>
                             <div id="dashboard-header-content">
@@ -65,11 +64,11 @@
                                         <span class="btn-add-text">分类</span>
                                     </div>
                                 </div>
-                                
+
                                 <div id="dashboard-header-avatar">
                                     <img src="app/images/tx.jpg" class="logobag">
                                 </div>
-                              
+
                                 <div id="dashboard-header-name">石榴集市店铺</div>
                                 <div id="dashboard-header-recent">
                                     <i class="icon icon-alarm"></i>
@@ -78,12 +77,24 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- dashboard-heade -->
+                        <!-- dashboard heade -->
                         <div id="dashboard-cards">
                             <div id="card-unprocessedOrders" class="dashboard-cards">
                                 <header class="card-header">待处理</header>
                                 <div class="card-content">
-                                    <ul class="card-orders" style="list-style-type:none">
+                                    <ul class="card-orders">
+                                        <li class="card-order-item">
+                                            <div class="card-order-meta">
+                                                <span class="order-item-status-paid">已支付</span> / 4小时前
+                                            </div>
+                                            <div class="card-order-detail">
+                                                <div class="card-order-price">
+                                                    <sup>¥</sup>56.36
+                                                </div>
+                                                <div class="card-order-info">买家：1231312@wqw
+                                                    <br>订单号：WXL966555544</div>
+                                            </div>
+                                        </li>
                                         <li class="card-order-item">
                                             <div class="card-order-meta">
                                                 <span class="order-item-status-paid">已支付</span> / 4小时前
@@ -98,32 +109,79 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <!-- card-content -->
+                                <!-- card content -->
                                 <footer class="card-footer">
                                     <i class="icon icon-done-all"></i>
                                     <span class="card-footer-more">查看全部30件待处理订单</span>
                                 </footer>
-                                <!-- card-footer -->
+                                <!-- card footer -->
                             </div>
-                        </div>
-                        <!-- dashboard-cards -->
+                            <!-- card unprocessedOrders -->
+                            <div id="card-shortageProducts" class="dashboard-cards">
+                                <header class="card-header">缺货商品</header>
+                                <div class="card-content">
+                                    <ul class="card-products clearListStyle">
+                                        <li class="card-product-item">
+                                            <img src="app/images/tx.jpg">
+                                        </li>
+                                        <li class="card-product-item">
+                                            <img src="app/images/tx.jpg">
+                                        </li>
+                                        <li class="card-product-item">
+                                            <img src="app/images/tx.jpg">
+                                        </li>
+                                        <li class="card-product-item">
+                                            <img src="app/images/tx.jpg">
+                                        </li>
+                                    </ul>
+                                    <div class="card-products-meta">库存
+                                        < 3</div>
+                                    </div>
+                                    <!-- card-content -->
+                                    <footer class="card-footer">
+                                        <i class="icon icon-done-all"></i>
+                                        <span class="card-footer-more">查看全部商品</span>
+                                    </footer>
+                                    <!-- card-footer -->
+                                </div>
+                                <!-- card shortageproducts -->
+                                <div id="card-accounting" class="dashboard-cards">
+                                    <div class="card-content">
+                                        <div class="card-accounting-income">
+                                            <div class="caption">总计收入</div>
+                                            <div class="card-price">
+                                                <sup>¥</sup>56.36
+                                            </div>
+                                        </div>
+                                        <div class="card-accounting-balance">账户余额 ¥50.00</div>
+                                    </div>
+                                    <!-- card-content -->
+                                    <footer class="card-footer">
+                                        <i class="icon icon-done-all"></i>
+                                        <span class="card-footer-more">提现</span>
+                                    </footer>
+                                    <!-- card-footer -->
+                                </div>
+                                <!-- card accounting -->
+                            </div>
+                            <!-- dashboard cards -->
 
-                    </div>
-                </div>
-                <footer id="bottombarWrapper">
-                    <div id="bottombar" class="bottombar clearfix">
-                        <div class="bottombar clearfix">
-                            <div class="bottombar-left">
-                                <i class="icon icon-uniE686"></i> 店铺名片
-                            </div>
-                            <div class="bottombar-right">
-                                <i class="icon icon-store"></i> 查看店铺
-                            </div>
                         </div>
                     </div>
-                </footer>
+                    <footer id="bottombarWrapper" style="display:none">
+                        <div id="bottombar" class="bottombar clearfix">
+                            <div class="bottombar clearfix">
+                                <div class="bottombar-left">
+                                    <i class="icon icon-uniE686"></i> 店铺名片
+                                </div>
+                                <div class="bottombar-right">
+                                    <i class="icon icon-store"></i> 查看店铺
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+                </div>
             </div>
-        </div>
     </main>
 
 

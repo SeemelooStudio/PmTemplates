@@ -75,6 +75,11 @@
     padding:0;
     margin:0;
 }
+@mixin clearListStyle {
+    list-style:none;
+    padding:0;
+    margin:0;
+}
 .clearUserSelect {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -135,4 +140,11 @@
     @include position(absolute, 50% null null 50%);
     @include size($width $height);
     @include margin((0-$height/2+$offsetY) null null (0-$width/2+$offsetX));
+}
+@mixin tour-animation($name, $duration, $delay: 0, $count: 1, $fill-mode: both) {
+    @include animation($name $duration $delay $count $default-timing-function $fill-mode);
+}
+
+@mixin default-animation($name, $duration, $delay: 0, $count: 1, $fill-mode: both) {
+    @include animation($name $duration $delay $count cubic-bezier(.36,0,.15,1) $fill-mode);
 }
