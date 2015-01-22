@@ -60,11 +60,11 @@
 
 #dashboard-header {
   position: absolute;
-  width: 100%;
-  height: 180px;
-  background-color: #dd4b39;
   top: 80px;
-  left: 0px; }
+  left: 0;
+  height: 180px;
+  width: 100%;
+  background-color: #dd4b39; }
 
 #dashboard-background-logo {
   height: 100%;
@@ -109,6 +109,118 @@
     font-size: 24px;
     line-height: 28px; }
 
+#btn-add-product {
+  -webkit-animation: btn-add-product 0.7s 1s 1 cubic-bezier(0.36, 0, 0.15, 1) both;
+  -moz-animation: btn-add-product 0.7s 1s 1 cubic-bezier(0.36, 0, 0.15, 1) both;
+  animation: btn-add-product 0.7s 1s 1 cubic-bezier(0.36, 0, 0.15, 1) both; }
+
+@-webkit-keyframes btn-add-product {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0); }
+  100% {
+    -webkit-transform: translate3d(-34px, -60px, 0); } }
+@-moz-keyframes btn-add-product {
+  0% {
+    -moz-transform: translate3d(0, 0, 0); }
+  100% {
+    -moz-transform: translate3d(-34px, -60px, 0); } }
+@keyframes btn-add-product {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); }
+  100% {
+    -webkit-transform: translate3d(-34px, -60px, 0);
+    -moz-transform: translate3d(-34px, -60px, 0);
+    -ms-transform: translate3d(-34px, -60px, 0);
+    -o-transform: translate3d(-34px, -60px, 0);
+    transform: translate3d(-34px, -60px, 0); } }
+#btn-add-category {
+  -webkit-animation: btn-add-category 0.7s 1s 1 cubic-bezier(0.36, 0, 0.15, 1) both;
+  -moz-animation: btn-add-category 0.7s 1s 1 cubic-bezier(0.36, 0, 0.15, 1) both;
+  animation: btn-add-category 0.7s 1s 1 cubic-bezier(0.36, 0, 0.15, 1) both; }
+
+@-webkit-keyframes btn-add-category {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0); }
+  100% {
+    -webkit-transform: translate3d(-80px, -12px, 0); } }
+@-moz-keyframes btn-add-category {
+  0% {
+    -moz-transform: translate3d(0, 0, 0); }
+  100% {
+    -moz-transform: translate3d(-80px, -12px, 0); } }
+@keyframes btn-add-category {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); }
+  100% {
+    -webkit-transform: translate3d(-80px, -12px, 0);
+    -moz-transform: translate3d(-80px, -12px, 0);
+    -ms-transform: translate3d(-80px, -12px, 0);
+    -o-transform: translate3d(-80px, -12px, 0);
+    transform: translate3d(-80px, -12px, 0); } }
+#btn-add-cmsItem {
+  -webkit-animation: btn-add-cmsItem 0.7s 1s 1 cubic-bezier(0.36, 0, 0.15, 1) both;
+  -moz-animation: btn-add-cmsItem 0.7s 1s 1 cubic-bezier(0.36, 0, 0.15, 1) both;
+  animation: btn-add-cmsItem 0.7s 1s 1 cubic-bezier(0.36, 0, 0.15, 1) both; }
+
+@-webkit-keyframes btn-add-cmsItem {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0); }
+  100% {
+    -webkit-transform: translate3d(34px, -60px, 0); } }
+@-moz-keyframes btn-add-cmsItem {
+  0% {
+    -moz-transform: translate3d(0, 0, 0); }
+  100% {
+    -moz-transform: translate3d(34px, -60px, 0); } }
+@keyframes btn-add-cmsItem {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); }
+  100% {
+    -webkit-transform: translate3d(34px, -60px, 0);
+    -moz-transform: translate3d(34px, -60px, 0);
+    -ms-transform: translate3d(34px, -60px, 0);
+    -o-transform: translate3d(34px, -60px, 0);
+    transform: translate3d(34px, -60px, 0); } }
+#btn-add-coupon {
+  -webkit-animation: btn-add-coupon 0.7s 1s 1 cubic-bezier(0.36, 0, 0.15, 1) both;
+  -moz-animation: btn-add-coupon 0.7s 1s 1 cubic-bezier(0.36, 0, 0.15, 1) both;
+  animation: btn-add-coupon 0.7s 1s 1 cubic-bezier(0.36, 0, 0.15, 1) both; }
+
+@-webkit-keyframes btn-add-coupon {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0); }
+  100% {
+    -webkit-transform: translate3d(80px, -12px, 0); } }
+@-moz-keyframes btn-add-coupon {
+  0% {
+    -moz-transform: translate3d(0, 0, 0); }
+  100% {
+    -moz-transform: translate3d(80px, -12px, 0); } }
+@keyframes btn-add-coupon {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); }
+  100% {
+    -webkit-transform: translate3d(80px, -12px, 0);
+    -moz-transform: translate3d(80px, -12px, 0);
+    -ms-transform: translate3d(80px, -12px, 0);
+    -o-transform: translate3d(80px, -12px, 0);
+    transform: translate3d(80px, -12px, 0); } }
 .btn-add-text {
   display: block;
   font-size: 12px; }
@@ -138,5 +250,87 @@
   line-height: 14px;
   overflow: hidden;
   text-align: center; }
+
+.dashboard-cards {
+  position: absolute;
+  top: 276px;
+  left: 8px;
+  height: auto;
+  width: 95%;
+  box-shadow: 2px 0 3px rgba(0, 0, 0, 0.1);
+  background-color: #FFF; }
+
+.card-header {
+  position: relative;
+  top: 15px;
+  left: 12px;
+  height: auto;
+  width: 96%;
+  font-size: 20px;
+  color: #757575;
+  line-height: 22px; }
+
+.card-content {
+  position: relative;
+  top: 23px;
+  left: 6px;
+  height: auto;
+  width: 96%;
+  border-top: 1px solid #cecece; }
+
+.card-orders {
+  position: relative;
+  top: 14px;
+  left: -18px;
+  height: auto;
+  width: 100%; }
+  .card-orders .card-order-meta {
+    font-size: 12px;
+    line-height: 14px;
+    color: #9b9b9b; }
+    .card-orders .card-order-meta .order-item-status-paid {
+      color: #ffc107; }
+
+.card-order-detail {
+  position: relative;
+  top: 6px;
+  left: 0; }
+  .card-order-detail .card-order-price {
+    font-size: 28px;
+    line-height: 30px;
+    color: #757575; }
+  .card-order-detail sup {
+    font-size: 14px;
+    line-height: 15px;
+    top: -0.75em; }
+  .card-order-detail .card-order-info {
+    position: relative;
+    top: -27px;
+    left: 94px;
+    font-size: 12px;
+    line-height: 14px;
+    color: #bdbdbd; }
+
+.card-footer {
+  position: relative;
+  top: 6px;
+  left: 0;
+  height: 48px;
+  width: 100%;
+  border-top: 1px solid #cecece; }
+  .card-footer .icon-done-all {
+    position: relative;
+    top: 9px;
+    left: 12px;
+    height: 24px;
+    width: 24px;
+    color: #dd4b39; }
+  .card-footer .card-footer-more {
+    position: relative;
+    top: 7px;
+    left: 18px;
+    font-size: 14px;
+    line-height: 16px;
+    color: #dd4b39; }
 
 /*# sourceMappingURL=dashboard.css.map */

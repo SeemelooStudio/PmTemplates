@@ -1,13 +1,13 @@
 @import "bower_components/bourbon/app/assets/stylesheets/bourbon";
 @import "lib/settings";
 @import "lib/mixins";
+@mixin tour-animation($name, $duration, $delay: 0, $count: 1, $fill-mode: both) {
+    @include animation($name $duration $delay $count $default-timing-function $fill-mode);
+}
 #dashboard-header {
-    position: absolute;
-    width: 100%;
-    height: 180px;
+    @include position(absolute, 80px null null 0);
+    @include size(100% 180px);
     background-color: #dd4b39;
-    top: 80px;
-    left: 0px;
 }
 #dashboard-background-logo {
     @include sizeAndBackground(100%, 100%, "pome_background_logo.png");
@@ -43,8 +43,49 @@
         line-height: 28px;
     }
 }
+#btn-add-product {
+    @include tour-animation(btn-add-product, 0.7s, 1s);
+}
+@include keyframes(btn-add-product) {
+    0% {
+        @include transform(translate3d(0, 0, 0));
+    }
+    100% {
+        @include transform(translate3d(-34px, -60px, 0));
+    }
+}
 #btn-add-category {
-   
+    @include tour-animation(btn-add-category, 0.7s, 1s);
+}
+@include keyframes(btn-add-category) {
+    0% {
+        @include transform(translate3d(0, 0, 0));
+    }
+    100% {
+        @include transform(translate3d(-80px, -12px, 0));
+    }
+}
+#btn-add-cmsItem {
+    @include tour-animation(btn-add-cmsItem, 0.7s, 1s);
+}
+@include keyframes(btn-add-cmsItem) {
+    0% {
+        @include transform(translate3d(0, 0, 0));
+    }
+    100% {
+        @include transform(translate3d(34px, -60px, 0));
+    }
+}
+#btn-add-coupon {
+    @include tour-animation(btn-add-coupon, 0.7s, 1s);
+}
+@include keyframes(btn-add-coupon) {
+    0% {
+        @include transform(translate3d(0, 0, 0));
+    }
+    100% {
+        @include transform(translate3d(80px, -12px, 0));
+    }
 }
 .btn-add-text {
     display: block;
@@ -66,4 +107,69 @@
     line-height: 14px;
     overflow: hidden;
     text-align: center;
+}
+.dashboard-cards {
+    @include position(absolute, 276px null null 8px);
+    @include size(95% auto);
+    box-shadow: 2px 0 3px rgba(0, 0, 0, .1);
+    background-color: $white;
+}
+.card-header {
+    @include position(relative, 15px null null 12px);
+    @include size(96% auto);
+    font-size: 20px;
+    color: #757575;
+    line-height: 22px;
+}
+.card-content {
+    @include position(relative, 23px null null 6px);
+    @include size(96% auto);
+    border-top: 1px solid #cecece;
+}
+.card-orders {
+    @include position(relative, 14px null null -18px);
+    @include size(100% auto);
+    .card-order-meta {
+        font-size: 12px;
+        line-height: 14px;
+        color: #9b9b9b;
+        .order-item-status-paid {
+            color: #ffc107;
+        }
+    }
+}
+.card-order-detail {
+    @include position(relative, 6px null null 0);
+    .card-order-price {
+        font-size: 28px;
+        line-height: 30px;
+        color: #757575;
+    }
+    sup {
+        font-size: 14px;
+        line-height: 15px;
+        top: -0.75em;
+    }
+    .card-order-info {
+        @include position(relative, -27px null null 94px);
+        font-size: 12px;
+        line-height: 14px;
+        color: #bdbdbd;
+    }
+}
+.card-footer {
+    @include position(relative, 6px null null 0);
+    @include size(100% 48px);
+    border-top: 1px solid #cecece;
+    .icon-done-all {
+        @include position(relative, 9px null null 12px);
+        @include size(24px);
+        color: #dd4b39;
+    }
+    .card-footer-more {
+        @include position(relative, 7px null null 18px);
+        font-size: 14px;
+        line-height: 16px;
+        color: #dd4b39;
+    }
 }
