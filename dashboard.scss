@@ -12,7 +12,7 @@
 #dashboard-background-logo {
     @include sizeAndBackground(100%, 100%, "pome_background_logo.png");
     @include position(absolute, 0 null null 0);
-    opacity: 0.3;
+    opacity: 0.17;
 }
 #dashboard-header-avatar {
     @include position(absolute, 57px null null 130px);
@@ -31,16 +31,18 @@
 }
 .dashboard-header-buttons {
     background-color: #ff8a80;
-    border-radius: 48px;
+    border-radius: 44px;
     color: $white;
-    font-size: 12px;
-    line-height: 12px;
     text-align: center;
-    @include centerAndOffset(48px);
+    @include centerAndOffset(44px);
     >.icon {
+        @include position(relative, 5px null null null);
         display: block;
-        font-size: 24px;
-        line-height: 28px;
+    }
+    .btn-add-text {
+        @include position(relative, 8px null null null);
+        font-size: 12px;
+        line-height: 14px;
     }
 }
 #btn-add-product {
@@ -62,7 +64,7 @@
         @include transform(translate3d(0, 0, 0));
     }
     100% {
-        @include transform(translate3d(-80px, -12px, 0));
+        @include transform(translate3d(-70px, -12px, 0));
     }
 }
 #btn-add-cmsItem {
@@ -84,7 +86,7 @@
         @include transform(translate3d(0, 0, 0));
     }
     100% {
-        @include transform(translate3d(80px, -12px, 0));
+        @include transform(translate3d(70px, -12px, 0));
     }
 }
 .btn-add-text {
